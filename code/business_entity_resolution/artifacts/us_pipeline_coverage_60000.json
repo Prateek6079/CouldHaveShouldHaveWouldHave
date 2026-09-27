@@ -1,0 +1,612 @@
+{
+  "seed": 20260927,
+  "per_source": 10000,
+  "pipeline_order": "preprocess_batch then US parse_address",
+  "elapsed_seconds": 19.649,
+  "stats": {
+    "rows": 60000,
+    "nonempty": 58683,
+    "status_partial": 15942,
+    "address_tokens": 344079,
+    "with_unparsed_text": 10522,
+    "unparsed_tokens": 26297,
+    "status_parsed": 42741,
+    "partial_without_unparsed_text": 5420,
+    "empty": 1317
+  },
+  "groups": {
+    "train_S1": {
+      "rows": 10000,
+      "nonempty": 10000,
+      "status_partial": 1824,
+      "with_unparsed_text": 1236,
+      "status_parsed": 8176,
+      "partial_without_unparsed_text": 588
+    },
+    "train_S2": {
+      "rows": 10000,
+      "nonempty": 9616,
+      "status_parsed": 6563,
+      "status_partial": 3053,
+      "partial_without_unparsed_text": 1052,
+      "with_unparsed_text": 2001,
+      "empty": 384
+    },
+    "train_S3": {
+      "rows": 10000,
+      "nonempty": 9663,
+      "status_parsed": 6567,
+      "empty": 337,
+      "status_partial": 3096,
+      "with_unparsed_text": 1994,
+      "partial_without_unparsed_text": 1102
+    },
+    "test_S1": {
+      "rows": 10000,
+      "nonempty": 10000,
+      "status_parsed": 8216,
+      "status_partial": 1784,
+      "partial_without_unparsed_text": 605,
+      "with_unparsed_text": 1179
+    },
+    "test_S2": {
+      "rows": 10000,
+      "nonempty": 9709,
+      "status_partial": 3078,
+      "with_unparsed_text": 2026,
+      "partial_without_unparsed_text": 1052,
+      "status_parsed": 6631,
+      "empty": 291
+    },
+    "test_S3": {
+      "rows": 10000,
+      "nonempty": 9695,
+      "status_parsed": 6588,
+      "status_partial": 3107,
+      "with_unparsed_text": 2086,
+      "partial_without_unparsed_text": 1021,
+      "empty": 305
+    }
+  },
+  "component_coverage": {
+    "house_number": 51170,
+    "street": 53434,
+    "unit": 4832,
+    "floor": 547,
+    "building": 277,
+    "locality": 1410,
+    "city": 50685,
+    "state": 58683,
+    "postal_code": 62,
+    "po_box": 641,
+    "landmark_direction": 3
+  },
+  "parse_reasons": {
+    "unmatched_text": 10522,
+    "incomplete_components": 10411,
+    "unrecognized_order": 8961,
+    "conflicting_state": 375,
+    "conflicting_street": 90,
+    "conflicting_unit": 7,
+    "conflicting_building": 1
+  },
+  "unparsed_categories": {
+    "unrecognized_numeric_segment": 5166,
+    "unrecognized_name_or_location": 2206,
+    "unusual_unit_or_building": 108,
+    "conflicting_component": 247,
+    "rural_or_numbered_road": 361,
+    "stray_punctuation": 918,
+    "placeholder_text": 1516
+  },
+  "examples": {
+    "unrecognized_numeric_segment": [
+      {
+        "group": "train_S1",
+        "entity_id": "S1-811377967",
+        "address": "532 600, salt lake city, ut",
+        "recognized": {
+          "state": "ut"
+        },
+        "unparsed_text": "532 600, salt lake city",
+        "parse_reason": "unmatched_text;incomplete_components;unrecognized_order"
+      },
+      {
+        "group": "train_S1",
+        "entity_id": "S1-579487747",
+        "address": "7019 e, town of abrams, wi",
+        "recognized": {
+          "state": "wi"
+        },
+        "unparsed_text": "7019 e, town of abrams",
+        "parse_reason": "unmatched_text;incomplete_components;unrecognized_order"
+      },
+      {
+        "group": "train_S1",
+        "entity_id": "S1-8264388",
+        "address": "6676 us 290, johnson city, tx",
+        "recognized": {
+          "state": "tx"
+        },
+        "unparsed_text": "6676 us 290, johnson city",
+        "parse_reason": "unmatched_text;incomplete_components;unrecognized_order"
+      },
+      {
+        "group": "train_S1",
+        "entity_id": "S1-427999833",
+        "address": "2999 2683, jefferson, tx",
+        "recognized": {
+          "state": "tx"
+        },
+        "unparsed_text": "2999 2683, jefferson",
+        "parse_reason": "unmatched_text;incomplete_components;unrecognized_order"
+      },
+      {
+        "group": "train_S1",
+        "entity_id": "S1-277191626",
+        "address": "851 3418, wills point, tx",
+        "recognized": {
+          "state": "tx"
+        },
+        "unparsed_text": "851 3418, wills point",
+        "parse_reason": "unmatched_text;incomplete_components;unrecognized_order"
+      }
+    ],
+    "unrecognized_name_or_location": [
+      {
+        "group": "train_S1",
+        "entity_id": "S1-962762739",
+        "address": "fl apt 28, queen city, tx, 806 houston street",
+        "recognized": {
+          "house_number": "806",
+          "street": "houston st",
+          "unit": "apt 28",
+          "city": "queen city",
+          "state": "tx"
+        },
+        "unparsed_text": "fl",
+        "parse_reason": "unmatched_text;unrecognized_order"
+      },
+      {
+        "group": "train_S1",
+        "entity_id": "S1-292626630",
+        "address": "hammond, 1704 atchison avenue, in",
+        "recognized": {
+          "house_number": "1704",
+          "street": "atchison ave",
+          "state": "in"
+        },
+        "unparsed_text": "hammond",
+        "parse_reason": "unmatched_text;incomplete_components"
+      },
+      {
+        "group": "train_S1",
+        "entity_id": "S1-783394116",
+        "address": "902 hanna place court, mo, unit unit c, ballwin",
+        "recognized": {
+          "house_number": "902",
+          "street": "hanna pl",
+          "unit": "unit unit c",
+          "city": "ballwin",
+          "state": "mo"
+        },
+        "unparsed_text": "court",
+        "parse_reason": "unmatched_text;unrecognized_order"
+      },
+      {
+        "group": "train_S1",
+        "entity_id": "S1-292446195",
+        "address": "hempstead, unit apartment 1, ny, 144 sheridan boulevard",
+        "recognized": {
+          "house_number": "144",
+          "street": "sheridan blvd",
+          "unit": "unit apt 1",
+          "state": "ny"
+        },
+        "unparsed_text": "hempstead",
+        "parse_reason": "unmatched_text;incomplete_components;unrecognized_order"
+      },
+      {
+        "group": "train_S1",
+        "entity_id": "S1-648247247",
+        "address": "harpers ferry, 62 robin lane, wv",
+        "recognized": {
+          "house_number": "62",
+          "street": "robin ln",
+          "state": "wv"
+        },
+        "unparsed_text": "harpers ferry",
+        "parse_reason": "unmatched_text;incomplete_components"
+      }
+    ],
+    "unusual_unit_or_building": [
+      {
+        "group": "train_S1",
+        "entity_id": "S1-382898466",
+        "address": "14320 28th street, unit unit 12f3, lake stevens, wa",
+        "recognized": {
+          "house_number": "14320",
+          "street": "28th st",
+          "city": "lake stevens",
+          "state": "wa"
+        },
+        "unparsed_text": "unit unit 12f3",
+        "parse_reason": "unmatched_text"
+      },
+      {
+        "group": "train_S1",
+        "entity_id": "S1-446448380",
+        "address": "1005 cascade street, unit unit, wenatchee, wa",
+        "recognized": {
+          "house_number": "1005",
+          "street": "cascade st",
+          "city": "wenatchee",
+          "state": "wa"
+        },
+        "unparsed_text": "unit unit",
+        "parse_reason": "unmatched_text"
+      },
+      {
+        "group": "train_S1",
+        "entity_id": "S1-111454635",
+        "address": "ny, 8101 conlon road, leroy, unit site b29",
+        "recognized": {
+          "house_number": "8101",
+          "street": "conlon rd",
+          "state": "ny"
+        },
+        "unparsed_text": "leroy, unit site b29",
+        "parse_reason": "unmatched_text;incomplete_components"
+      },
+      {
+        "group": "train_S1",
+        "entity_id": "S1-461708904",
+        "address": "wi, 1400 great wolf drive, village of lake delton, unit condo 3301",
+        "recognized": {
+          "house_number": "1400",
+          "street": "great wolf dr",
+          "locality": "village of lake delton",
+          "state": "wi"
+        },
+        "unparsed_text": "unit condo 3301",
+        "parse_reason": "unmatched_text;incomplete_components;unrecognized_order"
+      },
+      {
+        "group": "train_S1",
+        "entity_id": "S1-185553512",
+        "address": "22414 shannondell drive, fl fourth floor, lower providence township, pa",
+        "recognized": {
+          "house_number": "22414",
+          "street": "shannondell dr",
+          "city": "lower providence township",
+          "state": "pa"
+        },
+        "unparsed_text": "fl fourth floor",
+        "parse_reason": "unmatched_text"
+      }
+    ],
+    "conflicting_component": [
+      {
+        "group": "train_S1",
+        "entity_id": "S1-212978715",
+        "address": "md, fl 0, glen burnie, 104 marley station road",
+        "recognized": {
+          "house_number": "104",
+          "street": "marley station rd",
+          "floor": "floor 0",
+          "state": "md"
+        },
+        "unparsed_text": "glen burnie",
+        "parse_reason": "conflicting_state;unmatched_text;incomplete_components"
+      },
+      {
+        "group": "train_S1",
+        "entity_id": "S1-395967700",
+        "address": "1 village square shopping circle, unit suite b, hazelwood, mo",
+        "recognized": {
+          "house_number": "1",
+          "street": "village sq",
+          "unit": "unit suite b",
+          "city": "hazelwood",
+          "state": "mo"
+        },
+        "unparsed_text": "shopping circle",
+        "parse_reason": "conflicting_street;unmatched_text"
+      },
+      {
+        "group": "train_S1",
+        "entity_id": "S1-549702163",
+        "address": "fl 0, ks, 6501 osage avenue, haysville",
+        "recognized": {
+          "house_number": "6501",
+          "street": "osage ave",
+          "city": "haysville",
+          "state": "fl"
+        },
+        "unparsed_text": "0, ks",
+        "parse_reason": "conflicting_state;unmatched_text;unrecognized_order"
+      },
+      {
+        "group": "train_S1",
+        "entity_id": "S1-519902695",
+        "address": "292 galena park boulevard, unit 819, draper city (sl co), ut",
+        "recognized": {
+          "house_number": "292",
+          "street": "galena park blvd",
+          "unit": "unit 819",
+          "city": "sl",
+          "state": "co"
+        },
+        "unparsed_text": "draper city, ut",
+        "parse_reason": "conflicting_state;unmatched_text"
+      },
+      {
+        "group": "train_S1",
+        "entity_id": "S1-431785662",
+        "address": "112 delaware st apt 308, unit apt 308, fairfield, il",
+        "recognized": {
+          "house_number": "112",
+          "street": "delaware st",
+          "unit": "apt 308",
+          "city": "fairfield",
+          "state": "il"
+        },
+        "unparsed_text": "unit apt 308",
+        "parse_reason": "conflicting_unit;unmatched_text"
+      }
+    ],
+    "rural_or_numbered_road": [
+      {
+        "group": "train_S1",
+        "entity_id": "S1-446226651",
+        "address": "5157 county road 290, joplin, mo",
+        "recognized": {
+          "house_number": "5157",
+          "street": "county rd",
+          "city": "joplin",
+          "state": "mo"
+        },
+        "unparsed_text": "290",
+        "parse_reason": "unmatched_text"
+      },
+      {
+        "group": "train_S1",
+        "entity_id": "S1-993511973",
+        "address": "199 fm 629, refugio county, tx",
+        "recognized": {
+          "state": "tx"
+        },
+        "unparsed_text": "199 fm 629, refugio county",
+        "parse_reason": "unmatched_text;incomplete_components;unrecognized_order"
+      },
+      {
+        "group": "train_S1",
+        "entity_id": "S1-283522398",
+        "address": "257 county road 2853, cleveland, tx",
+        "recognized": {
+          "house_number": "257",
+          "street": "county rd",
+          "city": "cleveland",
+          "state": "tx"
+        },
+        "unparsed_text": "2853",
+        "parse_reason": "unmatched_text"
+      },
+      {
+        "group": "train_S1",
+        "entity_id": "S1-957781045",
+        "address": "37 county road 3566, cleveland, tx",
+        "recognized": {
+          "house_number": "37",
+          "street": "county rd",
+          "city": "cleveland",
+          "state": "tx"
+        },
+        "unparsed_text": "3566",
+        "parse_reason": "unmatched_text"
+      },
+      {
+        "group": "train_S1",
+        "entity_id": "S1-518034255",
+        "address": "2470 fm 37, unit 2470, sudan, tx",
+        "recognized": {
+          "unit": "unit 2470",
+          "state": "tx"
+        },
+        "unparsed_text": "2470 fm 37, sudan",
+        "parse_reason": "unmatched_text;incomplete_components;unrecognized_order"
+      }
+    ],
+    "stray_punctuation": [
+      {
+        "group": "train_S1",
+        "entity_id": "S1-594606892",
+        "address": "1477 donahue drive, unit 25-, auburn, al",
+        "recognized": {
+          "house_number": "1477",
+          "street": "donahue dr",
+          "unit": "unit 25",
+          "city": "auburn",
+          "state": "al"
+        },
+        "unparsed_text": "-",
+        "parse_reason": "unmatched_text"
+      },
+      {
+        "group": "train_S2",
+        "entity_id": "S2-373206813",
+        "address": "##1305 huntspoint way, henderson, ky",
+        "recognized": {
+          "house_number": "#1305",
+          "street": "huntspoint way",
+          "city": "henderson",
+          "state": "ky"
+        },
+        "unparsed_text": "#",
+        "parse_reason": "unmatched_text"
+      },
+      {
+        "group": "train_S2",
+        "entity_id": "S2-885630929",
+        "address": "il, plainfield, ##13431 kerr st",
+        "recognized": {
+          "house_number": "#13431",
+          "street": "kerr st",
+          "city": "plainfield",
+          "state": "il"
+        },
+        "unparsed_text": "#",
+        "parse_reason": "unmatched_text"
+      },
+      {
+        "group": "train_S2",
+        "entity_id": "S2-191642999",
+        "address": "##3114 anderson creek road, talent, or",
+        "recognized": {
+          "house_number": "#3114",
+          "street": "anderson creek rd",
+          "city": "talent",
+          "state": "or"
+        },
+        "unparsed_text": "#",
+        "parse_reason": "unmatched_text"
+      },
+      {
+        "group": "train_S2",
+        "entity_id": "S2-711286692",
+        "address": "##441 utica ave, tulsa, ok",
+        "recognized": {
+          "house_number": "#441",
+          "street": "utica ave",
+          "city": "tulsa",
+          "state": "ok"
+        },
+        "unparsed_text": "#",
+        "parse_reason": "unmatched_text"
+      }
+    ],
+    "placeholder_text": [
+      {
+        "group": "train_S2",
+        "entity_id": "S2-715333400",
+        "address": "5402 locust ln, n/a, hison, tn",
+        "recognized": {
+          "house_number": "5402",
+          "street": "locust ln",
+          "city": "hison",
+          "state": "tn"
+        },
+        "unparsed_text": "n/a",
+        "parse_reason": "unmatched_text"
+      },
+      {
+        "group": "train_S2",
+        "entity_id": "S2-813458577",
+        "address": "2319 algonquin road, n/a, schenectady, ny",
+        "recognized": {
+          "house_number": "2319",
+          "street": "algonquin rd",
+          "city": "schenectady",
+          "state": "ny"
+        },
+        "unparsed_text": "n/a",
+        "parse_reason": "unmatched_text"
+      },
+      {
+        "group": "train_S2",
+        "entity_id": "S2-247082989",
+        "address": "5411b post road, n/a, bronx, ny",
+        "recognized": {
+          "house_number": "5411b",
+          "street": "post rd",
+          "city": "bronx",
+          "state": "ny"
+        },
+        "unparsed_text": "n/a",
+        "parse_reason": "unmatched_text"
+      },
+      {
+        "group": "train_S2",
+        "entity_id": "S2-549037503",
+        "address": "073 stonewall ter, n/a, sand springs, ok",
+        "recognized": {
+          "house_number": "073",
+          "street": "stonewall ter",
+          "city": "sand springs",
+          "state": "ok"
+        },
+        "unparsed_text": "n/a",
+        "parse_reason": "unmatched_text"
+      },
+      {
+        "group": "train_S2",
+        "entity_id": "S2-358068215",
+        "address": "3660 silverpark pl, marion county, null, or",
+        "recognized": {
+          "house_number": "3660",
+          "street": "silverpark pl",
+          "state": "or"
+        },
+        "unparsed_text": "marion county, null",
+        "parse_reason": "unmatched_text;incomplete_components"
+      }
+    ]
+  },
+  "files": {
+    "/home/sherencrypted/projects/simple_ml_pipeline/dataset/train/train_source1.tsv": {
+      "after": {
+        "sha256": "591af0e1dfeb65cab71ea6ee8cb69df00f92d6ba6fa79e05746c938775d14973",
+        "size": 210069713,
+        "mtime_ns": 1790330230572535100
+      },
+      "unchanged_since_raw_audit": true
+    },
+    "/home/sherencrypted/projects/simple_ml_pipeline/dataset/train/train_source2.tsv": {
+      "after": {
+        "sha256": "6336c1a055eec79cf8a6d99fdc8d32a2e4d9dc2662e00963cb35d66b89ed09ed",
+        "size": 489301488,
+        "mtime_ns": 1790330224528272300
+      },
+      "unchanged_since_raw_audit": true
+    },
+    "/home/sherencrypted/projects/simple_ml_pipeline/dataset/train/train_source3.tsv": {
+      "after": {
+        "sha256": "67da22f5151898ff3006febd836c1a159e97ae95efa7257a5aff4fda685e58e9",
+        "size": 503705637,
+        "mtime_ns": 1790330228827089300
+      },
+      "unchanged_since_raw_audit": true
+    },
+    "/home/sherencrypted/projects/simple_ml_pipeline/dataset/test/test_source1.tsv": {
+      "after": {
+        "sha256": "3d4a32c54c2ca9c53fd7c2be105bf26f708f94c4d2f88eb370972a195665c2f5",
+        "size": 175022086,
+        "mtime_ns": 1790330219358088400
+      },
+      "unchanged_since_raw_audit": true
+    },
+    "/home/sherencrypted/projects/simple_ml_pipeline/dataset/test/test_source2.tsv": {
+      "after": {
+        "sha256": "79d906c7497af2ace70aa277f6e334a652094909de99bd6c57b53420b6a7b2dd",
+        "size": 509456422,
+        "mtime_ns": 1790330213588482500
+      },
+      "unchanged_since_raw_audit": true
+    },
+    "/home/sherencrypted/projects/simple_ml_pipeline/dataset/test/test_source3.tsv": {
+      "after": {
+        "sha256": "850942b11d2a4343486ed0834e28bce9f3b385f3fd497fd60ccf4ea3b8bda035",
+        "size": 506002772,
+        "mtime_ns": 1790330217932101400
+      },
+      "unchanged_since_raw_audit": true
+    }
+  },
+  "limitations": [
+    "Deterministic 10,000-row sample per file, not every US row.",
+    "No component ground truth: coverage, status and retention do not measure assignment accuracy.",
+    "Token remainder ratio counts normalized word/number tokens and ignores punctuation.",
+    "Categories are diagnostic regex groupings and can overlap conceptually; each row is assigned to one category.",
+    "Development regression cases are evaluated separately in us_grammar_coverage_60000.json."
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "common": [
+    "private limited",
+    "private ltd",
+    "pvt limited",
+    "pvt ltd",
+    "limited",
+    "ltd",
+    "limited liability company",
+    "llc",
+    "l l c",
+    "llp",
+    "l l p",
+    "plc",
+    "p l c",
+    "incorporated",
+    "inc",
+    "corporation",
+    "corp"
+  ],
+  "countries": {
+    "france": {
+      "labels": [
+        "france",
+        "fr",
+        "fra"
+      ],
+      "forms": [
+        "societe a responsabilite limitee",
+        "societe par actions simplifiee",
+        "sarl",
+        "s a r l",
+        "sasu",
+        "s a s u",
+        "sas",
+        "s a s",
+        "eurl",
+        "e u r l",
+        "sa",
+        "s a"
+      ]
+    },
+    "india": {
+      "labels": [
+        "india",
+        "in",
+        "ind"
+      ],
+      "forms": [
+        "praiveta limiteda",
+        "limiteda",
+        "pra li",
+        "elaelapi",
+        "elaelasi",
+        "praivarr limirrad",
+        "limirrad"
+      ]
+    }
+  }
+}

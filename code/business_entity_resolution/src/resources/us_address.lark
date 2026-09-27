@@ -1,0 +1,22 @@
+// Independently parseable components over typed, offset-tracked spans.
+unit: UNIT_KEY+ ID
+floor: ORDINAL FLOOR_KEY | NUMBER FLOOR_KEY | FLOOR_KEY NUMBER | FLOOR_KEY ORDINAL | FLOOR_SPECIAL
+building: WORD+ BUILDING_KEY | BUILDING_KEY WORD+ | KNOWN_BUILDING
+locality: WORD+ LOCALITY_KEY | LOCALITY_KEY WORD+ | KNOWN_LOCALITY
+street: HOUSE? WORD+ STREET_KEY DIRECTION? | HOUSE? WORD* STREET_KEY NUMBER
+landmark: LANDMARK_KEY WORD+
+po_box: BOX_KEY ID
+postal_code: POSTAL_KEY? POSTAL
+// Compact normal/reverse assembly. Components survive an assembly failure.
+address: LANDMARK? core LANDMARK?
+       | LANDMARK? location street_add LANDMARK?
+       | LANDMARK? CITY street_add STATE? POSTAL? LANDMARK?
+core: street_add location?
+location: CITY STATE? POSTAL? | STATE CITY? POSTAL? | LOCALITY CITY STATE? POSTAL?
+street_add: building_add? STREET building_add? | POBOX
+building_add: BUILDING inbuilding? | inbuilding BUILDING?
+inbuilding: UNIT FLOOR? | FLOOR UNIT?
+%declare UNIT_KEY ID ORDINAL NUMBER FLOOR_KEY FLOOR_SPECIAL WORD BUILDING_KEY
+%declare LOCALITY_KEY KNOWN_LOCALITY KNOWN_BUILDING HOUSE STREET_KEY DIRECTION LANDMARK_KEY BOX_KEY
+%declare POSTAL_KEY
+%declare UNIT FLOOR BUILDING STREET LOCALITY CITY STATE POSTAL LANDMARK POBOX

@@ -1,0 +1,9 @@
+{
+  "paths": {
+    "train_data": "../../dataset/train",
+    "test_data": "../../dataset/test",
+    "artifacts": "artifacts",
+    "final_output": "../../output"
+  },
+  "random_seed": 42
+}

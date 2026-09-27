@@ -1,0 +1,751 @@
+{
+  "version": 1,
+  "source": "User-supplied US and French city tables; business counts are not used",
+  "us": [
+    {
+      "city": "New York City",
+      "state": "NY",
+      "aliases": [
+        "New York",
+        "NYC",
+        "New York City"
+      ]
+    },
+    {
+      "city": "Los Angeles",
+      "state": "CA",
+      "aliases": [
+        "LA",
+        "L.A.",
+        "Los Angeles"
+      ]
+    },
+    {
+      "city": "Chicago",
+      "state": "IL",
+      "aliases": [
+        "Chicago",
+        "Chi-Town",
+        "Chi"
+      ]
+    },
+    {
+      "city": "Houston",
+      "state": "TX",
+      "aliases": [
+        "Houston",
+        "H-Town"
+      ]
+    },
+    {
+      "city": "San Francisco",
+      "state": "CA",
+      "aliases": [
+        "San Francisco",
+        "SF",
+        "S.F."
+      ]
+    },
+    {
+      "city": "Dallas",
+      "state": "TX",
+      "aliases": [
+        "Dallas",
+        "DFW"
+      ]
+    },
+    {
+      "city": "Philadelphia",
+      "state": "PA",
+      "aliases": [
+        "Philadelphia",
+        "Philly",
+        "Phila."
+      ]
+    },
+    {
+      "city": "Phoenix",
+      "state": "AZ",
+      "aliases": [
+        "Phoenix",
+        "PHX"
+      ]
+    },
+    {
+      "city": "San Diego",
+      "state": "CA",
+      "aliases": [
+        "San Diego",
+        "SD"
+      ]
+    },
+    {
+      "city": "Washington",
+      "state": "DC",
+      "aliases": [
+        "Washington DC",
+        "Washington",
+        "D.C.",
+        "DC"
+      ]
+    },
+    {
+      "city": "Boston",
+      "state": "MA",
+      "aliases": [
+        "Boston",
+        "BOS"
+      ]
+    },
+    {
+      "city": "Seattle",
+      "state": "WA",
+      "aliases": [
+        "Seattle",
+        "SEA"
+      ]
+    },
+    {
+      "city": "Austin",
+      "state": "TX",
+      "aliases": [
+        "Austin",
+        "ATX"
+      ]
+    },
+    {
+      "city": "San Jose",
+      "state": "CA",
+      "aliases": [
+        "San Jose",
+        "San José",
+        "SJ"
+      ]
+    },
+    {
+      "city": "Denver",
+      "state": "CO",
+      "aliases": [
+        "Denver",
+        "DEN"
+      ]
+    },
+    {
+      "city": "Miami",
+      "state": "FL",
+      "aliases": [
+        "Miami",
+        "MIA"
+      ]
+    },
+    {
+      "city": "Atlanta",
+      "state": "GA",
+      "aliases": [
+        "Atlanta",
+        "ATL"
+      ]
+    },
+    {
+      "city": "Charlotte",
+      "state": "NC",
+      "aliases": [
+        "Charlotte",
+        "CLT"
+      ]
+    },
+    {
+      "city": "Jacksonville",
+      "state": "FL",
+      "aliases": [
+        "Jacksonville",
+        "Jax",
+        "JAX"
+      ]
+    },
+    {
+      "city": "Indianapolis",
+      "state": "IN",
+      "aliases": [
+        "Indianapolis",
+        "Indy"
+      ]
+    },
+    {
+      "city": "Columbus",
+      "state": "OH",
+      "aliases": [
+        "Columbus",
+        "Cbus"
+      ]
+    },
+    {
+      "city": "Fort Worth",
+      "state": "TX",
+      "aliases": [
+        "Fort Worth",
+        "Ft. Worth"
+      ]
+    },
+    {
+      "city": "Nashville",
+      "state": "TN",
+      "aliases": [
+        "Nashville",
+        "Music City"
+      ]
+    },
+    {
+      "city": "Portland",
+      "state": "OR",
+      "aliases": [
+        "Portland",
+        "PDX"
+      ]
+    },
+    {
+      "city": "Las Vegas",
+      "state": "NV",
+      "aliases": [
+        "Las Vegas",
+        "Vegas"
+      ]
+    },
+    {
+      "city": "Sacramento",
+      "state": "CA",
+      "aliases": [
+        "Sacramento",
+        "Sac"
+      ]
+    },
+    {
+      "city": "Baltimore",
+      "state": "MD",
+      "aliases": [
+        "Baltimore",
+        "B'more"
+      ]
+    },
+    {
+      "city": "Detroit",
+      "state": "MI",
+      "aliases": [
+        "Detroit",
+        "Motor City"
+      ]
+    },
+    {
+      "city": "Minneapolis",
+      "state": "MN",
+      "aliases": [
+        "Minneapolis",
+        "MPLS"
+      ]
+    },
+    {
+      "city": "Oklahoma City",
+      "state": "OK",
+      "aliases": [
+        "Oklahoma City",
+        "OKC"
+      ]
+    },
+    {
+      "city": "Louisville",
+      "state": "KY",
+      "aliases": [
+        "Louisville",
+        "Lou"
+      ]
+    },
+    {
+      "city": "Kansas City",
+      "state": "MO",
+      "aliases": [
+        "Kansas City",
+        "KC",
+        "KCMO"
+      ]
+    },
+    {
+      "city": "Tampa",
+      "state": "FL",
+      "aliases": [
+        "Tampa",
+        "TPA"
+      ]
+    },
+    {
+      "city": "Raleigh",
+      "state": "NC",
+      "aliases": [
+        "Raleigh",
+        "RDU"
+      ]
+    },
+    {
+      "city": "New Orleans",
+      "state": "LA",
+      "aliases": [
+        "New Orleans",
+        "NOLA"
+      ]
+    },
+    {
+      "city": "Milwaukee",
+      "state": "WI",
+      "aliases": [
+        "Milwaukee",
+        "MKE"
+      ]
+    },
+    {
+      "city": "Memphis",
+      "state": "TN",
+      "aliases": [
+        "Memphis",
+        "MEM"
+      ]
+    },
+    {
+      "city": "Tucson",
+      "state": "AZ",
+      "aliases": [
+        "Tucson",
+        "TUS"
+      ]
+    },
+    {
+      "city": "Albuquerque",
+      "state": "NM",
+      "aliases": [
+        "Albuquerque",
+        "ABQ"
+      ]
+    },
+    {
+      "city": "Oakland",
+      "state": "CA",
+      "aliases": [
+        "Oakland",
+        "OAK"
+      ]
+    },
+    {
+      "city": "Cleveland",
+      "state": "OH",
+      "aliases": [
+        "Cleveland",
+        "CLE"
+      ]
+    },
+    {
+      "city": "Omaha",
+      "state": "NE",
+      "aliases": [
+        "Omaha",
+        "OMA"
+      ]
+    },
+    {
+      "city": "Cincinnati",
+      "state": "OH",
+      "aliases": [
+        "Cincinnati",
+        "Cincy"
+      ]
+    },
+    {
+      "city": "Orlando",
+      "state": "FL",
+      "aliases": [
+        "Orlando",
+        "ORL"
+      ]
+    },
+    {
+      "city": "Virginia Beach",
+      "state": "VA",
+      "aliases": [
+        "Virginia Beach",
+        "VB"
+      ]
+    },
+    {
+      "city": "Tulsa",
+      "state": "OK",
+      "aliases": [
+        "Tulsa",
+        "TUL"
+      ]
+    },
+    {
+      "city": "Pittsburgh",
+      "state": "PA",
+      "aliases": [
+        "Pittsburgh",
+        "PGH"
+      ]
+    },
+    {
+      "city": "St. Louis",
+      "state": "MO",
+      "aliases": [
+        "Saint Louis",
+        "St Louis",
+        "St. Louis",
+        "STL"
+      ]
+    },
+    {
+      "city": "Honolulu",
+      "state": "HI",
+      "aliases": [
+        "Honolulu",
+        "HNL"
+      ]
+    },
+    {
+      "city": "Fresno",
+      "state": "CA",
+      "aliases": [
+        "Fresno"
+      ]
+    }
+  ],
+  "france": [
+    {
+      "city": "Paris",
+      "aliases": [
+        "Paris",
+        "Paris 75"
+      ]
+    },
+    {
+      "city": "Marseille",
+      "aliases": [
+        "Marseille",
+        "Marseilles"
+      ]
+    },
+    {
+      "city": "Lyon",
+      "aliases": [
+        "Lyon",
+        "Lyons"
+      ]
+    },
+    {
+      "city": "Toulouse",
+      "aliases": [
+        "Toulouse"
+      ]
+    },
+    {
+      "city": "Nice",
+      "aliases": [
+        "Nice"
+      ]
+    },
+    {
+      "city": "Bordeaux",
+      "aliases": [
+        "Bordeaux"
+      ]
+    },
+    {
+      "city": "Montpellier",
+      "aliases": [
+        "Montpellier"
+      ]
+    },
+    {
+      "city": "Nantes",
+      "aliases": [
+        "Nantes"
+      ]
+    },
+    {
+      "city": "Strasbourg",
+      "aliases": [
+        "Strasbourg",
+        "Straßburg"
+      ]
+    },
+    {
+      "city": "Lille",
+      "aliases": [
+        "Lille"
+      ]
+    },
+    {
+      "city": "Rennes",
+      "aliases": [
+        "Rennes"
+      ]
+    },
+    {
+      "city": "Aix-en-Provence",
+      "aliases": [
+        "Aix-en-Provence",
+        "Aix"
+      ]
+    },
+    {
+      "city": "Grenoble",
+      "aliases": [
+        "Grenoble"
+      ]
+    },
+    {
+      "city": "Fort-de-France",
+      "aliases": [
+        "Fort de France"
+      ]
+    },
+    {
+      "city": "Boulogne-Billancourt",
+      "aliases": [
+        "Boulogne-Billancourt",
+        "Boulogne"
+      ]
+    },
+    {
+      "city": "Annecy",
+      "aliases": [
+        "Annecy"
+      ]
+    },
+    {
+      "city": "Villeurbanne",
+      "aliases": [
+        "Villeurbanne"
+      ]
+    },
+    {
+      "city": "Nîmes",
+      "aliases": [
+        "Nimes",
+        "Nîmes"
+      ]
+    },
+    {
+      "city": "Reims",
+      "aliases": [
+        "Reims",
+        "Rheims"
+      ]
+    },
+    {
+      "city": "Dijon",
+      "aliases": [
+        "Dijon"
+      ]
+    },
+    {
+      "city": "Saint-Étienne",
+      "aliases": [
+        "Saint-Etienne",
+        "St-Étienne",
+        "St Etienne"
+      ]
+    },
+    {
+      "city": "Toulon",
+      "aliases": [
+        "Toulon"
+      ]
+    },
+    {
+      "city": "Cannes",
+      "aliases": [
+        "Cannes"
+      ]
+    },
+    {
+      "city": "Angers",
+      "aliases": [
+        "Angers"
+      ]
+    },
+    {
+      "city": "Clermont-Ferrand",
+      "aliases": [
+        "Clermont-Ferrand",
+        "Clermont Ferrand"
+      ]
+    },
+    {
+      "city": "Rouen",
+      "aliases": [
+        "Rouen"
+      ]
+    },
+    {
+      "city": "Saint-Denis (Réunion)",
+      "aliases": [
+        "Saint-Denis",
+        "St-Denis",
+        "Saint Denis Réunion"
+      ],
+      "requires_context": "reunion"
+    },
+    {
+      "city": "Perpignan",
+      "aliases": [
+        "Perpignan"
+      ]
+    },
+    {
+      "city": "Tours",
+      "aliases": [
+        "Tours"
+      ]
+    },
+    {
+      "city": "Neuilly-sur-Seine",
+      "aliases": [
+        "Neuilly-sur-Seine",
+        "Neuilly"
+      ]
+    },
+    {
+      "city": "Antibes",
+      "aliases": [
+        "Antibes",
+        "Antibes Juan-les-Pins"
+      ]
+    },
+    {
+      "city": "Metz",
+      "aliases": [
+        "Metz"
+      ]
+    },
+    {
+      "city": "Caen",
+      "aliases": [
+        "Caen"
+      ]
+    },
+    {
+      "city": "Brest",
+      "aliases": [
+        "Brest",
+        "Brest France"
+      ]
+    },
+    {
+      "city": "Nancy",
+      "aliases": [
+        "Nancy"
+      ]
+    },
+    {
+      "city": "Saint-Paul (Réunion)",
+      "aliases": [
+        "Saint-Paul",
+        "St-Paul",
+        "Saint Paul Réunion"
+      ],
+      "requires_context": "reunion"
+    },
+    {
+      "city": "Le Mans",
+      "aliases": [
+        "Le Mans",
+        "Mans"
+      ]
+    },
+    {
+      "city": "Amiens",
+      "aliases": [
+        "Amiens"
+      ]
+    },
+    {
+      "city": "Le Havre",
+      "aliases": [
+        "Le Havre",
+        "Havre"
+      ]
+    },
+    {
+      "city": "Avignon",
+      "aliases": [
+        "Avignon"
+      ]
+    },
+    {
+      "city": "Limoges",
+      "aliases": [
+        "Limoges"
+      ]
+    },
+    {
+      "city": "Besançon",
+      "aliases": [
+        "Besancon",
+        "Besançon"
+      ]
+    },
+    {
+      "city": "Courbevoie",
+      "aliases": [
+        "Courbevoie"
+      ]
+    },
+    {
+      "city": "Orléans",
+      "aliases": [
+        "Orleans",
+        "Orléans"
+      ]
+    },
+    {
+      "city": "La Rochelle",
+      "aliases": [
+        "La Rochelle",
+        "Rochelle"
+      ]
+    },
+    {
+      "city": "Versailles",
+      "aliases": [
+        "Versailles"
+      ]
+    },
+    {
+      "city": "Asnières-sur-Seine",
+      "aliases": [
+        "Asnieres-sur-Seine",
+        "Asnières"
+      ]
+    },
+    {
+      "city": "Mulhouse",
+      "aliases": [
+        "Mulhouse",
+        "Mülhausen"
+      ]
+    },
+    {
+      "city": "Levallois-Perret",
+      "aliases": [
+        "Levallois-Perret",
+        "Levallois"
+      ]
+    },
+    {
+      "city": "Argenteuil",
+      "aliases": [
+        "Argenteuil"
+      ]
+    }
+  ],
+  "regional_aliases": [
+    "DFW",
+    "RDU"
+  ]
+}

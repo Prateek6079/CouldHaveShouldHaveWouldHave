@@ -1,0 +1,110 @@
+test_arguments (test_address.AddressTests.test_arguments) ... ok
+test_batch_schema_order_read_only_and_repeat (test_address.AddressTests.test_batch_schema_order_read_only_and_repeat) ... ok
+test_empty_unknown_and_india_routing (test_address.AddressTests.test_empty_unknown_and_india_routing) ... ok
+test_french_rules_and_leading_zero (test_address.AddressTests.test_french_rules_and_leading_zero) ... ok
+test_french_unknown_text_retained (test_address.AddressTests.test_french_unknown_text_retained) ... ok
+test_stream_input_unchanged (test_address.AddressTests.test_stream_input_unchanged) ... ok
+test_us_ambiguous_parse_falls_back (test_address.AddressTests.test_us_ambiguous_parse_falls_back) ... ok
+test_us_street_and_missing_postcode (test_address.AddressTests.test_us_street_and_missing_postcode) ... ok
+test_us_unassigned_and_normalization (test_address.AddressTests.test_us_unassigned_and_normalization) ... ok
+test_us_unit_zip_and_po_box (test_address.AddressTests.test_us_unit_zip_and_po_box) ... ok
+test_french_abbreviations_and_names (test_address_normalization.AddressNormalizationTests.test_french_abbreviations_and_names) ... ok
+test_us_equivalent_types_and_unknown (test_address_normalization.AddressNormalizationTests.test_us_equivalent_types_and_unknown) ... ok
+test_us_guessed_roles_are_used_without_reinterpreting_name (test_address_normalization.AddressNormalizationTests.test_us_guessed_roles_are_used_without_reinterpreting_name) ... ok
+test_whole_text_status_and_unparsed_text_preserved (test_address_normalization.AddressNormalizationTests.test_whole_text_status_and_unparsed_text_preserved) ... ok
+test_conflicts_short_aliases_and_street_names (test_cities.CityTests.test_conflicts_short_aliases_and_street_names) ... ok
+test_country_scope_and_existing_unknown_city (test_cities.CityTests.test_country_scope_and_existing_unknown_city) ... ok
+test_french_aliases_and_missing_postcode (test_cities.CityTests.test_french_aliases_and_missing_postcode) ... ok
+test_recover_reordered_city_without_changing_evidence (test_cities.CityTests.test_recover_reordered_city_without_changing_evidence) ... ok
+test_reunion_requires_context (test_cities.CityTests.test_reunion_requires_context) ... ok
+test_supplied_aliases (test_cities.CityTests.test_supplied_aliases) ... ok
+test_absolute_path_without_side_effects (test_config.ConfigTests.test_absolute_path_without_side_effects) ... ok
+test_external_config_uses_project_root (test_config.ConfigTests.test_external_config_uses_project_root) ... ok
+test_invalid_paths (test_config.ConfigTests.test_invalid_paths) ... ok
+test_invalid_seeds (test_config.ConfigTests.test_invalid_seeds) ... ok
+test_missing_and_malformed_files (test_config.ConfigTests.test_missing_and_malformed_files) ... ok
+test_output_overlap (test_config.ConfigTests.test_output_overlap) ... ok
+test_schema (test_config.ConfigTests.test_schema) ... ok
+test_working_directory_independence (test_config.ConfigTests.test_working_directory_independence) ... ok
+test_bad_ground_truth (test_data_io.DataIOTests.test_bad_ground_truth) ... ok
+test_bad_source_files (test_data_io.DataIOTests.test_bad_source_files) ... ok
+test_cross_batch_matches (test_data_io.DataIOTests.test_cross_batch_matches) ... ok
+test_empty_text_and_header_only (test_data_io.DataIOTests.test_empty_text_and_header_only) ... ok
+test_ground_truth_lists (test_data_io.DataIOTests.test_ground_truth_lists) ... ok
+test_invalid_arguments (test_data_io.DataIOTests.test_invalid_arguments) ... ok
+test_invalid_batch_sizes (test_data_io.DataIOTests.test_invalid_batch_sizes) ... ok
+test_missing_and_invalid_encoding (test_data_io.DataIOTests.test_missing_and_invalid_encoding) ... ok
+test_polars_batches_and_repeatable_dataset (test_data_io.DataIOTests.test_polars_batches_and_repeatable_dataset) ... ok
+test_preserves_text_and_extra_fields (test_data_io.DataIOTests.test_preserves_text_and_extra_fields) ... ok
+test_read_only (test_data_io.DataIOTests.test_read_only) ... ok
+test_test_split_needs_no_labels (test_data_io.DataIOTests.test_test_split_needs_no_labels) ... ok
+test_train_integrity (test_data_io.DataIOTests.test_train_integrity) ... ok
+test_administrative_middle_marker_does_not_drop_numbers (test_india.IndiaTests.test_administrative_middle_marker_does_not_drop_numbers) ... ok
+test_attached_and_spaced_pins_need_location_context (test_india.IndiaTests.test_attached_and_spaced_pins_need_location_context) ... ok
+test_bare_numbers_and_alphanumeric_ids (test_india.IndiaTests.test_bare_numbers_and_alphanumeric_ids) ... ok
+test_building_and_locality_delimiter_free (test_india.IndiaTests.test_building_and_locality_delimiter_free) ... ok
+test_city_and_state_names_inside_roads (test_india.IndiaTests.test_city_and_state_names_inside_roads) ... ok
+test_city_lookup_without_delivery_or_state (test_india.IndiaTests.test_city_lookup_without_delivery_or_state) ... ok
+test_city_state_overlap_and_repeated_name (test_india.IndiaTests.test_city_state_overlap_and_repeated_name) ... ok
+test_city_suffix_without_commas (test_india.IndiaTests.test_city_suffix_without_commas) ... ok
+test_conflicting_units_are_retained (test_india.IndiaTests.test_conflicting_units_are_retained) ... ok
+test_contextual_roman_normalization (test_india.IndiaTests.test_contextual_roman_normalization) ... ok
+test_empty_unknown_and_partial_contract (test_india.IndiaTests.test_empty_unknown_and_partial_contract) ... ok
+test_floor_variants (test_india.IndiaTests.test_floor_variants) ... ok
+test_leading_numbered_locality_is_not_a_house (test_india.IndiaTests.test_leading_numbered_locality_is_not_a_house) ... ok
+test_locality_markers_at_either_end (test_india.IndiaTests.test_locality_markers_at_either_end) ... ok
+test_multiple_localities_and_number_retention (test_india.IndiaTests.test_multiple_localities_and_number_retention) ... ok
+test_number_marker_and_numbered_road (test_india.IndiaTests.test_number_marker_and_numbered_road) ... ok
+test_numbered_streets_are_not_houses (test_india.IndiaTests.test_numbered_streets_are_not_houses) ... ok
+test_numerics_never_disappear (test_india.IndiaTests.test_numerics_never_disappear) ... ok
+test_pins_and_invalid_pin (test_india.IndiaTests.test_pins_and_invalid_pin) ... ok
+test_production_normalization_and_country_scope (test_india.IndiaTests.test_production_normalization_and_country_scope) ... ok
+test_reported_leading_number_and_locality (test_india.IndiaTests.test_reported_leading_number_and_locality) ... ok
+test_reported_plot_and_unmarked_locality (test_india.IndiaTests.test_reported_plot_and_unmarked_locality) ... ok
+test_reported_roman_floor_and_slash_identifier (test_india.IndiaTests.test_reported_roman_floor_and_slash_identifier) ... ok
+test_reversed_order_is_partial_and_keeps_fields (test_india.IndiaTests.test_reversed_order_is_partial_and_keeps_fields) ... ok
+test_unit_labels_are_numeric_or_identifier_not_names (test_india.IndiaTests.test_unit_labels_are_numeric_or_identifier_not_names) ... ok
+test_unknown_city_inference_respects_order (test_india.IndiaTests.test_unknown_city_inference_respects_order) ... ok
+test_unparsed_component_is_not_relabelled_as_locality (test_india.IndiaTests.test_unparsed_component_is_not_relabelled_as_locality) ... ok
+test_address_structure_and_digits (test_preprocessing.PreprocessingTests.test_address_structure_and_digits) ... ok
+test_batch_stream_and_read_only_file (test_preprocessing.PreprocessingTests.test_batch_stream_and_read_only_file) ... ok
+test_case_spacing_accents_and_compatibility (test_preprocessing.PreprocessingTests.test_case_spacing_accents_and_compatibility) ... ok
+test_country_legal_forms (test_preprocessing.PreprocessingTests.test_country_legal_forms) ... ok
+test_empty_null_and_empty_frame (test_preprocessing.PreprocessingTests.test_empty_null_and_empty_frame) ... ok
+test_input_unchanged_no_extra_columns_and_idempotence (test_preprocessing.PreprocessingTests.test_input_unchanged_no_extra_columns_and_idempotence) ... ok
+test_invalid_schema (test_preprocessing.PreprocessingTests.test_invalid_schema) ... ok
+test_legal_boundaries (test_preprocessing.PreprocessingTests.test_legal_boundaries) ... ok
+test_modern_script_characters (test_preprocessing.PreprocessingTests.test_modern_script_characters) ... ok
+test_nine_indic_scripts_and_mixed_text (test_preprocessing.PreprocessingTests.test_nine_indic_scripts_and_mixed_text) ... ok
+test_transliterated_legal_forms (test_preprocessing.PreprocessingTests.test_transliterated_legal_forms) ... ok
+test_unsupported_script_fails (test_preprocessing.PreprocessingTests.test_unsupported_script_fails) ... ok
+test_attached_complete_examples (test_us_grammar.USGrammarTests.test_attached_complete_examples) ... ok
+test_batch_preserves_input_and_schema (test_us_grammar.USGrammarTests.test_batch_preserves_input_and_schema) ... ok
+test_buildings_and_localities (test_us_grammar.USGrammarTests.test_buildings_and_localities) ... ok
+test_conflicting_duplicate_components_keep_evidence (test_us_grammar.USGrammarTests.test_conflicting_duplicate_components_keep_evidence) ... ok
+test_floors (test_us_grammar.USGrammarTests.test_floors) ... FAIL
+test_grammar_rejects_bad_shapes (test_us_grammar.USGrammarTests.test_grammar_rejects_bad_shapes) ... ok
+test_known_city_after_building_without_comma (test_us_grammar.USGrammarTests.test_known_city_after_building_without_comma) ... ok
+test_landmarks (test_us_grammar.USGrammarTests.test_landmarks) ... ok
+test_name_bound_and_no_model_fallback (test_us_grammar.USGrammarTests.test_name_bound_and_no_model_fallback) ... ok
+test_order_and_building_composition (test_us_grammar.USGrammarTests.test_order_and_building_composition) ... ok
+test_partial_example_retains_unknown (test_us_grammar.USGrammarTests.test_partial_example_retains_unknown) ... ok
+test_real_address_regressions (test_us_grammar.USGrammarTests.test_real_address_regressions) ... ok
+test_states_and_postcode (test_us_grammar.USGrammarTests.test_states_and_postcode) ... ok
+test_streets_and_numbers (test_us_grammar.USGrammarTests.test_streets_and_numbers) ... ok
+test_unit_identifiers (test_us_grammar.USGrammarTests.test_unit_identifiers) ... ok
+
+======================================================================
+FAIL: test_floors (test_us_grammar.USGrammarTests.test_floors)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sherencrypted/projects/simple_ml_pipeline/code/business_entity_resolution/tests/test_us_grammar.py", line 46, in test_floors
+    self.check(text,floor=expected,unit=None,unparsed_text=None)
+  File "/home/sherencrypted/projects/simple_ml_pipeline/code/business_entity_resolution/tests/test_us_grammar.py", line 17, in check
+    self.assertEqual(getattr(result,field), value, (text,field,result))
+AssertionError: None != 'floor 10' : ('10th Fl.', 'floor', AddressResult(house_number=None, street=None, unit=None, floor=None, building=None, locality=None, city=None, state=None, postal_code=None, po_box=None, landmark_direction=None, unparsed_text='10th Fl.', parser='us_regex_lark', parse_status='fallback', parse_reason='unmatched_text'))
+
+----------------------------------------------------------------------
+Ran 95 tests in 0.377s
+
+FAILED (failures=1)

@@ -1,0 +1,3076 @@
+{
+  "seed": 42,
+  "per_group": 3000,
+  "groups": {
+    "train_S1_US": {
+      "counts": {
+        "rows": 3000,
+        "nonempty": 3000,
+        "unit_floor_building_marker": 450,
+        "single_postcode_shaped_token": 314,
+        "postcode_shaped_token_not_in_postal_field": 313,
+        "missing_tokens_components_only": 356,
+        "numeric_address_without_house_or_po_box": 62,
+        "missing_numbers_components_only": 48,
+        "marker_without_unit_floor_building_field": 21,
+        "missing_tokens_with_remainder": 9,
+        "whole_address_changed_by_parser": 0
+      },
+      "statuses": {
+        "partial": 508,
+        "parsed": 2480,
+        "fallback": 12
+      },
+      "component_nonempty": {
+        "house_number": 2937,
+        "street": 2948,
+        "unit": 450,
+        "building": 35,
+        "city": 2710,
+        "state": 2621,
+        "postal_code": 1,
+        "po_box": 1
+      },
+      "examples": {
+        "missing_tokens_components_only": [
+          {
+            "entity_id": "S1-963560979",
+            "address": "crossville, 154 jacobs crossing, tn, unit 231",
+            "missing": {
+              "crossville": 1
+            },
+            "fields": {
+              "house_number": "154",
+              "street": "jacobs crossing tn",
+              "unit": "unit 231"
+            },
+            "unparsed_text": "crossville",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S1-550835161",
+            "address": "oyster bay, ny, 236 peachtree drive",
+            "missing": {
+              "oyster": 1,
+              "bay": 1,
+              "ny": 1
+            },
+            "fields": {
+              "house_number": "236",
+              "street": "peachtree dr"
+            },
+            "unparsed_text": "oyster bay, ny",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S1-642697650",
+            "address": "avondale, 10926 bermuda drive, az",
+            "missing": {
+              "avondale": 1
+            },
+            "fields": {
+              "house_number": "10926",
+              "street": "bermuda dr",
+              "state": "az"
+            },
+            "unparsed_text": "avondale",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S1-525016389",
+            "address": "houston, 134 3167, al",
+            "missing": {
+              "houston": 1,
+              "134": 1,
+              "3167": 1
+            },
+            "fields": {
+              "state": "al"
+            },
+            "unparsed_text": "houston 134 3167",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S1-292386498",
+            "address": "pineville, 47 spruce avenue, wv",
+            "missing": {
+              "pineville": 1
+            },
+            "fields": {
+              "house_number": "47",
+              "street": "spruce ave",
+              "state": "wv"
+            },
+            "unparsed_text": "pineville",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S1-498508886",
+            "address": "ravenswood, wv, 1169 murraysville road",
+            "missing": {
+              "ravenswood": 1,
+              "wv": 1
+            },
+            "fields": {
+              "house_number": "1169",
+              "street": "murraysville rd"
+            },
+            "unparsed_text": "ravenswood, wv",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S1-461444739",
+            "address": "salina, 2945 florida avenue, ks",
+            "missing": {
+              "salina": 1
+            },
+            "fields": {
+              "house_number": "2945",
+              "street": "florida ave",
+              "state": "ks"
+            },
+            "unparsed_text": "salina",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S1-938856456",
+            "address": "troy, nc, 213 faduma street",
+            "missing": {
+              "troy": 1,
+              "nc": 1
+            },
+            "fields": {
+              "house_number": "213",
+              "street": "faduma st"
+            },
+            "unparsed_text": "troy, nc",
+            "status": "partial"
+          }
+        ],
+        "missing_numbers_components_only": [
+          {
+            "entity_id": "S1-525016389",
+            "address": "houston, 134 3167, al",
+            "missing": {
+              "134": 1,
+              "3167": 1
+            },
+            "fields": {
+              "state": "al"
+            },
+            "unparsed_text": "houston 134 3167",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S1-973063321",
+            "address": "1506 drexel street, bldg 700, city of wilson, nc",
+            "missing": {
+              "700": 1
+            },
+            "fields": {
+              "house_number": "1506",
+              "street": "drexel st",
+              "city": "city of wilson",
+              "state": "nc"
+            },
+            "unparsed_text": "bldg 700",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S1-544641883",
+            "address": "clarkstown, 2 mein drive, ny",
+            "missing": {
+              "2": 1
+            },
+            "fields": {
+              "city": "mein drive",
+              "state": "ny"
+            },
+            "unparsed_text": "clarkstown 2",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S1-370684286",
+            "address": "frederick county, va, 1346 cedar creek gr",
+            "missing": {
+              "1346": 1
+            },
+            "fields": {
+              "city": "cedar creek",
+              "state": "gr"
+            },
+            "unparsed_text": "frederick county, va 1346",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S1-714453201",
+            "address": "ut, hurricane city, 1062 50",
+            "missing": {
+              "50": 1
+            },
+            "fields": {
+              "city": "hurricane city",
+              "state": "1062"
+            },
+            "unparsed_text": "ut 50",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S1-427162396",
+            "address": "9139 stockton boulevard, ca, elk grove",
+            "missing": {
+              "9139": 1
+            },
+            "fields": {},
+            "unparsed_text": "9139 stockton boulevard, ca, elk grove",
+            "status": "fallback"
+          },
+          {
+            "entity_id": "S1-889769623",
+            "address": "23201 holycross epps road, bldg 13259, marysville, oh",
+            "missing": {
+              "13259": 1
+            },
+            "fields": {
+              "house_number": "23201",
+              "street": "holycross epps rd",
+              "city": "marysville",
+              "state": "oh"
+            },
+            "unparsed_text": "bldg 13259",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S1-669316507",
+            "address": "bleiblerville, 17576 williams creek, tx",
+            "missing": {
+              "17576": 1
+            },
+            "fields": {
+              "city": "williams creek",
+              "state": "tx"
+            },
+            "unparsed_text": "bleiblerville 17576",
+            "status": "partial"
+          }
+        ],
+        "missing_tokens_with_remainder": [
+          {
+            "entity_id": "S1-968075045",
+            "address": "49 stoneleigh towers street, saint louis, mo",
+            "missing": {
+              "saint": 1
+            },
+            "fields": {
+              "house_number": "49",
+              "street": "stoneleigh towers st",
+              "city": "st. louis",
+              "state": "mo"
+            },
+            "unparsed_text": "",
+            "status": "parsed"
+          },
+          {
+            "entity_id": "S1-705392824",
+            "address": "2138 edmund avenue, fl 0, saint louis, mo",
+            "missing": {
+              "saint": 1
+            },
+            "fields": {
+              "house_number": "2138",
+              "street": "edmund ave",
+              "unit": "fl 0",
+              "city": "st. louis",
+              "state": "mo"
+            },
+            "unparsed_text": "",
+            "status": "parsed"
+          },
+          {
+            "entity_id": "S1-378108970",
+            "address": "11549 larimore road, fl 0, saint louis, mo",
+            "missing": {
+              "saint": 1
+            },
+            "fields": {
+              "house_number": "11549",
+              "street": "larimore rd",
+              "unit": "fl 0",
+              "city": "st. louis",
+              "state": "mo"
+            },
+            "unparsed_text": "",
+            "status": "parsed"
+          },
+          {
+            "entity_id": "S1-718400465",
+            "address": "10250 mackenzie road, unit apt 202, saint louis, mo",
+            "missing": {
+              "saint": 1
+            },
+            "fields": {
+              "house_number": "10250",
+              "street": "mackenzie rd",
+              "unit": "unit apt 202",
+              "city": "st. louis",
+              "state": "mo"
+            },
+            "unparsed_text": "",
+            "status": "parsed"
+          },
+          {
+            "entity_id": "S1-405074013",
+            "address": "1119 laredo avenue, fl 0, saint louis, mo",
+            "missing": {
+              "saint": 1
+            },
+            "fields": {
+              "house_number": "1119",
+              "street": "laredo ave",
+              "unit": "fl 0",
+              "city": "st. louis",
+              "state": "mo"
+            },
+            "unparsed_text": "",
+            "status": "parsed"
+          },
+          {
+            "entity_id": "S1-122931137",
+            "address": "7200 marlton lane, fl 0, saint louis, mo",
+            "missing": {
+              "saint": 1
+            },
+            "fields": {
+              "house_number": "7200",
+              "street": "marlton ln",
+              "unit": "fl 0",
+              "city": "st. louis",
+              "state": "mo"
+            },
+            "unparsed_text": "",
+            "status": "parsed"
+          },
+          {
+            "entity_id": "S1-698981869",
+            "address": "10 cricket lane, fl 0, saint louis, mo",
+            "missing": {
+              "saint": 1
+            },
+            "fields": {
+              "house_number": "10",
+              "street": "cricket ln",
+              "unit": "fl 0",
+              "city": "st. louis",
+              "state": "mo"
+            },
+            "unparsed_text": "",
+            "status": "parsed"
+          },
+          {
+            "entity_id": "S1-728905256",
+            "address": "7731 weaver avenue, fl 0, saint louis, mo",
+            "missing": {
+              "saint": 1
+            },
+            "fields": {
+              "house_number": "7731",
+              "street": "weaver ave",
+              "unit": "fl 0",
+              "city": "st. louis",
+              "state": "mo"
+            },
+            "unparsed_text": "",
+            "status": "parsed"
+          }
+        ]
+      }
+    },
+    "train_S2_US": {
+      "counts": {
+        "rows": 3000,
+        "nonempty": 2900,
+        "missing_tokens_components_only": 397,
+        "missing_tokens_with_remainder": 8,
+        "missing_numbers_components_only": 85,
+        "numeric_address_without_house_or_po_box": 78,
+        "single_postcode_shaped_token": 256,
+        "postcode_shaped_token_not_in_postal_field": 255,
+        "unit_floor_building_marker": 135,
+        "marker_without_unit_floor_building_field": 126,
+        "empty": 100,
+        "whole_address_changed_by_parser": 0
+      },
+      "statuses": {
+        "parsed": 2171,
+        "partial": 715,
+        "fallback": 14,
+        "empty": 100
+      },
+      "component_nonempty": {
+        "house_number": 2660,
+        "street": 2789,
+        "city": 2652,
+        "state": 2538,
+        "building": 36,
+        "po_box": 48,
+        "unit": 32,
+        "postal_code": 1
+      },
+      "examples": {
+        "missing_tokens_components_only": [
+          {
+            "entity_id": "S2-334502574",
+            "address": "9330 melanie dr, saint louis, mo",
+            "missing": {
+              "saint": 1
+            },
+            "fields": {
+              "house_number": "9330",
+              "street": "melanie dr",
+              "city": "st. louis",
+              "state": "mo"
+            },
+            "unparsed_text": "",
+            "status": "parsed"
+          },
+          {
+            "entity_id": "S2-899654276",
+            "address": "tx, 1002 bc zora drive, temple",
+            "missing": {
+              "tx": 1
+            },
+            "fields": {
+              "house_number": "1002",
+              "street": "bc zora dr",
+              "city": "temple"
+            },
+            "unparsed_text": "tx",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S2-204424250",
+            "address": "wi, monoe, 2229-c 15th street",
+            "missing": {
+              "wi": 1,
+              "monoe": 1
+            },
+            "fields": {
+              "house_number": "2229-c",
+              "street": "15th st"
+            },
+            "unparsed_text": "wi, monoe",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S2-738146566",
+            "address": "oh, waverly, 613 market st",
+            "missing": {
+              "oh": 1,
+              "waverly": 1
+            },
+            "fields": {
+              "house_number": "613",
+              "street": "market st"
+            },
+            "unparsed_text": "oh, waverly",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S2-124661156",
+            "address": "dublin, 7978 bristol bane court, oh",
+            "missing": {
+              "dublin": 1
+            },
+            "fields": {
+              "house_number": "7978",
+              "street": "bristol bane ct",
+              "state": "oh"
+            },
+            "unparsed_text": "dublin",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S2-402175583",
+            "address": "83-85 lafayette 2473, taylor, ar",
+            "missing": {
+              "83": 1,
+              "85": 1,
+              "lafayette": 1,
+              "2473": 1,
+              "taylor": 1,
+              "ar": 1
+            },
+            "fields": {},
+            "unparsed_text": "83-85 lafayette 2473, taylor, ar",
+            "status": "fallback"
+          },
+          {
+            "entity_id": "S2-390730800",
+            "address": "800 wydown boulevard, saint louis, mo",
+            "missing": {
+              "saint": 1
+            },
+            "fields": {
+              "house_number": "800",
+              "street": "wydown blvd",
+              "city": "st. louis",
+              "state": "mo"
+            },
+            "unparsed_text": "",
+            "status": "parsed"
+          },
+          {
+            "entity_id": "S2-75397922",
+            "address": "michigan avenue, chicago, il",
+            "missing": {
+              "michigan": 1,
+              "ave": 1
+            },
+            "fields": {
+              "city": "chicago",
+              "state": "il"
+            },
+            "unparsed_text": "michigan avenue",
+            "status": "partial"
+          }
+        ],
+        "missing_tokens_with_remainder": [
+          {
+            "entity_id": "S2-334502574",
+            "address": "9330 melanie dr, saint louis, mo",
+            "missing": {
+              "saint": 1
+            },
+            "fields": {
+              "house_number": "9330",
+              "street": "melanie dr",
+              "city": "st. louis",
+              "state": "mo"
+            },
+            "unparsed_text": "",
+            "status": "parsed"
+          },
+          {
+            "entity_id": "S2-390730800",
+            "address": "800 wydown boulevard, saint louis, mo",
+            "missing": {
+              "saint": 1
+            },
+            "fields": {
+              "house_number": "800",
+              "street": "wydown blvd",
+              "city": "st. louis",
+              "state": "mo"
+            },
+            "unparsed_text": "",
+            "status": "parsed"
+          },
+          {
+            "entity_id": "S2-737660968",
+            "address": "1 st alfred rd, saint louis, mo",
+            "missing": {
+              "saint": 1
+            },
+            "fields": {
+              "house_number": "1",
+              "street": "st alfred rd",
+              "city": "st. louis",
+              "state": "mo"
+            },
+            "unparsed_text": "",
+            "status": "parsed"
+          },
+          {
+            "entity_id": "S2-932877134",
+            "address": "7708 kelly lynn ln, ft worth, tx",
+            "missing": {
+              "ft": 1
+            },
+            "fields": {
+              "house_number": "7708",
+              "street": "kelly lynn ln",
+              "city": "fort worth",
+              "state": "tx"
+            },
+            "unparsed_text": "",
+            "status": "parsed"
+          },
+          {
+            "entity_id": "S2-54419741",
+            "address": "82 fortune ln, saint louis, mo",
+            "missing": {
+              "saint": 1
+            },
+            "fields": {
+              "house_number": "82",
+              "street": "fortune ln",
+              "city": "st. louis",
+              "state": "mo"
+            },
+            "unparsed_text": "",
+            "status": "parsed"
+          },
+          {
+            "entity_id": "S2-857005609",
+            "address": "5659 bogn dr, ft. worth, tx",
+            "missing": {
+              "ft": 1
+            },
+            "fields": {
+              "house_number": "5659",
+              "street": "bogn dr",
+              "city": "fort worth",
+              "state": "tx"
+            },
+            "unparsed_text": "",
+            "status": "parsed"
+          },
+          {
+            "entity_id": "S2-990613048",
+            "address": "3640 anita ln, saint louis, mo",
+            "missing": {
+              "saint": 1
+            },
+            "fields": {
+              "house_number": "3640",
+              "street": "anita ln",
+              "city": "st. louis",
+              "state": "mo"
+            },
+            "unparsed_text": "",
+            "status": "parsed"
+          },
+          {
+            "entity_id": "S2-216230336",
+            "address": "0956 juniper street, atl, ga",
+            "missing": {
+              "atl": 1
+            },
+            "fields": {
+              "house_number": "0956",
+              "street": "juniper st",
+              "city": "atlanta",
+              "state": "ga"
+            },
+            "unparsed_text": "",
+            "status": "parsed"
+          }
+        ],
+        "missing_numbers_components_only": [
+          {
+            "entity_id": "S2-402175583",
+            "address": "83-85 lafayette 2473, taylor, ar",
+            "missing": {
+              "83-85": 1,
+              "2473": 1
+            },
+            "fields": {},
+            "unparsed_text": "83-85 lafayette 2473, taylor, ar",
+            "status": "fallback"
+          },
+          {
+            "entity_id": "S2-277362399",
+            "address": "chanute, 1519 highland avenue, ks",
+            "missing": {
+              "1519": 1
+            },
+            "fields": {
+              "city": "highland avenue",
+              "state": "ks"
+            },
+            "unparsed_text": "chanute 1519",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S2-54987718",
+            "address": "2309 buckingham dr, pmb 1886, huntsville, al",
+            "missing": {
+              "1886": 1
+            },
+            "fields": {
+              "house_number": "2309",
+              "street": "buckingham dr",
+              "city": "huntsville",
+              "state": "al"
+            },
+            "unparsed_text": "pmb 1886",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S2-701439380",
+            "address": "9th avenue, shenandoah, ia",
+            "missing": {
+              "9": 1
+            },
+            "fields": {
+              "city": "shenandoah",
+              "state": "ia"
+            },
+            "unparsed_text": "9th avenue",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S2-328071771",
+            "address": "555-b uptown boulevard, pmb 4528, town of brookfield, wi",
+            "missing": {
+              "4528": 1
+            },
+            "fields": {
+              "house_number": "555-b",
+              "street": "uptown blvd",
+              "city": "town of brookfield",
+              "state": "wi"
+            },
+            "unparsed_text": "pmb 4528",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S2-496648696",
+            "address": "299 main st, pmb 3504, norway, me",
+            "missing": {
+              "3504": 1
+            },
+            "fields": {
+              "house_number": "299",
+              "street": "main st",
+              "city": "norway",
+              "state": "me"
+            },
+            "unparsed_text": "pmb 3504",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S2-54840290",
+            "address": "711 ash st, pmb 2613, fairbury, il",
+            "missing": {
+              "2613": 1
+            },
+            "fields": {
+              "house_number": "711",
+              "street": "ash st",
+              "city": "fairbury",
+              "state": "il"
+            },
+            "unparsed_text": "pmb 2613",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S2-866078356",
+            "address": "warrensville, nc, 5061 88",
+            "missing": {
+              "88": 1
+            },
+            "fields": {
+              "city": "warrensville",
+              "state": "nc, 5061"
+            },
+            "unparsed_text": "88",
+            "status": "partial"
+          }
+        ]
+      }
+    },
+    "train_S3_US": {
+      "counts": {
+        "rows": 3000,
+        "nonempty": 2896,
+        "numeric_address_without_house_or_po_box": 145,
+        "unit_floor_building_marker": 499,
+        "missing_tokens_components_only": 500,
+        "empty": 104,
+        "missing_numbers_components_only": 157,
+        "single_postcode_shaped_token": 284,
+        "postcode_shaped_token_not_in_postal_field": 281,
+        "marker_without_unit_floor_building_field": 216,
+        "whole_address_changed_by_parser": 0
+      },
+      "statuses": {
+        "partial": 717,
+        "parsed": 2094,
+        "empty": 104,
+        "fallback": 85
+      },
+      "component_nonempty": {
+        "unit": 295,
+        "building": 50,
+        "city": 2672,
+        "state": 2440,
+        "house_number": 2589,
+        "street": 2718,
+        "po_box": 50,
+        "floor": 1,
+        "postal_code": 3
+      },
+      "examples": {
+        "missing_tokens_components_only": [
+          {
+            "entity_id": "S3-459431318",
+            "address": "texas, 1215 glen hollow dr, humble",
+            "missing": {
+              "texas": 1
+            },
+            "fields": {
+              "house_number": "1215",
+              "street": "glen hollow dr",
+              "city": "humble"
+            },
+            "unparsed_text": "texas",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S3-592478156",
+            "address": "1602 covington st, pmb 3816, wihcita falls city, texas",
+            "missing": {
+              "pmb": 1,
+              "3816": 1
+            },
+            "fields": {
+              "house_number": "1602",
+              "street": "covington st",
+              "city": "wihcita falls city",
+              "state": "texas"
+            },
+            "unparsed_text": "pmb 3816",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S3-114935340",
+            "address": "dubuque dr, summit, iowa",
+            "missing": {
+              "dubuque": 1,
+              "dr": 1,
+              "summit": 1
+            },
+            "fields": {
+              "city": "iowa"
+            },
+            "unparsed_text": "dubuque dr, summit",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S3-68804530",
+            "address": "maryland, 8515 wood staff way, columbia",
+            "missing": {
+              "maryland": 1
+            },
+            "fields": {
+              "house_number": "8515",
+              "street": "wood staff way",
+              "city": "columbia"
+            },
+            "unparsed_text": "maryland",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S3-798182922",
+            "address": "deer park, new york, 70 franklin ave",
+            "missing": {
+              "deer": 1,
+              "park": 1
+            },
+            "fields": {
+              "house_number": "70",
+              "street": "franklin ave",
+              "city": "new york city"
+            },
+            "unparsed_text": "deer park, new york",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S3-425690136",
+            "address": "virginia, roanoke, 2502 rutrough rd",
+            "missing": {
+              "virginia": 1,
+              "roanoke": 1
+            },
+            "fields": {
+              "house_number": "2502",
+              "street": "rutrough rd"
+            },
+            "unparsed_text": "virginia, roanoke",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S3-60555627",
+            "address": "indiana, 005375 62nd st, unit apt 242, indianapolis toownship",
+            "missing": {
+              "indiana": 1
+            },
+            "fields": {
+              "house_number": "005375",
+              "street": "62nd st",
+              "unit": "unit apt 242",
+              "city": "indianapolis",
+              "state": "toownship"
+            },
+            "unparsed_text": "indiana",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S3-694862657",
+            "address": "irondale, alabama, 6242 ransom rd",
+            "missing": {
+              "irondale": 1,
+              "alabama": 1
+            },
+            "fields": {
+              "house_number": "6242",
+              "street": "ransom rd"
+            },
+            "unparsed_text": "irondale, alabama",
+            "status": "partial"
+          }
+        ],
+        "missing_numbers_components_only": [
+          {
+            "entity_id": "S3-592478156",
+            "address": "1602 covington st, pmb 3816, wihcita falls city, texas",
+            "missing": {
+              "3816": 1
+            },
+            "fields": {
+              "house_number": "1602",
+              "street": "covington st",
+              "city": "wihcita falls city",
+              "state": "texas"
+            },
+            "unparsed_text": "pmb 3816",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S3-635916192",
+            "address": "4401 6209 safelite blvd, rio rancho, new mexico",
+            "missing": {
+              "4401": 1
+            },
+            "fields": {
+              "house_number": "6209",
+              "street": "safelite blvd",
+              "city": "rio rancho",
+              "state": "new mexico"
+            },
+            "unparsed_text": "4401",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S3-938084431",
+            "address": "5503d 9000, unit j104, west jordan city, utah",
+            "missing": {
+              "5503": 1,
+              "9000": 1,
+              "104": 1
+            },
+            "fields": {},
+            "unparsed_text": "5503d 9000, unit j104, west jordan city, utah",
+            "status": "fallback"
+          },
+          {
+            "entity_id": "S3-797292851",
+            "address": "156 davis st, # unit b (upper), center township, iowa",
+            "missing": {
+              "156": 1
+            },
+            "fields": {},
+            "unparsed_text": "156 davis st, # unit b (upper), center township, iowa",
+            "status": "fallback"
+          },
+          {
+            "entity_id": "S3-373807562",
+            "address": "2877 overland avenue, # unit a, billings, montana",
+            "missing": {
+              "2877": 1
+            },
+            "fields": {},
+            "unparsed_text": "2877 overland avenue, # unit a, billings, montana",
+            "status": "fallback"
+          },
+          {
+            "entity_id": "S3-673909777",
+            "address": "scottsburg, indiana, pmb 2210, 448 boatman road",
+            "missing": {
+              "2210": 1
+            },
+            "fields": {
+              "house_number": "448",
+              "street": "boatman rd"
+            },
+            "unparsed_text": "scottsburg, indiana pmb 2210",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S3-627342062",
+            "address": "2185 curry rd, # suite 2, schenectady, new york",
+            "missing": {
+              "2185": 1,
+              "2": 1
+            },
+            "fields": {
+              "city": "new york city"
+            },
+            "unparsed_text": "2185 curry rd, # suite 2, schenectady, new york",
+            "status": "fallback"
+          },
+          {
+            "entity_id": "S3-645392799",
+            "address": "2360 youngman ave, # apartment 502, saint paul, minnesota",
+            "missing": {
+              "2360": 1,
+              "502": 1
+            },
+            "fields": {},
+            "unparsed_text": "2360 youngman ave, # apartment 502, saint paul, minnesota",
+            "status": "fallback"
+          }
+        ]
+      }
+    },
+    "test_S1_US": {
+      "counts": {
+        "rows": 3000,
+        "nonempty": 3000,
+        "unit_floor_building_marker": 428,
+        "single_postcode_shaped_token": 323,
+        "postcode_shaped_token_not_in_postal_field": 321,
+        "missing_tokens_components_only": 329,
+        "missing_numbers_components_only": 55,
+        "numeric_address_without_house_or_po_box": 72,
+        "marker_without_unit_floor_building_field": 19,
+        "missing_tokens_with_remainder": 6,
+        "whole_address_changed_by_parser": 0
+      },
+      "statuses": {
+        "parsed": 2511,
+        "partial": 477,
+        "fallback": 12
+      },
+      "component_nonempty": {
+        "house_number": 2925,
+        "street": 2932,
+        "city": 2726,
+        "state": 2645,
+        "unit": 435,
+        "building": 44,
+        "postal_code": 2,
+        "po_box": 3
+      },
+      "examples": {
+        "missing_tokens_components_only": [
+          {
+            "entity_id": "S1-368888143",
+            "address": "hugo, ok, 1026 jefferson street",
+            "missing": {
+              "hugo": 1,
+              "ok": 1
+            },
+            "fields": {
+              "house_number": "1026",
+              "street": "jefferson st"
+            },
+            "unparsed_text": "hugo, ok",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S1-958406641",
+            "address": "roseville, mn, unit apartment 1, 1227 rose vista court",
+            "missing": {
+              "roseville": 1,
+              "mn": 1,
+              "unit": 1,
+              "apartment": 1,
+              "1": 1,
+              "1227": 1,
+              "rose": 1,
+              "vista": 1,
+              "ct": 1
+            },
+            "fields": {},
+            "unparsed_text": "roseville, mn, unit apartment 1, 1227 rose vista court",
+            "status": "fallback"
+          },
+          {
+            "entity_id": "S1-801139041",
+            "address": "ca, watsonville, 58 union street",
+            "missing": {
+              "ca": 1,
+              "watsonville": 1
+            },
+            "fields": {
+              "house_number": "58",
+              "street": "union st"
+            },
+            "unparsed_text": "ca, watsonville",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S1-403402541",
+            "address": "de, middletown, 413 cicero crossing",
+            "missing": {
+              "de": 1,
+              "middletown": 1
+            },
+            "fields": {
+              "house_number": "413",
+              "street": "cicero crossing"
+            },
+            "unparsed_text": "de, middletown",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S1-35862753",
+            "address": "al, 1011 1st avenue, lanett",
+            "missing": {
+              "al": 1
+            },
+            "fields": {
+              "house_number": "1011",
+              "street": "1st ave",
+              "city": "lanett"
+            },
+            "unparsed_text": "al",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S1-595179760",
+            "address": "in, 6024 blue ladder cove, fort wayne",
+            "missing": {
+              "in": 1
+            },
+            "fields": {
+              "house_number": "6024",
+              "street": "blue ladder cove",
+              "city": "fort wayne"
+            },
+            "unparsed_text": "in",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S1-530686125",
+            "address": "pembroke, 215 birch street, ma",
+            "missing": {
+              "pembroke": 1
+            },
+            "fields": {
+              "house_number": "215",
+              "street": "birch st",
+              "state": "ma"
+            },
+            "unparsed_text": "pembroke",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S1-533011452",
+            "address": "tn, 1505 heritage drive, columbia",
+            "missing": {
+              "tn": 1
+            },
+            "fields": {
+              "house_number": "1505",
+              "street": "heritage dr",
+              "city": "columbia"
+            },
+            "unparsed_text": "tn",
+            "status": "partial"
+          }
+        ],
+        "missing_numbers_components_only": [
+          {
+            "entity_id": "S1-958406641",
+            "address": "roseville, mn, unit apartment 1, 1227 rose vista court",
+            "missing": {
+              "1": 1,
+              "1227": 1
+            },
+            "fields": {},
+            "unparsed_text": "roseville, mn, unit apartment 1, 1227 rose vista court",
+            "status": "fallback"
+          },
+          {
+            "entity_id": "S1-593405146",
+            "address": "tx, 1024 hickey court, acton",
+            "missing": {
+              "1024": 1
+            },
+            "fields": {
+              "city": "hickey court",
+              "state": "acton"
+            },
+            "unparsed_text": "tx 1024",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S1-566695756",
+            "address": "al, jacksonville, 1303 quail run drive",
+            "missing": {
+              "1303": 1
+            },
+            "fields": {},
+            "unparsed_text": "al, jacksonville, 1303 quail run drive",
+            "status": "fallback"
+          },
+          {
+            "entity_id": "S1-719294205",
+            "address": "ruidoso, 298 16 gavilan canyon road, nm",
+            "missing": {
+              "298": 1
+            },
+            "fields": {
+              "house_number": "16",
+              "street": "gavilan canyon rd",
+              "state": "nm"
+            },
+            "unparsed_text": "ruidoso 298",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S1-109679584",
+            "address": "sacramento, unit 358, ca, 2045 el camino avenue",
+            "missing": {
+              "358": 1,
+              "2045": 1
+            },
+            "fields": {
+              "city": "sacramento"
+            },
+            "unparsed_text": "sacramento, unit 358, ca, 2045 el camino avenue",
+            "status": "fallback"
+          },
+          {
+            "entity_id": "S1-350049250",
+            "address": "springfield, 4611 casey drive, il",
+            "missing": {
+              "4611": 1
+            },
+            "fields": {
+              "city": "casey drive",
+              "state": "il"
+            },
+            "unparsed_text": "springfield 4611",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S1-445620518",
+            "address": "williams, 7598 stonewall trail, az",
+            "missing": {
+              "7598": 1
+            },
+            "fields": {
+              "city": "stonewall trail",
+              "state": "az"
+            },
+            "unparsed_text": "williams 7598",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S1-799902608",
+            "address": "wi, w2330 23, town of forest",
+            "missing": {
+              "2330": 1
+            },
+            "fields": {
+              "house_number": "23",
+              "street": "town of forest"
+            },
+            "unparsed_text": "wi w2330",
+            "status": "partial"
+          }
+        ],
+        "missing_tokens_with_remainder": [
+          {
+            "entity_id": "S1-875547360",
+            "address": "1397 sharondale circle, unit apt h, saint louis, mo",
+            "missing": {
+              "saint": 1
+            },
+            "fields": {
+              "house_number": "1397",
+              "street": "sharondale circle",
+              "unit": "unit apt h",
+              "city": "st. louis",
+              "state": "mo"
+            },
+            "unparsed_text": "",
+            "status": "parsed"
+          },
+          {
+            "entity_id": "S1-600188855",
+            "address": "10100 northgate drive, unit up up1, saint louis, mo",
+            "missing": {
+              "saint": 1
+            },
+            "fields": {
+              "house_number": "10100",
+              "street": "northgate dr",
+              "unit": "unit up up1",
+              "city": "st. louis",
+              "state": "mo"
+            },
+            "unparsed_text": "",
+            "status": "parsed"
+          },
+          {
+            "entity_id": "S1-32113095",
+            "address": "10524 williamsfield drive, saint louis, mo",
+            "missing": {
+              "saint": 1
+            },
+            "fields": {
+              "house_number": "10524",
+              "street": "williamsfield dr",
+              "city": "st. louis",
+              "state": "mo"
+            },
+            "unparsed_text": "",
+            "status": "parsed"
+          },
+          {
+            "entity_id": "S1-967824964",
+            "address": "7626 watson road, unit apt b308, saint louis, mo",
+            "missing": {
+              "saint": 1
+            },
+            "fields": {
+              "house_number": "7626",
+              "street": "watson rd",
+              "unit": "unit apt b308",
+              "city": "st. louis",
+              "state": "mo"
+            },
+            "unparsed_text": "",
+            "status": "parsed"
+          },
+          {
+            "entity_id": "S1-951308505",
+            "address": "830 rayburn avenue, fl 0, saint louis, mo",
+            "missing": {
+              "saint": 1
+            },
+            "fields": {
+              "house_number": "830",
+              "street": "rayburn ave",
+              "unit": "fl 0",
+              "city": "st. louis",
+              "state": "mo"
+            },
+            "unparsed_text": "",
+            "status": "parsed"
+          },
+          {
+            "entity_id": "S1-315489193",
+            "address": "3542 lemay ferry road, fl 0, saint louis, mo",
+            "missing": {
+              "saint": 1
+            },
+            "fields": {
+              "house_number": "3542",
+              "street": "lemay ferry rd",
+              "unit": "fl 0",
+              "city": "st. louis",
+              "state": "mo"
+            },
+            "unparsed_text": "",
+            "status": "parsed"
+          }
+        ]
+      }
+    },
+    "test_S1_France": {
+      "counts": {
+        "rows": 3000,
+        "nonempty": 3000,
+        "missing_tokens_components_only": 3000,
+        "missing_numbers_components_only": 543,
+        "numeric_address_without_house_or_po_box": 514,
+        "single_postcode_shaped_token": 13,
+        "unit_floor_building_marker": 27,
+        "marker_without_unit_floor_building_field": 27,
+        "whole_address_changed_by_parser": 0
+      },
+      "statuses": {
+        "partial": 2471,
+        "fallback": 529
+      },
+      "component_nonempty": {
+        "house_number": 2467,
+        "street": 2467,
+        "city": 1314,
+        "postal_code": 13
+      },
+      "examples": {
+        "missing_tokens_components_only": [
+          {
+            "entity_id": "S1-937400555",
+            "address": "9 bis chemin des frechailles, saint-nazaire, pays de la loire",
+            "missing": {
+              "saint": 1,
+              "nazaire": 1,
+              "pays": 1,
+              "de": 1,
+              "la": 1,
+              "loire": 1
+            },
+            "fields": {
+              "house_number": "9 bis",
+              "street": "chemin des frechailles"
+            },
+            "unparsed_text": "saint-nazaire, pays de la loire",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S1-129981693",
+            "address": "pays de la loire, 32 rue de la ville en bois, nantes",
+            "missing": {
+              "pays": 1,
+              "de": 2,
+              "la": 2,
+              "loire": 1,
+              "32": 1,
+              "rue": 1,
+              "ville": 1,
+              "en": 1,
+              "bois": 1
+            },
+            "fields": {
+              "city": "nantes"
+            },
+            "unparsed_text": "pays de la loire, 32 rue de la ville en bois, nantes",
+            "status": "fallback"
+          },
+          {
+            "entity_id": "S1-792006740",
+            "address": "114 rue lucien faure, campus competences developpement, bordeaux, nouvelle-aquitaine",
+            "missing": {
+              "campus": 1,
+              "competences": 1,
+              "developpement": 1,
+              "nouvelle": 1,
+              "aquitaine": 1
+            },
+            "fields": {
+              "house_number": "114",
+              "street": "rue lucien faure",
+              "city": "bordeaux"
+            },
+            "unparsed_text": "campus competences developpement, bordeaux, nouvelle-aquitaine",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S1-190810246",
+            "address": "105 quai des chevillards, lille, hauts-de-france",
+            "missing": {
+              "hauts": 1,
+              "de": 1,
+              "france": 1
+            },
+            "fields": {
+              "house_number": "105",
+              "street": "quai des chevillards",
+              "city": "lille"
+            },
+            "unparsed_text": "lille, hauts-de-france",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S1-448186656",
+            "address": "38 boulevard de la republique francois mitterrand, dunkerque, hauts-de-france",
+            "missing": {
+              "de": 1,
+              "dunkerque": 1,
+              "hauts": 1,
+              "france": 1
+            },
+            "fields": {
+              "house_number": "38",
+              "street": "boulevard de la republique francois mitterrand"
+            },
+            "unparsed_text": "dunkerque, hauts-de-france",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S1-83512816",
+            "address": "35 av abadie, bordeaux, nouvelle-aquitaine",
+            "missing": {
+              "nouvelle": 1,
+              "aquitaine": 1
+            },
+            "fields": {
+              "house_number": "35",
+              "street": "avenue abadie",
+              "city": "bordeaux"
+            },
+            "unparsed_text": "bordeaux, nouvelle-aquitaine",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S1-998874995",
+            "address": "123 rue nationale, lille, hauts-de-france",
+            "missing": {
+              "hauts": 1,
+              "de": 1,
+              "france": 1
+            },
+            "fields": {
+              "house_number": "123",
+              "street": "rue nationale",
+              "city": "lille"
+            },
+            "unparsed_text": "lille, hauts-de-france",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S1-305199850",
+            "address": "99 allee des tulipes, pessac, nouvelle-aquitaine",
+            "missing": {
+              "pessac": 1,
+              "nouvelle": 1,
+              "aquitaine": 1
+            },
+            "fields": {
+              "house_number": "99",
+              "street": "allee des tulipes"
+            },
+            "unparsed_text": "pessac, nouvelle-aquitaine",
+            "status": "partial"
+          }
+        ],
+        "missing_numbers_components_only": [
+          {
+            "entity_id": "S1-129981693",
+            "address": "pays de la loire, 32 rue de la ville en bois, nantes",
+            "missing": {
+              "32": 1
+            },
+            "fields": {
+              "city": "nantes"
+            },
+            "unparsed_text": "pays de la loire, 32 rue de la ville en bois, nantes",
+            "status": "fallback"
+          },
+          {
+            "entity_id": "S1-149620841",
+            "address": "hauts-de-france, tourcoing, 25 rue du brun pain",
+            "missing": {
+              "25": 1
+            },
+            "fields": {},
+            "unparsed_text": "hauts-de-france, tourcoing, 25 rue du brun pain",
+            "status": "fallback"
+          },
+          {
+            "entity_id": "S1-56232140",
+            "address": "2 d avenue des helianthes, la baule-escoublac, pays de la loire",
+            "missing": {
+              "2": 1
+            },
+            "fields": {},
+            "unparsed_text": "2 d avenue des helianthes, la baule-escoublac, pays de la loire",
+            "status": "fallback"
+          },
+          {
+            "entity_id": "S1-359375358",
+            "address": "roubaix, hauts-de-france, 176 rue de blanchemaille",
+            "missing": {
+              "176": 1
+            },
+            "fields": {},
+            "unparsed_text": "roubaix, hauts-de-france, 176 rue de blanchemaille",
+            "status": "fallback"
+          },
+          {
+            "entity_id": "S1-803628676",
+            "address": "nouvelle-aquitaine, 6 rue reinette, bordeaux",
+            "missing": {
+              "6": 1
+            },
+            "fields": {
+              "city": "bordeaux"
+            },
+            "unparsed_text": "nouvelle-aquitaine, 6 rue reinette, bordeaux",
+            "status": "fallback"
+          },
+          {
+            "entity_id": "S1-850194886",
+            "address": "6 parvis des chartrons, cite mondiale, bordeaux, nouvelle-aquitaine",
+            "missing": {
+              "6": 1
+            },
+            "fields": {
+              "city": "bordeaux"
+            },
+            "unparsed_text": "6 parvis des chartrons, cite mondiale, bordeaux, nouvelle-aquitaine",
+            "status": "fallback"
+          },
+          {
+            "entity_id": "S1-527040180",
+            "address": "bordeaux, 7 rue foy, nouvelle-aquitaine",
+            "missing": {
+              "7": 1
+            },
+            "fields": {
+              "city": "bordeaux"
+            },
+            "unparsed_text": "bordeaux, 7 rue foy, nouvelle-aquitaine",
+            "status": "fallback"
+          },
+          {
+            "entity_id": "S1-498116067",
+            "address": "pays de la loire, nantes, 14 rue felix marquet",
+            "missing": {
+              "14": 1
+            },
+            "fields": {
+              "city": "nantes"
+            },
+            "unparsed_text": "pays de la loire, nantes, 14 rue felix marquet",
+            "status": "fallback"
+          }
+        ]
+      }
+    },
+    "test_S2_US": {
+      "counts": {
+        "rows": 3000,
+        "nonempty": 2922,
+        "missing_tokens_components_only": 427,
+        "missing_numbers_components_only": 93,
+        "unit_floor_building_marker": 167,
+        "marker_without_unit_floor_building_field": 162,
+        "single_postcode_shaped_token": 320,
+        "postcode_shaped_token_not_in_postal_field": 319,
+        "empty": 78,
+        "numeric_address_without_house_or_po_box": 67,
+        "missing_tokens_with_remainder": 9,
+        "whole_address_changed_by_parser": 0
+      },
+      "statuses": {
+        "partial": 700,
+        "parsed": 2204,
+        "empty": 78,
+        "fallback": 18
+      },
+      "component_nonempty": {
+        "house_number": 2717,
+        "street": 2809,
+        "building": 42,
+        "city": 2666,
+        "state": 2557,
+        "po_box": 52,
+        "unit": 25,
+        "postal_code": 1
+      },
+      "examples": {
+        "missing_tokens_components_only": [
+          {
+            "entity_id": "S2-894236822",
+            "address": "canfield, oh, 7268 columbiana canfield rd",
+            "missing": {
+              "canfield": 1,
+              "oh": 1
+            },
+            "fields": {
+              "house_number": "7268",
+              "street": "columbiana canfield rd"
+            },
+            "unparsed_text": "canfield, oh",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S2-832979733",
+            "address": "hakell, ok, 616-620 chickasaw ave",
+            "missing": {
+              "hakell": 1,
+              "ok": 1
+            },
+            "fields": {
+              "house_number": "616-620",
+              "street": "chickasaw ave"
+            },
+            "unparsed_text": "hakell, ok",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S2-483330115",
+            "address": "328 summerset place, pmb 9309, estill springs, tn",
+            "missing": {
+              "pmb": 1,
+              "9309": 1
+            },
+            "fields": {
+              "house_number": "328",
+              "street": "summerset pl",
+              "city": "estill springs",
+              "state": "tn"
+            },
+            "unparsed_text": "pmb 9309",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S2-206811147",
+            "address": "or, tlaent, 009973 wagner creek road",
+            "missing": {
+              "or": 1,
+              "tlaent": 1
+            },
+            "fields": {
+              "house_number": "009973",
+              "street": "wagner creek rd"
+            },
+            "unparsed_text": "or, tlaent",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S2-262060454",
+            "address": "arrington, 7374-7376 almaville rd, tn",
+            "missing": {
+              "arrington": 1
+            },
+            "fields": {
+              "house_number": "7374-7376",
+              "street": "almaville rd",
+              "state": "tn"
+            },
+            "unparsed_text": "arrington",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S2-542497524",
+            "address": "oh, 7959 cove harbour drive, hollan dcdp",
+            "missing": {
+              "oh": 1
+            },
+            "fields": {
+              "house_number": "7959",
+              "street": "cove harbour dr",
+              "city": "hollan dcdp"
+            },
+            "unparsed_text": "oh",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S2-956677833",
+            "address": "tx, clute, 1156 lake saint",
+            "missing": {
+              "tx": 1,
+              "clute": 1
+            },
+            "fields": {
+              "house_number": "1156",
+              "street": "lake saint"
+            },
+            "unparsed_text": "tx, clute",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S2-88303162",
+            "address": "39- piedmont dr, pmb 684, brookhaven, ny",
+            "missing": {
+              "pmb": 1,
+              "684": 1
+            },
+            "fields": {
+              "house_number": "39-",
+              "street": "piedmont dr",
+              "city": "brookhaven",
+              "state": "ny"
+            },
+            "unparsed_text": "pmb 684",
+            "status": "partial"
+          }
+        ],
+        "missing_numbers_components_only": [
+          {
+            "entity_id": "S2-483330115",
+            "address": "328 summerset place, pmb 9309, estill springs, tn",
+            "missing": {
+              "9309": 1
+            },
+            "fields": {
+              "house_number": "328",
+              "street": "summerset pl",
+              "city": "estill springs",
+              "state": "tn"
+            },
+            "unparsed_text": "pmb 9309",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S2-88303162",
+            "address": "39- piedmont dr, pmb 684, brookhaven, ny",
+            "missing": {
+              "684": 1
+            },
+            "fields": {
+              "house_number": "39-",
+              "street": "piedmont dr",
+              "city": "brookhaven",
+              "state": "ny"
+            },
+            "unparsed_text": "pmb 684",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S2-104847630",
+            "address": "ct, easton city, 7 sierra lane",
+            "missing": {
+              "7": 1
+            },
+            "fields": {},
+            "unparsed_text": "ct, easton city, 7 sierra lane",
+            "status": "fallback"
+          },
+          {
+            "entity_id": "S2-457253391",
+            "address": "ca, 2824 t street, sacramento, n/a",
+            "missing": {
+              "2824": 1
+            },
+            "fields": {
+              "city": "sacramento"
+            },
+            "unparsed_text": "ca, 2824 t street, sacramento, n/a",
+            "status": "fallback"
+          },
+          {
+            "entity_id": "S2-913294738",
+            "address": "ar, 2710 washington, magnolia, null",
+            "missing": {
+              "2710": 1
+            },
+            "fields": {
+              "city": "washington",
+              "state": "magnolia, null"
+            },
+            "unparsed_text": "ar 2710",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S2-599302574",
+            "address": "st rt 555, chesterhill, oh",
+            "missing": {
+              "555": 1
+            },
+            "fields": {
+              "city": "chesterhill",
+              "state": "oh"
+            },
+            "unparsed_text": "st rt 555",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S2-423444052",
+            "address": "va, 315 -7 23nd street, virginia beach city",
+            "missing": {
+              "315": 1
+            },
+            "fields": {
+              "house_number": "7",
+              "street": "23nd st",
+              "city": "virginia beach city"
+            },
+            "unparsed_text": "va 315",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S2-919366974",
+            "address": "il, 160 25 forrst ave, springfield",
+            "missing": {
+              "160": 1
+            },
+            "fields": {
+              "house_number": "25",
+              "street": "forrst ave",
+              "city": "springfield"
+            },
+            "unparsed_text": "il 160",
+            "status": "partial"
+          }
+        ],
+        "missing_tokens_with_remainder": [
+          {
+            "entity_id": "S2-235523654",
+            "address": "#12025 manchester rd, saint louis, mo",
+            "missing": {
+              "saint": 1
+            },
+            "fields": {
+              "house_number": "# 12025",
+              "street": "manchester rd",
+              "city": "st. louis",
+              "state": "mo"
+            },
+            "unparsed_text": "",
+            "status": "parsed"
+          },
+          {
+            "entity_id": "S2-715986619",
+            "address": "734 roberts cut off road, ft worth, tx",
+            "missing": {
+              "ft": 1
+            },
+            "fields": {
+              "house_number": "734",
+              "street": "roberts cut off rd",
+              "city": "fort worth",
+              "state": "tx"
+            },
+            "unparsed_text": "",
+            "status": "parsed"
+          },
+          {
+            "entity_id": "S2-496678477",
+            "address": "wellington way, saint louis, mo",
+            "missing": {
+              "saint": 1
+            },
+            "fields": {
+              "city": "st. louis",
+              "state": "mo"
+            },
+            "unparsed_text": "wellington way",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S2-326192629",
+            "address": "57 saint claire lane, atl, ga",
+            "missing": {
+              "atl": 1
+            },
+            "fields": {
+              "house_number": "57",
+              "street": "saint claire ln",
+              "city": "atlanta",
+              "state": "ga"
+            },
+            "unparsed_text": "",
+            "status": "parsed"
+          },
+          {
+            "entity_id": "S2-196802802",
+            "address": "3305 r mathieson dr, atl, ga",
+            "missing": {
+              "atl": 1
+            },
+            "fields": {
+              "house_number": "3305 r",
+              "street": "mathieson dr",
+              "city": "atlanta",
+              "state": "ga"
+            },
+            "unparsed_text": "",
+            "status": "parsed"
+          },
+          {
+            "entity_id": "S2-339034758",
+            "address": "194 alison court, atl, ga",
+            "missing": {
+              "atl": 1
+            },
+            "fields": {
+              "house_number": "194",
+              "street": "alison ct",
+              "city": "atlanta",
+              "state": "ga"
+            },
+            "unparsed_text": "",
+            "status": "parsed"
+          },
+          {
+            "entity_id": "S2-221137322",
+            "address": "12328 oak hollow drive, saint louis, mo",
+            "missing": {
+              "saint": 1
+            },
+            "fields": {
+              "house_number": "12328",
+              "street": "oak hollow dr",
+              "city": "st. louis",
+              "state": "mo"
+            },
+            "unparsed_text": "",
+            "status": "parsed"
+          },
+          {
+            "entity_id": "S2-895768126",
+            "address": "2410 bellevue avenue, saint louis, mo",
+            "missing": {
+              "saint": 1
+            },
+            "fields": {
+              "house_number": "2410",
+              "street": "bellevue ave",
+              "city": "st. louis",
+              "state": "mo"
+            },
+            "unparsed_text": "",
+            "status": "parsed"
+          }
+        ]
+      }
+    },
+    "test_S2_France": {
+      "counts": {
+        "rows": 3000,
+        "nonempty": 2901,
+        "missing_tokens_components_only": 2628,
+        "numeric_address_without_house_or_po_box": 1009,
+        "single_postcode_shaped_token": 15,
+        "empty": 99,
+        "missing_numbers_components_only": 1013,
+        "unit_floor_building_marker": 113,
+        "marker_without_unit_floor_building_field": 113,
+        "whole_address_changed_by_parser": 0
+      },
+      "statuses": {
+        "partial": 1779,
+        "empty": 99,
+        "fallback": 1122
+      },
+      "component_nonempty": {
+        "city": 1284,
+        "postal_code": 15,
+        "house_number": 1768,
+        "street": 1768
+      },
+      "examples": {
+        "missing_tokens_components_only": [
+          {
+            "entity_id": "S2-946613353",
+            "address": "17523 r du coq frnacais, roubaix, hauts-de-france",
+            "missing": {
+              "roubaix": 1,
+              "hauts": 1,
+              "de": 1,
+              "france": 1
+            },
+            "fields": {
+              "city": "r du coq frnacais",
+              "postal_code": "17523"
+            },
+            "unparsed_text": "roubaix, hauts-de-france",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S2-589623792",
+            "address": "rue albbrt cys, nord, dunkerque",
+            "missing": {
+              "rue": 1,
+              "albbrt": 1,
+              "cys": 1,
+              "nord": 1,
+              "dunkerque": 1
+            },
+            "fields": {},
+            "unparsed_text": "rue albbrt cys, nord, dunkerque",
+            "status": "fallback"
+          },
+          {
+            "entity_id": "S2-134452347",
+            "address": "0026 r. des pyramides, roubaix, nord",
+            "missing": {
+              "roubaix": 1,
+              "nord": 1
+            },
+            "fields": {
+              "house_number": "0026",
+              "street": "rue des pyramides"
+            },
+            "unparsed_text": "roubaix, nord",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S2-242501406",
+            "address": "68 bis avenue de la liberation, merignac",
+            "missing": {
+              "merignac": 1
+            },
+            "fields": {
+              "house_number": "68 bis",
+              "street": "avenue de la liberation"
+            },
+            "unparsed_text": "merignac",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S2-57238669",
+            "address": "27 - r du docteur defossez, tourcoing, nord",
+            "missing": {
+              "27": 1,
+              "rue": 1,
+              "du": 1,
+              "docteur": 1,
+              "defossez": 1,
+              "tourcoing": 1,
+              "nord": 1
+            },
+            "fields": {},
+            "unparsed_text": "27 - r du docteur defossez, tourcoing, nord",
+            "status": "fallback"
+          },
+          {
+            "entity_id": "S2-777149152",
+            "address": "r louis faure, lille, nord",
+            "missing": {
+              "rue": 1,
+              "louis": 1,
+              "faure": 1,
+              "nord": 1
+            },
+            "fields": {
+              "city": "lille"
+            },
+            "unparsed_text": "r louis faure, lille, nord",
+            "status": "fallback"
+          },
+          {
+            "entity_id": "S2-5804688",
+            "address": "109 boulevard victor hugo, loire-atlantique, saint-nazaire",
+            "missing": {
+              "loire": 1,
+              "atlantique": 1,
+              "saint": 1,
+              "nazaire": 1
+            },
+            "fields": {
+              "house_number": "109",
+              "street": "boulevard victor hugo"
+            },
+            "unparsed_text": "loire-atlantique, saint-nazaire",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S2-333223637",
+            "address": "10 bis rue charles de montesquieu, saint-nazaire",
+            "missing": {
+              "saint": 1,
+              "nazaire": 1
+            },
+            "fields": {
+              "house_number": "10 bis",
+              "street": "rue charles de montesquieu"
+            },
+            "unparsed_text": "saint-nazaire",
+            "status": "partial"
+          }
+        ],
+        "missing_numbers_components_only": [
+          {
+            "entity_id": "S2-57238669",
+            "address": "27 - r du docteur defossez, tourcoing, nord",
+            "missing": {
+              "27": 1
+            },
+            "fields": {},
+            "unparsed_text": "27 - r du docteur defossez, tourcoing, nord",
+            "status": "fallback"
+          },
+          {
+            "entity_id": "S2-406327793",
+            "address": "gironde, pessac, 64 r jean de la fonttine",
+            "missing": {
+              "64": 1
+            },
+            "fields": {},
+            "unparsed_text": "gironde, pessac, 64 r jean de la fonttine",
+            "status": "fallback"
+          },
+          {
+            "entity_id": "S2-86879671",
+            "address": "no. 79 r henri regnault, roubaix",
+            "missing": {
+              "79": 1
+            },
+            "fields": {},
+            "unparsed_text": "no. 79 r henri regnault, roubaix",
+            "status": "fallback"
+          },
+          {
+            "entity_id": "S2-453706287",
+            "address": "1 lotissement l'oree de la seuev, la teste de buch, gironde",
+            "missing": {
+              "1": 1
+            },
+            "fields": {},
+            "unparsed_text": "1 lotissement l'oree de la seuev, la teste de buch, gironde",
+            "status": "fallback"
+          },
+          {
+            "entity_id": "S2-721075645",
+            "address": "no 10 r des charpentiers, roubaix, hauts-de-france",
+            "missing": {
+              "10": 1
+            },
+            "fields": {},
+            "unparsed_text": "no 10 r des charpentiers, roubaix, hauts-de-france",
+            "status": "fallback"
+          },
+          {
+            "entity_id": "S2-24648276",
+            "address": "4 b passage felibien, nantes, pays de la loire",
+            "missing": {
+              "4": 1
+            },
+            "fields": {
+              "city": "nantes"
+            },
+            "unparsed_text": "4 b passage felibien, nantes, pays de la loire",
+            "status": "fallback"
+          },
+          {
+            "entity_id": "S2-459460510",
+            "address": "no 81 rue leyteire, bordeaux",
+            "missing": {
+              "81": 1
+            },
+            "fields": {
+              "city": "bordeaux"
+            },
+            "unparsed_text": "no 81 rue leyteire, bordeaux",
+            "status": "fallback"
+          },
+          {
+            "entity_id": "S2-97726139",
+            "address": "bordeaux, 3 rue hazera, nouvelle-aquitaine",
+            "missing": {
+              "3": 1
+            },
+            "fields": {
+              "city": "bordeaux"
+            },
+            "unparsed_text": "bordeaux, 3 rue hazera, nouvelle-aquitaine",
+            "status": "fallback"
+          }
+        ]
+      }
+    },
+    "test_S3_US": {
+      "counts": {
+        "rows": 3000,
+        "nonempty": 2897,
+        "empty": 103,
+        "single_postcode_shaped_token": 287,
+        "postcode_shaped_token_not_in_postal_field": 284,
+        "missing_tokens_components_only": 473,
+        "unit_floor_building_marker": 465,
+        "missing_numbers_components_only": 155,
+        "marker_without_unit_floor_building_field": 212,
+        "numeric_address_without_house_or_po_box": 145,
+        "whole_address_changed_by_parser": 0
+      },
+      "statuses": {
+        "parsed": 2158,
+        "empty": 103,
+        "partial": 652,
+        "fallback": 87
+      },
+      "component_nonempty": {
+        "house_number": 2643,
+        "street": 2744,
+        "city": 2664,
+        "state": 2416,
+        "building": 47,
+        "unit": 267,
+        "po_box": 47,
+        "postal_code": 3
+      },
+      "examples": {
+        "missing_tokens_components_only": [
+          {
+            "entity_id": "S3-55987622",
+            "address": "norton, massachusetts, null , 0010 peter street",
+            "missing": {
+              "norton": 1,
+              "massachusetts": 1,
+              "null": 1
+            },
+            "fields": {
+              "house_number": "0010",
+              "street": "peter st"
+            },
+            "unparsed_text": "norton, massachusetts, null",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S3-366607494",
+            "address": "akron, 2160 eastwood ave, ohio",
+            "missing": {
+              "akron": 1
+            },
+            "fields": {
+              "house_number": "2160",
+              "street": "eastwood ave",
+              "city": "ohio"
+            },
+            "unparsed_text": "akron",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S3-503553802",
+            "address": "tempe, 4633 lakeshore dr, pmb 5273, arizona",
+            "missing": {
+              "tempe": 1,
+              "pmb": 1,
+              "5273": 1
+            },
+            "fields": {
+              "house_number": "4633",
+              "street": "lakeshore dr",
+              "city": "arizona"
+            },
+            "unparsed_text": "tempe pmb 5273",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S3-317021043",
+            "address": "new york, 7456 curriers road, null , arcade",
+            "missing": {
+              "new": 1,
+              "york": 1
+            },
+            "fields": {
+              "house_number": "7456",
+              "street": "curriers rd",
+              "city": "null arcade"
+            },
+            "unparsed_text": "new york",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S3-929957308",
+            "address": "fenton, 1494 noche ct, missouri",
+            "missing": {
+              "fenton": 1
+            },
+            "fields": {
+              "house_number": "1494",
+              "street": "noche ct",
+              "city": "missouri"
+            },
+            "unparsed_text": "fenton",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S3-50618124",
+            "address": "illinois, 3246. linden ave, po box 4533, east saint louis",
+            "missing": {
+              "illinois": 1
+            },
+            "fields": {
+              "house_number": "3246.",
+              "street": "linden ave",
+              "city": "east saint",
+              "state": "louis",
+              "po_box": "po box 4533"
+            },
+            "unparsed_text": "illinois",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S3-564653425",
+            "address": "8155 1/2 southport rd, # suite 102, indianapolis, indiana",
+            "missing": {
+              "8155": 1,
+              "1": 1,
+              "2": 1,
+              "southport": 1,
+              "rd": 1,
+              "suite": 1,
+              "102": 1,
+              "indiana": 1
+            },
+            "fields": {
+              "city": "indianapolis"
+            },
+            "unparsed_text": "8155 1/2 southport rd, # suite 102, indianapolis, indiana",
+            "status": "fallback"
+          },
+          {
+            "entity_id": "S3-354156554",
+            "address": "winfield, illinois, 27w 237 ash court",
+            "missing": {
+              "winfield": 1,
+              "illinois": 1,
+              "27": 1,
+              "w": 1
+            },
+            "fields": {
+              "house_number": "237",
+              "street": "ash ct"
+            },
+            "unparsed_text": "winfield, illinois, 27w",
+            "status": "partial"
+          }
+        ],
+        "missing_numbers_components_only": [
+          {
+            "entity_id": "S3-503553802",
+            "address": "tempe, 4633 lakeshore dr, pmb 5273, arizona",
+            "missing": {
+              "5273": 1
+            },
+            "fields": {
+              "house_number": "4633",
+              "street": "lakeshore dr",
+              "city": "arizona"
+            },
+            "unparsed_text": "tempe pmb 5273",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S3-564653425",
+            "address": "8155 1/2 southport rd, # suite 102, indianapolis, indiana",
+            "missing": {
+              "8155": 1,
+              "1/2": 1,
+              "102": 1
+            },
+            "fields": {
+              "city": "indianapolis"
+            },
+            "unparsed_text": "8155 1/2 southport rd, # suite 102, indianapolis, indiana",
+            "status": "fallback"
+          },
+          {
+            "entity_id": "S3-354156554",
+            "address": "winfield, illinois, 27w 237 ash court",
+            "missing": {
+              "27": 1
+            },
+            "fields": {
+              "house_number": "237",
+              "street": "ash ct"
+            },
+            "unparsed_text": "winfield, illinois, 27w",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S3-281598177",
+            "address": "281 beaver spring road, # campsite 98, davenport city, new york",
+            "missing": {
+              "281": 1,
+              "98": 1
+            },
+            "fields": {
+              "city": "new york city"
+            },
+            "unparsed_text": "281 beaver spring road, # campsite 98, davenport city, new york",
+            "status": "fallback"
+          },
+          {
+            "entity_id": "S3-401378478",
+            "address": "7105 drew hill ln, bldg. 7000, chapel hill, north carolina",
+            "missing": {
+              "7000": 1
+            },
+            "fields": {
+              "house_number": "7105",
+              "street": "drew hill ln",
+              "city": "chapel hill",
+              "state": "north carolina"
+            },
+            "unparsed_text": "bldg. 7000",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S3-907312991",
+            "address": "602 heisinger rd, # apt a, jefferson city, missouri",
+            "missing": {
+              "602": 1
+            },
+            "fields": {},
+            "unparsed_text": "602 heisinger rd, # apt a, jefferson city, missouri",
+            "status": "fallback"
+          },
+          {
+            "entity_id": "S3-763488113",
+            "address": "maryland, 6423 lacrosse ln, glen burnie, floor 0",
+            "missing": {
+              "0": 1
+            },
+            "fields": {
+              "house_number": "6423",
+              "street": "lacrosse ln",
+              "city": "glen burnie",
+              "state": "floor"
+            },
+            "unparsed_text": "maryland 0",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S3-337932658",
+            "address": "1864 lindauer rd, # apt 2, forrest city, arkansas",
+            "missing": {
+              "1864": 1,
+              "2": 1
+            },
+            "fields": {},
+            "unparsed_text": "1864 lindauer rd, # apt 2, forrest city, arkansas",
+            "status": "fallback"
+          }
+        ]
+      }
+    },
+    "test_S3_France": {
+      "counts": {
+        "rows": 3000,
+        "nonempty": 2923,
+        "missing_tokens_components_only": 2694,
+        "missing_numbers_components_only": 967,
+        "numeric_address_without_house_or_po_box": 949,
+        "unit_floor_building_marker": 113,
+        "marker_without_unit_floor_building_field": 113,
+        "empty": 77,
+        "single_postcode_shaped_token": 20,
+        "whole_address_changed_by_parser": 0
+      },
+      "statuses": {
+        "fallback": 1053,
+        "partial": 1870,
+        "empty": 77
+      },
+      "component_nonempty": {
+        "house_number": 1857,
+        "street": 1857,
+        "city": 1275,
+        "postal_code": 20
+      },
+      "examples": {
+        "missing_tokens_components_only": [
+          {
+            "entity_id": "S3-893118547",
+            "address": "n 24 rue d' odessa, tourcoing, hauts-de-france",
+            "missing": {
+              "n": 1,
+              "24": 1,
+              "rue": 1,
+              "d": 1,
+              "odessa": 1,
+              "tourcoing": 1,
+              "hauts": 1,
+              "de": 1,
+              "france": 1
+            },
+            "fields": {},
+            "unparsed_text": "n 24 rue d' odessa, tourcoing, hauts-de-france",
+            "status": "fallback"
+          },
+          {
+            "entity_id": "S3-629838008",
+            "address": "lege-cap-ferret, nouvelle-aquitaine, 22 avenue des saules",
+            "missing": {
+              "lege": 1,
+              "cap": 1,
+              "ferret": 1,
+              "nouvelle": 1,
+              "aquitaine": 1,
+              "22": 1,
+              "ave": 1,
+              "des": 1,
+              "saules": 1
+            },
+            "fields": {},
+            "unparsed_text": "lege-cap-ferret, nouvelle-aquitaine, 22 avenue des saules",
+            "status": "fallback"
+          },
+          {
+            "entity_id": "S3-281895995",
+            "address": "(38) r. alfred de vigny, calais",
+            "missing": {
+              "38": 1,
+              "rue": 1,
+              "alfred": 1,
+              "de": 1,
+              "vigny": 1,
+              "calais": 1
+            },
+            "fields": {},
+            "unparsed_text": "(38) r. alfred de vigny, calais",
+            "status": "fallback"
+          },
+          {
+            "entity_id": "S3-457771976",
+            "address": "46 rue du chemin de fer, roubaix, hauts-de-france",
+            "missing": {
+              "de": 1,
+              "roubaix": 1,
+              "hauts": 1,
+              "france": 1
+            },
+            "fields": {
+              "house_number": "46",
+              "street": "rue du chemin de fer"
+            },
+            "unparsed_text": "roubaix, hauts-de-france",
+            "status": "partial"
+          },
+          {
+            "entity_id": "S3-343420573",
+            "address": "no 16 bd de launay, nantes",
+            "missing": {
+              "no": 1,
+              "16": 1,
+              "blvd": 1,
+              "de": 1,
+              "launay": 1
+            },
+            "fields": {
+              "city": "nantes"
+            },
+            "unparsed_text": "no 16 bd de launay, nantes",
+            "status": "fallback"
+          },
+          {
+            "entity_id": "S3-553082158",
+            "address": "nord, 13 r de saint-amand, roubaix",
+            "missing": {
+              "nord": 1,
+              "13": 1,
+              "rue": 1,
+              "de": 1,
+              "saint": 1,
+              "amand": 1,
+              "roubaix": 1
+            },
+            "fields": {},
+            "unparsed_text": "nord, 13 r de saint-amand, roubaix",
+            "status": "fallback"
+          },
+          {
+            "entity_id": "S3-174439721",
+            "address": "no 28 rue jean baptiste lebas, tourcoing, nord",
+            "missing": {
+              "no": 1,
+              "28": 1,
+              "rue": 1,
+              "jean": 1,
+              "baptiste": 1,
+              "lebas": 1,
+              "tourcoing": 1,
+              "nord": 1
+            },
+            "fields": {},
+            "unparsed_text": "no 28 rue jean baptiste lebas, tourcoing, nord",
+            "status": "fallback"
+          },
+          {
+            "entity_id": "S3-170703105",
+            "address": "30 r. de la mackellerie, tourcoing, hauts-de-france",
+            "missing": {
+              "de": 1,
+              "tourcoing": 1,
+              "hauts": 1,
+              "france": 1
+            },
+            "fields": {
+              "house_number": "30",
+              "street": "rue de la mackellerie"
+            },
+            "unparsed_text": "tourcoing, hauts-de-france",
+            "status": "partial"
+          }
+        ],
+        "missing_numbers_components_only": [
+          {
+            "entity_id": "S3-893118547",
+            "address": "n 24 rue d' odessa, tourcoing, hauts-de-france",
+            "missing": {
+              "24": 1
+            },
+            "fields": {},
+            "unparsed_text": "n 24 rue d' odessa, tourcoing, hauts-de-france",
+            "status": "fallback"
+          },
+          {
+            "entity_id": "S3-629838008",
+            "address": "lege-cap-ferret, nouvelle-aquitaine, 22 avenue des saules",
+            "missing": {
+              "22": 1
+            },
+            "fields": {},
+            "unparsed_text": "lege-cap-ferret, nouvelle-aquitaine, 22 avenue des saules",
+            "status": "fallback"
+          },
+          {
+            "entity_id": "S3-281895995",
+            "address": "(38) r. alfred de vigny, calais",
+            "missing": {
+              "38": 1
+            },
+            "fields": {},
+            "unparsed_text": "(38) r. alfred de vigny, calais",
+            "status": "fallback"
+          },
+          {
+            "entity_id": "S3-343420573",
+            "address": "no 16 bd de launay, nantes",
+            "missing": {
+              "16": 1
+            },
+            "fields": {
+              "city": "nantes"
+            },
+            "unparsed_text": "no 16 bd de launay, nantes",
+            "status": "fallback"
+          },
+          {
+            "entity_id": "S3-553082158",
+            "address": "nord, 13 r de saint-amand, roubaix",
+            "missing": {
+              "13": 1
+            },
+            "fields": {},
+            "unparsed_text": "nord, 13 r de saint-amand, roubaix",
+            "status": "fallback"
+          },
+          {
+            "entity_id": "S3-174439721",
+            "address": "no 28 rue jean baptiste lebas, tourcoing, nord",
+            "missing": {
+              "28": 1
+            },
+            "fields": {},
+            "unparsed_text": "no 28 rue jean baptiste lebas, tourcoing, nord",
+            "status": "fallback"
+          },
+          {
+            "entity_id": "S3-579820030",
+            "address": "no 3 rue des richolets, nantes",
+            "missing": {
+              "3": 1
+            },
+            "fields": {
+              "city": "nantes"
+            },
+            "unparsed_text": "no 3 rue des richolets, nantes",
+            "status": "fallback"
+          },
+          {
+            "entity_id": "S3-661410652",
+            "address": "lege-cap-ferret, nouvelle-aquitaine, 11 imp. des tourterelles",
+            "missing": {
+              "11": 1
+            },
+            "fields": {},
+            "unparsed_text": "lege-cap-ferret, nouvelle-aquitaine, 11 imp. des tourterelles",
+            "status": "fallback"
+          }
+        ]
+      }
+    }
+  },
+  "files": {
+    "/home/sherencrypted/projects/simple_ml_pipeline/dataset/train/train_source1.tsv": {
+      "before": {
+        "sha256": "591af0e1dfeb65cab71ea6ee8cb69df00f92d6ba6fa79e05746c938775d14973",
+        "mtime_ns": 1790330230572535100
+      },
+      "after": {
+        "sha256": "591af0e1dfeb65cab71ea6ee8cb69df00f92d6ba6fa79e05746c938775d14973",
+        "mtime_ns": 1790330230572535100
+      },
+      "unchanged": true
+    },
+    "/home/sherencrypted/projects/simple_ml_pipeline/dataset/train/train_source2.tsv": {
+      "before": {
+        "sha256": "6336c1a055eec79cf8a6d99fdc8d32a2e4d9dc2662e00963cb35d66b89ed09ed",
+        "mtime_ns": 1790330224528272300
+      },
+      "after": {
+        "sha256": "6336c1a055eec79cf8a6d99fdc8d32a2e4d9dc2662e00963cb35d66b89ed09ed",
+        "mtime_ns": 1790330224528272300
+      },
+      "unchanged": true
+    },
+    "/home/sherencrypted/projects/simple_ml_pipeline/dataset/train/train_source3.tsv": {
+      "before": {
+        "sha256": "67da22f5151898ff3006febd836c1a159e97ae95efa7257a5aff4fda685e58e9",
+        "mtime_ns": 1790330228827089300
+      },
+      "after": {
+        "sha256": "67da22f5151898ff3006febd836c1a159e97ae95efa7257a5aff4fda685e58e9",
+        "mtime_ns": 1790330228827089300
+      },
+      "unchanged": true
+    },
+    "/home/sherencrypted/projects/simple_ml_pipeline/dataset/test/test_source1.tsv": {
+      "before": {
+        "sha256": "3d4a32c54c2ca9c53fd7c2be105bf26f708f94c4d2f88eb370972a195665c2f5",
+        "mtime_ns": 1790330219358088400
+      },
+      "after": {
+        "sha256": "3d4a32c54c2ca9c53fd7c2be105bf26f708f94c4d2f88eb370972a195665c2f5",
+        "mtime_ns": 1790330219358088400
+      },
+      "unchanged": true
+    },
+    "/home/sherencrypted/projects/simple_ml_pipeline/dataset/test/test_source2.tsv": {
+      "before": {
+        "sha256": "79d906c7497af2ace70aa277f6e334a652094909de99bd6c57b53420b6a7b2dd",
+        "mtime_ns": 1790330213588482500
+      },
+      "after": {
+        "sha256": "79d906c7497af2ace70aa277f6e334a652094909de99bd6c57b53420b6a7b2dd",
+        "mtime_ns": 1790330213588482500
+      },
+      "unchanged": true
+    },
+    "/home/sherencrypted/projects/simple_ml_pipeline/dataset/test/test_source3.tsv": {
+      "before": {
+        "sha256": "850942b11d2a4343486ed0834e28bce9f3b385f3fd497fd60ccf4ea3b8bda035",
+        "mtime_ns": 1790330217932101400
+      },
+      "after": {
+        "sha256": "850942b11d2a4343486ed0834e28bce9f3b385f3fd497fd60ccf4ea3b8bda035",
+        "mtime_ns": 1790330217932101400
+      },
+      "unchanged": true
+    }
+  },
+  "targeted_cases": [
+    {
+      "country": "US",
+      "address": "123 main st suite 004, boston ma 02108",
+      "expected": {
+        "house_number": "123",
+        "unit": "suite 004",
+        "city": "boston",
+        "state": "ma",
+        "postal_code": "02108"
+      },
+      "actual": {
+        "house_number": "123",
+        "street": "main st",
+        "unit": "suite 004",
+        "floor": null,
+        "building": null,
+        "locality": null,
+        "city": "boston",
+        "state": "ma",
+        "postal_code": "02108",
+        "po_box": null,
+        "landmark_direction": null,
+        "unparsed_text": null,
+        "parser": "usaddress",
+        "parse_status": "parsed",
+        "parse_reason": null
+      },
+      "mismatches": {},
+      "passed": true
+    },
+    {
+      "country": "US",
+      "address": "oh, waverly, 613 market st",
+      "expected": {
+        "house_number": "613",
+        "city": "waverly",
+        "state": "oh"
+      },
+      "actual": {
+        "house_number": "613",
+        "street": "market st",
+        "unit": null,
+        "floor": null,
+        "building": null,
+        "locality": null,
+        "city": null,
+        "state": null,
+        "postal_code": null,
+        "po_box": null,
+        "landmark_direction": null,
+        "unparsed_text": "oh, waverly",
+        "parser": "usaddress",
+        "parse_status": "partial",
+        "parse_reason": "Street Address"
+      },
+      "mismatches": {
+        "city": {
+          "expected": "waverly",
+          "actual": null
+        },
+        "state": {
+          "expected": "oh",
+          "actual": null
+        }
+      },
+      "passed": false
+    },
+    {
+      "country": "US",
+      "address": "123 main st floor 3, boston ma 02108",
+      "expected": {
+        "floor": "floor 3"
+      },
+      "actual": {
+        "house_number": "123",
+        "street": "main st",
+        "unit": "floor 3",
+        "floor": null,
+        "building": null,
+        "locality": null,
+        "city": "boston",
+        "state": "ma",
+        "postal_code": "02108",
+        "po_box": null,
+        "landmark_direction": null,
+        "unparsed_text": null,
+        "parser": "usaddress",
+        "parse_status": "parsed",
+        "parse_reason": null
+      },
+      "mismatches": {
+        "floor": {
+          "expected": "floor 3",
+          "actual": null
+        }
+      },
+      "passed": false
+    },
+    {
+      "country": "France",
+      "address": "12 bis rue de la paix, 75002 paris",
+      "expected": {
+        "house_number": "12 bis",
+        "city": "paris",
+        "postal_code": "75002"
+      },
+      "actual": {
+        "house_number": "12 bis",
+        "street": "rue de la paix",
+        "unit": null,
+        "floor": null,
+        "building": null,
+        "locality": null,
+        "city": "paris",
+        "state": null,
+        "postal_code": "75002",
+        "po_box": null,
+        "landmark_direction": null,
+        "unparsed_text": null,
+        "parser": "fr_rules",
+        "parse_status": "partial",
+        "parse_reason": "conservative_rules"
+      },
+      "mismatches": {},
+      "passed": true
+    },
+    {
+      "country": "France",
+      "address": "105 quai des chevillards, lille, hauts-de-france",
+      "expected": {
+        "house_number": "105",
+        "city": "lille",
+        "state": "hauts-de-france"
+      },
+      "actual": {
+        "house_number": "105",
+        "street": "quai des chevillards",
+        "unit": null,
+        "floor": null,
+        "building": null,
+        "locality": null,
+        "city": "lille",
+        "state": null,
+        "postal_code": null,
+        "po_box": null,
+        "landmark_direction": null,
+        "unparsed_text": "lille, hauts-de-france",
+        "parser": "fr_rules",
+        "parse_status": "partial",
+        "parse_reason": "conservative_rules"
+      },
+      "mismatches": {
+        "state": {
+          "expected": "hauts-de-france",
+          "actual": null
+        }
+      },
+      "passed": false
+    },
+    {
+      "country": "France",
+      "address": "12345 rue de la paix, paris",
+      "expected": {
+        "house_number": "12345",
+        "street": "rue de la paix",
+        "city": "paris",
+        "postal_code": null
+      },
+      "actual": {
+        "house_number": null,
+        "street": null,
+        "unit": null,
+        "floor": null,
+        "building": null,
+        "locality": null,
+        "city": "rue de la paix",
+        "state": null,
+        "postal_code": "12345",
+        "po_box": null,
+        "landmark_direction": null,
+        "unparsed_text": "paris",
+        "parser": "fr_rules",
+        "parse_status": "partial",
+        "parse_reason": "conservative_rules"
+      },
+      "mismatches": {
+        "house_number": {
+          "expected": "12345",
+          "actual": null
+        },
+        "street": {
+          "expected": "rue de la paix",
+          "actual": null
+        },
+        "city": {
+          "expected": "paris",
+          "actual": "rue de la paix"
+        },
+        "postal_code": {
+          "expected": null,
+          "actual": "12345"
+        }
+      },
+      "passed": false
+    },
+    {
+      "country": "France",
+      "address": "0026 r. des pyramides, roubaix, nord",
+      "expected": {
+        "house_number": "0026",
+        "city": "roubaix"
+      },
+      "actual": {
+        "house_number": "0026",
+        "street": "rue des pyramides",
+        "unit": null,
+        "floor": null,
+        "building": null,
+        "locality": null,
+        "city": null,
+        "state": null,
+        "postal_code": null,
+        "po_box": null,
+        "landmark_direction": null,
+        "unparsed_text": "roubaix, nord",
+        "parser": "fr_rules",
+        "parse_status": "partial",
+        "parse_reason": "conservative_rules"
+      },
+      "mismatches": {
+        "city": {
+          "expected": "roubaix",
+          "actual": null
+        }
+      },
+      "passed": false
+    }
+  ],
+  "elapsed_seconds": 13.723,
+  "limitations": [
+    "Sampled retention, not full-dataset accuracy; no gold address-component labels.",
+    "Whole-address comparison starts AFTER Roman normalization, so does not assess earlier transliteration loss.",
+    "Token comparisons ignore punctuation/order and canonicalize US street/direction aliases globally.",
+    "Alias-adjusted lexical checks restore only known canonicalized parser-city fields; raw metrics are also retained.",
+    "Numeric-span comparison retains slash/hyphen groups and leading zeros; differences require inspection.",
+    "Postcode-shaped and occupancy-marker checks are heuristics, not ground truth.",
+    "Default French rules only; native libpostal unavailable."
+  ]
+}

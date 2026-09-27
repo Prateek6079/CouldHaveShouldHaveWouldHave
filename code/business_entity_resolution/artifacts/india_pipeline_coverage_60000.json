@@ -1,0 +1,1985 @@
+{
+  "run_at_utc": "2026-09-27T12:38:10.359379+00:00",
+  "polars_version": "1.44.2",
+  "python_version": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "seed": 42,
+  "per_source": 10000,
+  "pipeline_order": "preprocess_batch then country-routed India parse_address",
+  "country_aliases": [
+    "in",
+    "ind",
+    "india"
+  ],
+  "groups": {
+    "train_S1": {
+      "counts": {
+        "rows": 10000,
+        "raw_addresses_with_six_digit_group": 3,
+        "raw_addresses_with_split_pin_shape": 85,
+        "raw_addresses_with_postal_marker": 7,
+        "normalized_addresses_with_six_digit_group": 17,
+        "addresses_with_unretained_numeric_groups": 0,
+        "parsed_with_street_or_po_box": 687,
+        "nonempty": 10000,
+        "with_unparsed_text": 7646,
+        "partial_without_unparsed_text": 421,
+        "status_parsed": 1933,
+        "status_partial": 8067,
+        "status_fallback": 0,
+        "address_word_number_tokens": 127042,
+        "unparsed_word_number_tokens": 36394,
+        "unparsed_token_percent": 28.65
+      },
+      "statuses": {
+        "parsed": 1933,
+        "partial": 8067
+      },
+      "component_nonempty": {
+        "house_number": 5929,
+        "street": 3580,
+        "locality": 7116,
+        "city": 8857,
+        "state": 10000,
+        "unit": 1721,
+        "floor": 1466,
+        "landmark_direction": 1311,
+        "building": 1973,
+        "postal_code": 17,
+        "po_box": 2
+      },
+      "unparsed_categories": {
+        "unusual_unit_or_building": 662,
+        "unrecognized_numeric_segment": 2597,
+        "unrecognized_name_or_location": 3354,
+        "rural_or_unrecognized_road_form": 124,
+        "conflicting_component_guess": 897,
+        "placeholder_text": 12
+      },
+      "missing_numeric_groups": {},
+      "examples": {
+        "unusual_unit_or_building": [
+          {
+            "entity_id": "S1-251961090",
+            "address": "18 r n mukherjee rd6th floor, kolkata, calcutta, west bengal",
+            "recognized": {
+              "house_number": "18",
+              "city": "kolkata",
+              "state": "west bengal"
+            },
+            "unparsed_text": "r n mukherjee rd6th floor, kolkata",
+            "parse_reason": "unmatched_text"
+          },
+          {
+            "entity_id": "S1-381455860",
+            "address": "75, sankara flats, first floor, flat no f-1, sait colony second street, egmore, chennai, tamil nadu",
+            "recognized": {
+              "house_number": "75",
+              "street": "sait colony second street",
+              "unit": "flat f-1",
+              "locality": "egmore",
+              "city": "chennai",
+              "state": "tamil nadu"
+            },
+            "unparsed_text": "sankara flats, first floor",
+            "parse_reason": "unmatched_text"
+          },
+          {
+            "entity_id": "S1-581995772",
+            "address": "118/1 prabhavathi meredian a bolck no 414 fourth floor narasimha swamy temple dodd, athoguru, electronic city bangalore, bangalore, karnataka",
+            "recognized": {
+              "house_number": "414",
+              "unit": "118/1",
+              "locality": "athoguru, electronic city bangalore",
+              "city": "bangalore",
+              "state": "karnataka"
+            },
+            "unparsed_text": "prabhavathi meredian a bolck fourth floor narasimha swamy temple dodd",
+            "parse_reason": "unmatched_text"
+          }
+        ],
+        "unrecognized_numeric_segment": [
+          {
+            "entity_id": "S1-519809789",
+            "address": "noida, uttar pradesh, knowledge park-3, greater noida, gautam buddha nagar, 021",
+            "recognized": {
+              "locality": "gautam buddha nagar",
+              "city": "noida",
+              "state": "uttar pradesh"
+            },
+            "unparsed_text": "knowledge park-3, greater noida, 021",
+            "parse_reason": "unmatched_text;incomplete_components;unrecognized_order"
+          },
+          {
+            "entity_id": "S1-495792277",
+            "address": "ajc bose road, business towers 1st floor, 1b, kolkata, howrah, west bengal, kolkata, 206",
+            "recognized": {
+              "street": "ajc bose road",
+              "floor": "floor 1",
+              "building": "business towers",
+              "locality": "howrah",
+              "city": "kolkata",
+              "state": "west bengal"
+            },
+            "unparsed_text": "1b, kolkata, 206",
+            "parse_reason": "unmatched_text;unrecognized_order"
+          },
+          {
+            "entity_id": "S1-87905731",
+            "address": "plot no 830 &831, naya tolakumhrar, sampatchak, patna, bihar",
+            "recognized": {
+              "house_number": "plot 830",
+              "locality": "naya tolakumhrar, sampatchak",
+              "city": "patna",
+              "state": "bihar"
+            },
+            "unparsed_text": "&831",
+            "parse_reason": "unmatched_text"
+          }
+        ],
+        "unrecognized_name_or_location": [
+          {
+            "entity_id": "S1-935448999",
+            "address": "1a, bosepukur road, flat 3h, 3rd floor, kolkata, kolkata, howrah, west bengal",
+            "recognized": {
+              "house_number": "1a",
+              "street": "bosepukur road",
+              "unit": "flat 3h",
+              "floor": "floor 3",
+              "city": "kolkata",
+              "state": "west bengal"
+            },
+            "unparsed_text": "kolkata, howrah",
+            "parse_reason": "unmatched_text;unrecognized_order"
+          },
+          {
+            "entity_id": "S1-339696321",
+            "address": "servey no. 655/1/b part, near raval village waghodia, waghodia, vadodara, gujarat",
+            "recognized": {
+              "house_number": "655/1/b",
+              "locality": "part, waghodia",
+              "city": "vadodara",
+              "state": "gujarat",
+              "landmark_direction": "near raval village waghodia"
+            },
+            "unparsed_text": "servey",
+            "parse_reason": "unmatched_text"
+          },
+          {
+            "entity_id": "S1-699373455",
+            "address": "c/o bhiku jagnnath patil, district satara vahagaon, karad, satara, maharashtra",
+            "recognized": {
+              "locality": "district satara vahagaon",
+              "state": "maharashtra"
+            },
+            "unparsed_text": "c/o bhiku jagnnath patil, karad, satara",
+            "parse_reason": "unmatched_text;incomplete_components"
+          }
+        ],
+        "rural_or_unrecognized_road_form": [
+          {
+            "entity_id": "S1-161925772",
+            "address": "joy plaza shopping complex 2nd floor, rathbari, nh-34, room no ap/4, malda, west bengal",
+            "recognized": {
+              "unit": "room ap/4",
+              "floor": "floor 2",
+              "building": "joy plaza shopping complex",
+              "city": "malda",
+              "state": "west bengal"
+            },
+            "unparsed_text": "rathbari, nh-34",
+            "parse_reason": "unmatched_text"
+          },
+          {
+            "entity_id": "S1-135354073",
+            "address": "shop no 01 02, 4th floor, roongta shopping centre, besides white house, oppnandanvan2, vip, road, vesu, surat, gujarat",
+            "recognized": {
+              "unit": "shop 01",
+              "floor": "floor 4",
+              "building": "roongta shopping centre",
+              "locality": "vip, vesu",
+              "city": "surat",
+              "state": "gujarat"
+            },
+            "unparsed_text": "02, besides white house, oppnandanvan2, road",
+            "parse_reason": "unmatched_text"
+          },
+          {
+            "entity_id": "S1-491050505",
+            "address": "shop no. 2479 to 2484, 2nd floor, c wing, kohinoor textile market, ring road, salabatpura, surat city, surat, gujarat",
+            "recognized": {
+              "unit": "shop 2479",
+              "floor": "floor 2",
+              "building": "c wing",
+              "locality": "kohinoor textile market, salabatpura, surat city",
+              "city": "surat",
+              "state": "gujarat"
+            },
+            "unparsed_text": "to 2484, ring road",
+            "parse_reason": "unmatched_text"
+          }
+        ],
+        "conflicting_component_guess": [
+          {
+            "entity_id": "S1-780178532",
+            "address": "no. 1861, 11th a main rd, 38th cross, 4th t block, bangalore south, bangalore, karnataka",
+            "recognized": {
+              "house_number": "1861",
+              "street": "11th a main road",
+              "building": "4th t block",
+              "locality": "bangalore south",
+              "city": "bangalore",
+              "state": "karnataka"
+            },
+            "unparsed_text": "38th cross",
+            "parse_reason": "conflicting_street;unmatched_text;unrecognized_order"
+          },
+          {
+            "entity_id": "S1-675653593",
+            "address": "1705, micro shrishti c.h.s, gurudwara dashmesh marg, off l.b.s marg, bhandup west, mumbai, mumbai city, maharashtra",
+            "recognized": {
+              "house_number": "1705",
+              "street": "gurudwara dashmesh marg",
+              "locality": "bhandup west",
+              "city": "mumbai",
+              "state": "maharashtra"
+            },
+            "unparsed_text": "micro shrishti c.h.s, off l.b.s marg, mumbai city",
+            "parse_reason": "conflicting_street;unmatched_text"
+          },
+          {
+            "entity_id": "S1-290738658",
+            "address": "hno 3-6-188/64, opposite lane to lohit apartments, mutyal ba near r.t.c guest house, street no 4, hyd, erguda, hyderabad, telangana",
+            "recognized": {
+              "house_number": "3-6-188/64",
+              "street": "street 4",
+              "locality": "erguda",
+              "city": "hyderabad",
+              "state": "telangana",
+              "landmark_direction": "opposite lane to lohit apartments"
+            },
+            "unparsed_text": "mutyal ba near r.t.c guest house, hyd",
+            "parse_reason": "conflicting_landmark_direction;unmatched_text"
+          }
+        ],
+        "placeholder_text": [
+          {
+            "entity_id": "S1-268358729",
+            "address": "g.no. 1452 m.no. 2/0725, s m compound wagholi na, haveli, pune, maharashtra",
+            "recognized": {
+              "city": "pune",
+              "state": "maharashtra"
+            },
+            "unparsed_text": "g.no. 1452 m.no. 2/0725, s m compound wagholi na, haveli",
+            "parse_reason": "unmatched_text;incomplete_components"
+          },
+          {
+            "entity_id": "S1-409373790",
+            "address": "101, saniket house, cts no. 37/6, lane no. 6, prabhat road, near lijjat papad, erandwa, na, pune, maharashtra",
+            "recognized": {
+              "house_number": "37/6",
+              "street": "lane 6",
+              "unit": "101",
+              "locality": "erandwa",
+              "city": "pune",
+              "state": "maharashtra",
+              "landmark_direction": "near lijjat papad"
+            },
+            "unparsed_text": "saniket house, cts, prabhat road, na",
+            "parse_reason": "conflicting_street;unmatched_text"
+          },
+          {
+            "entity_id": "S1-820563747",
+            "address": "delhi, gf vishnu garden, khyala, na-235-a, west delhi, delhi",
+            "recognized": {
+              "floor": "ground floor",
+              "city": "delhi",
+              "state": "delhi"
+            },
+            "unparsed_text": "delhi, vishnu garden, khyala, na-235-a, west",
+            "parse_reason": "unmatched_text;incomplete_components"
+          }
+        ]
+      },
+      "sample_entity_ids_sha256": "83bff42417e069d45e605f757d604cd35fd284f113d4e75e5a65d73df53221e0"
+    },
+    "train_S2": {
+      "counts": {
+        "rows": 10000,
+        "raw_addresses_with_six_digit_group": 0,
+        "raw_addresses_with_split_pin_shape": 165,
+        "raw_addresses_with_postal_marker": 1,
+        "normalized_addresses_with_six_digit_group": 18,
+        "addresses_with_unretained_numeric_groups": 0,
+        "parsed_with_street_or_po_box": 515,
+        "nonempty": 9697,
+        "with_unparsed_text": 7533,
+        "empty": 303,
+        "partial_without_unparsed_text": 359,
+        "status_parsed": 1805,
+        "status_partial": 7807,
+        "status_fallback": 85,
+        "address_word_number_tokens": 115586,
+        "unparsed_word_number_tokens": 35382,
+        "unparsed_token_percent": 30.61
+      },
+      "statuses": {
+        "partial": 7807,
+        "parsed": 1805,
+        "fallback": 85
+      },
+      "component_nonempty": {
+        "house_number": 6366,
+        "city": 7928,
+        "street": 3109,
+        "unit": 1359,
+        "locality": 5821,
+        "state": 8084,
+        "building": 1854,
+        "floor": 1259,
+        "landmark_direction": 1039,
+        "postal_code": 18,
+        "po_box": 4
+      },
+      "unparsed_categories": {
+        "unrecognized_name_or_location": 2813,
+        "unrecognized_numeric_segment": 2442,
+        "conflicting_component_guess": 897,
+        "unusual_unit_or_building": 940,
+        "rural_or_unrecognized_road_form": 112,
+        "placeholder_text": 304,
+        "stray_punctuation": 25
+      },
+      "missing_numeric_groups": {},
+      "examples": {
+        "unrecognized_name_or_location": [
+          {
+            "entity_id": "S2-771853802",
+            "address": "h.no b3/1815 , village & post tuhiya, bharatpur, rajasthana",
+            "recognized": {
+              "house_number": "b3/1815",
+              "city": "post tuhiya"
+            },
+            "unparsed_text": "bharatpur, rajasthana",
+            "parse_reason": "unmatched_text;incomplete_components"
+          },
+          {
+            "entity_id": "S2-171307585",
+            "address": "38-c plot no.750, pinky palace, s v road, khar, mumbai, maharashtra",
+            "recognized": {
+              "house_number": "plot 750",
+              "street": "s v road",
+              "unit": "38-c",
+              "locality": "khar",
+              "city": "mumbai",
+              "state": "maharashtra"
+            },
+            "unparsed_text": "pinky palace",
+            "parse_reason": "unmatched_text"
+          },
+          {
+            "entity_id": "S2-2200885",
+            "address": "no 0441/10, royal enlave, 3rd avenue, anna nagar, east, m block, chennai, tamil nadu",
+            "recognized": {
+              "house_number": "0441/10",
+              "street": "3rd avenue",
+              "building": "m block",
+              "locality": "anna nagar",
+              "city": "chennai",
+              "state": "tamil nadu"
+            },
+            "unparsed_text": "royal enlave, east",
+            "parse_reason": "unmatched_text;unrecognized_order"
+          }
+        ],
+        "unrecognized_numeric_segment": [
+          {
+            "entity_id": "S2-32595219",
+            "address": "pl no f 13, narayan nagar limbayat, surat, gujarat",
+            "recognized": {
+              "house_number": "f",
+              "locality": "narayan nagar, limbayat",
+              "city": "surat",
+              "state": "gujarat"
+            },
+            "unparsed_text": "pl 13",
+            "parse_reason": "unmatched_text"
+          },
+          {
+            "entity_id": "S2-314901765",
+            "address": "t.m.c 12/74 g2 archives victoria, tripunithura, keralam",
+            "recognized": {},
+            "unparsed_text": "t.m.c 12/74 g2 archives victoria, tripunithura, keralam",
+            "parse_reason": "unmatched_text"
+          },
+          {
+            "entity_id": "S2-198638057",
+            "address": "plot no 203-204 lati plot 2, prithviraj plot 2, rajkot, gujarat",
+            "recognized": {
+              "house_number": "plot 203-204",
+              "city": "rajkot",
+              "state": "gujarat"
+            },
+            "unparsed_text": "lati plot 2, prithviraj plot 2",
+            "parse_reason": "unmatched_text"
+          }
+        ],
+        "conflicting_component_guess": [
+          {
+            "entity_id": "S2-211390993",
+            "address": "#68 c/o durga devi w/o mli r, ward no 24 krishna colony, jaipur, rajasthana",
+            "recognized": {
+              "house_number": "68",
+              "locality": "ward no 24 krishna colony",
+              "city": "jaipur"
+            },
+            "unparsed_text": "c/o durga devi w/o mli r, rajasthana",
+            "parse_reason": "conflicting_house_number;unmatched_text;incomplete_components"
+          },
+          {
+            "entity_id": "S2-171096238",
+            "address": "bldg no b/1 flat no 401 vedant complex, vartak nagar, thane, thane, maharashtra",
+            "recognized": {
+              "unit": "flat 401",
+              "building": "bldg no b/1",
+              "locality": "vartak nagar",
+              "city": "thane",
+              "state": "maharashtra"
+            },
+            "unparsed_text": "vedant complex, thane",
+            "parse_reason": "conflicting_building;unmatched_text"
+          },
+          {
+            "entity_id": "S2-290428277",
+            "address": "3/29, vinayagar street, vk road, thaneer pandal, coimbatore south, dhamilnadhu",
+            "recognized": {
+              "house_number": "3/29",
+              "street": "vinayagar street"
+            },
+            "unparsed_text": "vk road, thaneer pandal, coimbatore south, dhamilnadhu",
+            "parse_reason": "conflicting_street;unmatched_text;incomplete_components"
+          }
+        ],
+        "unusual_unit_or_building": [
+          {
+            "entity_id": "S2-443811607",
+            "address": "##40, jorapukur square lane, kolkata, west bengal",
+            "recognized": {
+              "street": "jorapukur square lane",
+              "city": "kolkata",
+              "state": "west bengal"
+            },
+            "unparsed_text": "##40",
+            "parse_reason": "unmatched_text"
+          },
+          {
+            "entity_id": "S2-182996336",
+            "address": "16 floor 3, plot 11, 18 batliwala bldg bldg, miya mohd chhotani road, nr canossa h school, mahim, mumbai, maharashtra",
+            "recognized": {
+              "street": "miya mohd chhotani road",
+              "floor": "floor 16",
+              "building": "18 batliwala bldg",
+              "locality": "mahim",
+              "city": "mumbai",
+              "state": "maharashtra",
+              "landmark_direction": "near canossa h school"
+            },
+            "unparsed_text": "3, plot 11, bldg",
+            "parse_reason": "unmatched_text"
+          },
+          {
+            "entity_id": "S2-18446160",
+            "address": "delhi, j-4/8b top floor, dda flat, kalkaji, new delhi",
+            "recognized": {
+              "city": "delhi",
+              "state": "delhi"
+            },
+            "unparsed_text": "j-4/8b top floor, dda flat, kalkaji, new",
+            "parse_reason": "unmatched_text;incomplete_components"
+          }
+        ],
+        "rural_or_unrecognized_road_form": [
+          {
+            "entity_id": "S2-471651673",
+            "address": "92-a, 91-b industrial area no 1, a.b.road, dewas, madhya pradesh",
+            "recognized": {
+              "house_number": "1",
+              "unit": "92-a",
+              "locality": "91-b industrial area",
+              "city": "dewas",
+              "state": "madhya pradesh"
+            },
+            "unparsed_text": "a.b.road",
+            "parse_reason": "unmatched_text;unrecognized_order"
+          },
+          {
+            "entity_id": "S2-874996744",
+            "address": "house no pvt no-23 kh.no. 264/228/173, 2nd floor, gali no 2, near corporative bank, village, wazirabad, delhi, dilli",
+            "recognized": {
+              "street": "gali 2",
+              "floor": "floor 2",
+              "locality": "wazirabad",
+              "city": "delhi",
+              "state": "delhi",
+              "landmark_direction": "near corporative bank"
+            },
+            "unparsed_text": "house no pvt no-23 kh.no. 264/228/173, village, dilli",
+            "parse_reason": "unmatched_text"
+          },
+          {
+            "entity_id": "S2-224401294",
+            "address": "madhya pradesha, 54-b, sheetal nagar, ring road, indore",
+            "recognized": {
+              "locality": "sheetal nagar",
+              "city": "indore"
+            },
+            "unparsed_text": "madhya pradesha, 54-b, ring road",
+            "parse_reason": "unmatched_text;incomplete_components"
+          }
+        ],
+        "placeholder_text": [
+          {
+            "entity_id": "S2-269003350",
+            "address": "b1/h14, mohan co-operative industrial area, mathura road, new delhi, null, delhi",
+            "recognized": {
+              "house_number": "b1/h14",
+              "street": "mathura road",
+              "locality": "mohan co-operative industrial area",
+              "city": "delhi",
+              "state": "delhi"
+            },
+            "unparsed_text": "null",
+            "parse_reason": "unmatched_text;unrecognized_order"
+          },
+          {
+            "entity_id": "S2-829733490",
+            "address": "30-6-41, null, visakhapatnam, vishakhapatnam, andhra pradesh",
+            "recognized": {
+              "house_number": "30-6-41",
+              "city": "visakhapatnam",
+              "state": "andhra pradesh"
+            },
+            "unparsed_text": "null, vishakhapatnam",
+            "parse_reason": "unmatched_text"
+          },
+          {
+            "entity_id": "S2-779571415",
+            "address": "plot no. d/196 , t.v.kadu co-op nagar phase 1 and ii, opp. hot chitps, chennai, n/a, dhamilnadhu",
+            "recognized": {
+              "house_number": "plot d/196",
+              "locality": "t.v.kadu co-op nagar, phase 1, and ii",
+              "city": "chennai",
+              "landmark_direction": "opposite hot chitps"
+            },
+            "unparsed_text": "n/a, dhamilnadhu",
+            "parse_reason": "unmatched_text;incomplete_components"
+          }
+        ],
+        "stray_punctuation": [
+          {
+            "entity_id": "S2-780239659",
+            "address": "190/y/14- , 12th main, 3rd block, rajajinagar, bangalore, karnataka",
+            "recognized": {
+              "house_number": "190/y/14",
+              "street": "12th main",
+              "building": "3rd block",
+              "locality": "rajajinagar",
+              "city": "bangalore",
+              "state": "karnataka"
+            },
+            "unparsed_text": "-",
+            "parse_reason": "unmatched_text;unrecognized_order"
+          },
+          {
+            "entity_id": "S2-780285390",
+            "address": "50-51-, b- block, anand plaza, girwa, rajasthan",
+            "recognized": {
+              "house_number": "50-51",
+              "building": "b - block",
+              "locality": "anand plaza",
+              "city": "girwa",
+              "state": "rajasthan"
+            },
+            "unparsed_text": "-",
+            "parse_reason": "unmatched_text"
+          },
+          {
+            "entity_id": "S2-613070745",
+            "address": "villa no 96-, ramky tranquillas, abhyudaya nagar hmbs colony, darga khalizkhan, hyderabad, telangana",
+            "recognized": {
+              "unit": "villa 96",
+              "locality": "ramky tranquillas, abhyudaya nagar, hmbs colony, darga khalizkhan",
+              "city": "hyderabad",
+              "state": "telangana"
+            },
+            "unparsed_text": "-",
+            "parse_reason": "unmatched_text"
+          }
+        ]
+      },
+      "sample_entity_ids_sha256": "2c30cced65b54a1810470fd1d5b6bcf8e1184a23dfc972e879a31b2fd8507001"
+    },
+    "train_S3": {
+      "counts": {
+        "rows": 10000,
+        "raw_addresses_with_six_digit_group": 2,
+        "raw_addresses_with_split_pin_shape": 136,
+        "raw_addresses_with_postal_marker": 0,
+        "normalized_addresses_with_six_digit_group": 13,
+        "addresses_with_unretained_numeric_groups": 0,
+        "parsed_with_street_or_po_box": 404,
+        "empty": 331,
+        "nonempty": 9669,
+        "with_unparsed_text": 7579,
+        "partial_without_unparsed_text": 265,
+        "status_parsed": 1825,
+        "status_partial": 7730,
+        "status_fallback": 114,
+        "address_word_number_tokens": 103905,
+        "unparsed_word_number_tokens": 34314,
+        "unparsed_token_percent": 33.02
+      },
+      "statuses": {
+        "partial": 7730,
+        "parsed": 1825,
+        "fallback": 114
+      },
+      "component_nonempty": {
+        "house_number": 6191,
+        "locality": 5208,
+        "city": 7990,
+        "state": 8106,
+        "street": 2420,
+        "unit": 1079,
+        "floor": 936,
+        "landmark_direction": 828,
+        "building": 1502,
+        "postal_code": 11,
+        "po_box": 5
+      },
+      "unparsed_categories": {
+        "unrecognized_numeric_segment": 2339,
+        "unrecognized_name_or_location": 3370,
+        "conflicting_component_guess": 646,
+        "placeholder_text": 302,
+        "unusual_unit_or_building": 840,
+        "rural_or_unrecognized_road_form": 81,
+        "stray_punctuation": 1
+      },
+      "missing_numeric_groups": {},
+      "examples": {
+        "unrecognized_numeric_segment": [
+          {
+            "entity_id": "S3-910686003",
+            "address": "207, heights, the retreat, south city 1, industrial estate, gurgaon, hr",
+            "recognized": {
+              "house_number": "207",
+              "locality": "the retreat",
+              "city": "gurgaon",
+              "state": "haryana"
+            },
+            "unparsed_text": "heights, south city 1, industrial estate",
+            "parse_reason": "unmatched_text"
+          },
+          {
+            "entity_id": "S3-667174956",
+            "address": "up, lucknow, 471",
+            "recognized": {
+              "city": "lucknow",
+              "state": "uttar pradesh"
+            },
+            "unparsed_text": "471",
+            "parse_reason": "unmatched_text;incomplete_components;unrecognized_order"
+          },
+          {
+            "entity_id": "S3-603551051",
+            "address": "plot no 5&6, chennai, thiruvallur, tn",
+            "recognized": {
+              "house_number": "plot 5",
+              "city": "chennai",
+              "state": "tamil nadu"
+            },
+            "unparsed_text": "&6, thiruvallur",
+            "parse_reason": "unmatched_text"
+          }
+        ],
+        "unrecognized_name_or_location": [
+          {
+            "entity_id": "S3-483297932",
+            "address": "c/o sunil kumar bhargwa vishweshwar nath 1 pareek college road, jaipur, rajasthana",
+            "recognized": {
+              "street": "c/o sunil kumar bhargwa vishweshwar nath 1 pareek college road",
+              "city": "jaipur"
+            },
+            "unparsed_text": "rajasthana",
+            "parse_reason": "unmatched_text;incomplete_components"
+          },
+          {
+            "entity_id": "S3-977391111",
+            "address": "h.no 3-13rajdhani enclave, delhi, north delhi, dl",
+            "recognized": {
+              "house_number": "3-13rajdhani",
+              "locality": "north",
+              "city": "delhi",
+              "state": "delhi"
+            },
+            "unparsed_text": "enclave, delhi",
+            "parse_reason": "unmatched_text"
+          },
+          {
+            "entity_id": "S3-681601490",
+            "address": "#24, chennai, dhamilnadhu",
+            "recognized": {
+              "house_number": "24",
+              "city": "chennai"
+            },
+            "unparsed_text": "dhamilnadhu",
+            "parse_reason": "unmatched_text;incomplete_components"
+          }
+        ],
+        "conflicting_component_guess": [
+          {
+            "entity_id": "S3-886999849",
+            "address": "no 46 gundala road, survey no. 461, near khedut solvant, behind gujarat ginning, rajkot, gujarata",
+            "recognized": {
+              "house_number": "survey 461",
+              "street": "no 46 gundala road",
+              "city": "rajkot",
+              "landmark_direction": "near khedut solvant"
+            },
+            "unparsed_text": "behind gujarat ginning, gujarata",
+            "parse_reason": "conflicting_house_number,landmark_direction;unmatched_text;incomplete_components;unrecognized_order"
+          },
+          {
+            "entity_id": "S3-432652249",
+            "address": "no 2nd floor, building no.8, community centre basant lok, new delhi, south west delhi, dl",
+            "recognized": {
+              "house_number": "2nd",
+              "building": "building no 8",
+              "locality": "south west",
+              "city": "delhi",
+              "state": "delhi"
+            },
+            "unparsed_text": "floor, community centre basant lok, new delhi",
+            "parse_reason": "conflicting_building;unmatched_text"
+          },
+          {
+            "entity_id": "S3-724698176",
+            "address": "chamber no 5, second inning, 150ft ring road, near kkv hall, opp chitralekha apartment, rajkot, gj",
+            "recognized": {
+              "house_number": "5",
+              "street": "150ft ring road",
+              "building": "opp chitralekha apartment",
+              "city": "rajkot",
+              "state": "gujarat",
+              "landmark_direction": "near kkv hall"
+            },
+            "unparsed_text": "chamber, second inning",
+            "parse_reason": "conflicting_landmark_direction;unmatched_text;unrecognized_order"
+          }
+        ],
+        "placeholder_text": [
+          {
+            "entity_id": "S3-667573759",
+            "address": "no.316, the mayfair 100 feet road indiranagar, bengaluru, null , karnataka",
+            "recognized": {
+              "house_number": "316",
+              "street": "the mayfair 100 feet road",
+              "locality": "indiranagar",
+              "city": "bangalore",
+              "state": "karnataka"
+            },
+            "unparsed_text": "null",
+            "parse_reason": "unmatched_text"
+          },
+          {
+            "entity_id": "S3-342423778",
+            "address": "kolkata, null, wb, 8/e dacres lane, kolkata, #3rd floor",
+            "recognized": {
+              "house_number": "3rd",
+              "street": "8/e dacres lane",
+              "city": "kolkata",
+              "state": "west bengal"
+            },
+            "unparsed_text": "kolkata, null, floor",
+            "parse_reason": "conflicting_house_number;unmatched_text;unrecognized_order"
+          },
+          {
+            "entity_id": "S3-988066300",
+            "address": "preethi house no xii/0715opp post office uliyakovil, kollam, null, keralam",
+            "recognized": {
+              "house_number": "xii/0715opp",
+              "locality": "post office uliyakovil"
+            },
+            "unparsed_text": "preethi, kollam, null, keralam",
+            "parse_reason": "unmatched_text;incomplete_components"
+          }
+        ],
+        "unusual_unit_or_building": [
+          {
+            "entity_id": "S3-532897228",
+            "address": "ab-21 ist floor behind postoffice near kamal cinema safdarjang enclave, new delhi, south delhi, dilli",
+            "recognized": {
+              "house_number": "ab-21",
+              "city": "delhi",
+              "landmark_direction": "behind postoffice near kamal cinema safdarjang enclave"
+            },
+            "unparsed_text": "ist floor, south delhi, dilli",
+            "parse_reason": "unmatched_text;incomplete_components"
+          },
+          {
+            "entity_id": "S3-296103746",
+            "address": "door no 6th floor, simba tower, near virwani industrial estate, goregaon east, mumbai, mh",
+            "recognized": {
+              "house_number": "6th",
+              "building": "simba tower",
+              "locality": "goregaon east",
+              "city": "mumbai",
+              "state": "maharashtra",
+              "landmark_direction": "near virwani industrial estate"
+            },
+            "unparsed_text": "floor",
+            "parse_reason": "unmatched_text"
+          },
+          {
+            "entity_id": "S3-74283506",
+            "address": "##123/6/88a, periyapudur, salem, dhamilnadhu",
+            "recognized": {},
+            "unparsed_text": "##123/6/88a, periyapudur, salem, dhamilnadhu",
+            "parse_reason": "unmatched_text"
+          }
+        ],
+        "rural_or_unrecognized_road_form": [
+          {
+            "entity_id": "S3-252359414",
+            "address": "village-ata kayasthan, post -bilwa, bhojipura, tahsil- bareilly, district- bareilly, bareilly, up",
+            "recognized": {
+              "locality": "post - bilwa, tahsil - bareilly, district - bareilly",
+              "state": "uttar pradesh"
+            },
+            "unparsed_text": "village-ata kayasthan, bhojipura, bareilly",
+            "parse_reason": "unmatched_text;incomplete_components"
+          },
+          {
+            "entity_id": "S3-812452674",
+            "address": "d/6, ground floor, shivalik business centre b/h.rajpath club, s.g.highway, bodakdev, ahmedabad hq region, ahmedabad, gj",
+            "recognized": {
+              "unit": "d/6",
+              "floor": "ground floor",
+              "building": "shivalik business centre",
+              "locality": "bodakdev, ahmedabad hq region",
+              "city": "ahmedabad",
+              "state": "gujarat"
+            },
+            "unparsed_text": "b/h.rajpath club, s.g.highway",
+            "parse_reason": "unmatched_text"
+          },
+          {
+            "entity_id": "S3-112465931",
+            "address": "kh. no. 00196, village, didauli, mohammadpur road, ghaziabad, up",
+            "recognized": {
+              "house_number": "00196",
+              "street": "mohammadpur road",
+              "city": "ghaziabad",
+              "state": "uttar pradesh"
+            },
+            "unparsed_text": "kh., village, didauli",
+            "parse_reason": "unmatched_text"
+          }
+        ],
+        "stray_punctuation": [
+          {
+            "entity_id": "S3-597846013",
+            "address": "block d-#907 narayanpur, kolkata, wb",
+            "recognized": {
+              "house_number": "907",
+              "building": "block d",
+              "locality": "narayanpur",
+              "city": "kolkata",
+              "state": "west bengal"
+            },
+            "unparsed_text": "-",
+            "parse_reason": "unmatched_text"
+          }
+        ]
+      },
+      "sample_entity_ids_sha256": "d37439d3250f676b9c27fb700153f7ef017a970de9e29a3109afa8be173026b0"
+    },
+    "test_S1": {
+      "counts": {
+        "rows": 10000,
+        "raw_addresses_with_six_digit_group": 5,
+        "raw_addresses_with_split_pin_shape": 83,
+        "raw_addresses_with_postal_marker": 2,
+        "normalized_addresses_with_six_digit_group": 26,
+        "addresses_with_unretained_numeric_groups": 0,
+        "parsed_with_street_or_po_box": 677,
+        "nonempty": 10000,
+        "with_unparsed_text": 7681,
+        "partial_without_unparsed_text": 354,
+        "status_parsed": 1965,
+        "status_partial": 8035,
+        "status_fallback": 0,
+        "address_word_number_tokens": 127407,
+        "unparsed_word_number_tokens": 36165,
+        "unparsed_token_percent": 28.39
+      },
+      "statuses": {
+        "partial": 8035,
+        "parsed": 1965
+      },
+      "component_nonempty": {
+        "unit": 1773,
+        "floor": 1488,
+        "building": 2043,
+        "locality": 7168,
+        "city": 8933,
+        "state": 10000,
+        "landmark_direction": 1255,
+        "street": 3644,
+        "house_number": 5979,
+        "postal_code": 22,
+        "po_box": 3
+      },
+      "unparsed_categories": {
+        "conflicting_component_guess": 877,
+        "unrecognized_name_or_location": 3343,
+        "unrecognized_numeric_segment": 2660,
+        "rural_or_unrecognized_road_form": 135,
+        "unusual_unit_or_building": 659,
+        "placeholder_text": 7
+      },
+      "missing_numeric_groups": {},
+      "examples": {
+        "conflicting_component_guess": [
+          {
+            "entity_id": "S1-930061016",
+            "address": "1-1-151/1, 3rd floor, sai ram towers, opp ymca alexander road, behind hari hara kala bh, avan, secunderabad, hyderabad, telangana",
+            "recognized": {
+              "unit": "1-1-151/1",
+              "floor": "floor 3",
+              "building": "sai ram towers",
+              "locality": "avan, secunderabad",
+              "city": "hyderabad",
+              "state": "telangana",
+              "landmark_direction": "opposite ymca alexander road"
+            },
+            "unparsed_text": "behind hari hara kala bh",
+            "parse_reason": "conflicting_landmark_direction;unmatched_text"
+          },
+          {
+            "entity_id": "S1-871347731",
+            "address": "transmission housecompartment no 82 plot no 6/19 marol coop ind est andheri e, mumbai, maharashtra",
+            "recognized": {
+              "house_number": "plot 6/19",
+              "locality": "marol coop ind est andheri e",
+              "city": "mumbai",
+              "state": "maharashtra"
+            },
+            "unparsed_text": "transmission housecompartment no 82",
+            "parse_reason": "conflicting_house_number;unmatched_text"
+          },
+          {
+            "entity_id": "S1-690038365",
+            "address": "bangalore north, 1st cross adarsh nagar, khb main road, rt nagar, bangalore, karnataka, no.7",
+            "recognized": {
+              "house_number": "7",
+              "street": "1st cross",
+              "locality": "adarsh nagar, rt nagar",
+              "city": "bangalore",
+              "state": "karnataka"
+            },
+            "unparsed_text": "bangalore north, khb main road",
+            "parse_reason": "conflicting_street;unmatched_text;unrecognized_order"
+          }
+        ],
+        "unrecognized_name_or_location": [
+          {
+            "entity_id": "S1-403658836",
+            "address": "c/o t balaram kishan, gandhinagar, main road, brahmapur sadar, ganjam, orissa",
+            "recognized": {
+              "street": "main road",
+              "locality": "brahmapur sadar",
+              "city": "ganjam",
+              "state": "odisha"
+            },
+            "unparsed_text": "c/o t balaram kishan, gandhinagar",
+            "parse_reason": "unmatched_text"
+          },
+          {
+            "entity_id": "S1-149541716",
+            "address": "b no 536 kishori khera, unnao, kishori khera, unnao, uttar pradesh",
+            "recognized": {
+              "house_number": "536",
+              "locality": "kishori khera, unnao, kishori khera",
+              "city": "unnao",
+              "state": "uttar pradesh"
+            },
+            "unparsed_text": "b",
+            "parse_reason": "unmatched_text"
+          },
+          {
+            "entity_id": "S1-973389084",
+            "address": "161, mahatma gandhi road, 2nd floor, room no. 214, kolkata, kolkata, howrah, west bengal",
+            "recognized": {
+              "house_number": "161",
+              "street": "mahatma gandhi road",
+              "unit": "room 214",
+              "floor": "floor 2",
+              "city": "kolkata",
+              "state": "west bengal"
+            },
+            "unparsed_text": "kolkata, howrah",
+            "parse_reason": "unmatched_text;unrecognized_order"
+          }
+        ],
+        "unrecognized_numeric_segment": [
+          {
+            "entity_id": "S1-324135473",
+            "address": "mumbai, maharashtra, ncpa apartments, dorabji tata road nariman point, b/14",
+            "recognized": {
+              "street": "dorabji tata road",
+              "building": "ncpa apartments",
+              "city": "mumbai",
+              "state": "maharashtra"
+            },
+            "unparsed_text": "nariman point, b/14",
+            "parse_reason": "unmatched_text;unrecognized_order"
+          },
+          {
+            "entity_id": "S1-331373722",
+            "address": "murasoli maran towers, 73, mrc nagar main road, mrc nagar, chennai city corporation, chennai, tamil nadu",
+            "recognized": {
+              "street": "mrc nagar main road",
+              "building": "murasoli maran towers",
+              "locality": "mrc nagar, chennai city corporation",
+              "city": "chennai",
+              "state": "tamil nadu"
+            },
+            "unparsed_text": "73",
+            "parse_reason": "unmatched_text"
+          },
+          {
+            "entity_id": "S1-299290326",
+            "address": "l.g-12 trade center, 18 south tukoganj, indore, madhya pradesh",
+            "recognized": {
+              "building": "l.g - 12 trade center",
+              "city": "indore",
+              "state": "madhya pradesh"
+            },
+            "unparsed_text": "18 south tukoganj",
+            "parse_reason": "unmatched_text"
+          }
+        ],
+        "rural_or_unrecognized_road_form": [
+          {
+            "entity_id": "S1-953541147",
+            "address": "b-20, sh-20, devendra chs ltd, shanti nagar sector 7, mira road east, thane, maharashtra",
+            "recognized": {
+              "house_number": "b-20",
+              "street": "mira road",
+              "locality": "shanti nagar, sector 7, east",
+              "city": "thane",
+              "state": "maharashtra"
+            },
+            "unparsed_text": "sh-20, devendra chs ltd",
+            "parse_reason": "unmatched_text;unrecognized_order"
+          },
+          {
+            "entity_id": "S1-942945792",
+            "address": "3932, gali state wali, nai sarak, new delhi, delhi",
+            "recognized": {
+              "house_number": "3932",
+              "locality": "nai sarak",
+              "city": "delhi",
+              "state": "delhi"
+            },
+            "unparsed_text": "gali state wali",
+            "parse_reason": "unmatched_text"
+          },
+          {
+            "entity_id": "S1-581937920",
+            "address": "gf-07, tower-b, vatika mindscapes, 12/3, nh-2 sarai khwaja, sector-27d, faridabad, haryana",
+            "recognized": {
+              "house_number": "gf-07",
+              "locality": "tower-b, vatika mindscapes",
+              "city": "faridabad",
+              "state": "haryana"
+            },
+            "unparsed_text": "12/3, nh-2 sarai khwaja, sector-27d",
+            "parse_reason": "unmatched_text"
+          }
+        ],
+        "unusual_unit_or_building": [
+          {
+            "entity_id": "S1-450657756",
+            "address": "17, first floor, nanjappabuilding, kalyanagar, t dasarahalli, bangalore, karnataka",
+            "recognized": {
+              "house_number": "17",
+              "locality": "nanjappabuilding, kalyanagar, t dasarahalli",
+              "city": "bangalore",
+              "state": "karnataka"
+            },
+            "unparsed_text": "first floor",
+            "parse_reason": "unmatched_text"
+          },
+          {
+            "entity_id": "S1-725300339",
+            "address": "c/o- swapna chakraborty, subhash nagar-b, block-morepukur, rishra, hooghly., rishra, hooghly, west bengal",
+            "recognized": {
+              "state": "west bengal"
+            },
+            "unparsed_text": "c/o- swapna chakraborty, subhash nagar-b, block-morepukur, rishra, hooghly., rishra, hooghly",
+            "parse_reason": "unmatched_text;incomplete_components"
+          },
+          {
+            "entity_id": "S1-941093931",
+            "address": "lohara road, city pride apt, fl no 207, yavatmal, maharashtra",
+            "recognized": {
+              "street": "lohara road",
+              "city": "yavatmal",
+              "state": "maharashtra"
+            },
+            "unparsed_text": "city pride apt, fl no 207",
+            "parse_reason": "unmatched_text"
+          }
+        ],
+        "placeholder_text": [
+          {
+            "entity_id": "S1-349068617",
+            "address": "survey no 323 plot no -08, 09, talod, jorajee na muvada, talod, sabarkantha, gujarat, talod, sabarkantha, gujarat",
+            "recognized": {
+              "house_number": "plot 08",
+              "locality": "talod, talod, sabarkantha, talod",
+              "city": "sabarkantha",
+              "state": "gujarat"
+            },
+            "unparsed_text": "survey no 323, 09, jorajee na muvada, gujarat",
+            "parse_reason": "conflicting_house_number;unmatched_text"
+          },
+          {
+            "entity_id": "S1-541040495",
+            "address": "na ram katha sangrahlaya, vasudev ghat faizabad, jalalpur, ambedkar nagar, uttar pradesh",
+            "recognized": {
+              "locality": "ambedkar nagar",
+              "state": "uttar pradesh"
+            },
+            "unparsed_text": "na ram katha sangrahlaya, vasudev ghat faizabad, jalalpur",
+            "parse_reason": "unmatched_text;incomplete_components"
+          },
+          {
+            "entity_id": "S1-706107358",
+            "address": "nai abadi, kachhpura, kuberpur, agra, uttar pradesh, 16/na/kp/786, agra",
+            "recognized": {
+              "city": "agra",
+              "state": "uttar pradesh"
+            },
+            "unparsed_text": "nai abadi, kachhpura, kuberpur, agra, 16/na/kp/786",
+            "parse_reason": "unmatched_text;incomplete_components;unrecognized_order"
+          }
+        ]
+      },
+      "sample_entity_ids_sha256": "1fad821ac0dc2ae2e4382abfcd32ec301f0879a9fd5131daf80a16a74e5bd74a"
+    },
+    "test_S2": {
+      "counts": {
+        "rows": 10000,
+        "raw_addresses_with_six_digit_group": 1,
+        "raw_addresses_with_split_pin_shape": 164,
+        "raw_addresses_with_postal_marker": 9,
+        "normalized_addresses_with_six_digit_group": 12,
+        "addresses_with_unretained_numeric_groups": 0,
+        "parsed_with_street_or_po_box": 550,
+        "nonempty": 9763,
+        "with_unparsed_text": 7488,
+        "partial_without_unparsed_text": 383,
+        "empty": 237,
+        "status_parsed": 1892,
+        "status_partial": 7804,
+        "status_fallback": 67,
+        "address_word_number_tokens": 117015,
+        "unparsed_word_number_tokens": 35630,
+        "unparsed_token_percent": 30.45
+      },
+      "statuses": {
+        "partial": 7804,
+        "parsed": 1892,
+        "fallback": 67
+      },
+      "component_nonempty": {
+        "city": 7973,
+        "house_number": 6640,
+        "street": 3178,
+        "locality": 5913,
+        "state": 8222,
+        "floor": 1222,
+        "building": 1913,
+        "landmark_direction": 1102,
+        "unit": 1362,
+        "postal_code": 11,
+        "po_box": 3
+      },
+      "unparsed_categories": {
+        "unrecognized_numeric_segment": 2480,
+        "stray_punctuation": 28,
+        "unrecognized_name_or_location": 2734,
+        "unusual_unit_or_building": 892,
+        "rural_or_unrecognized_road_form": 107,
+        "conflicting_component_guess": 921,
+        "placeholder_text": 326
+      },
+      "missing_numeric_groups": {},
+      "examples": {
+        "unrecognized_numeric_segment": [
+          {
+            "entity_id": "S2-502685131",
+            "address": "chennai, a14-a15, dhamilnadhu",
+            "recognized": {
+              "city": "chennai"
+            },
+            "unparsed_text": "a14-a15, dhamilnadhu",
+            "parse_reason": "unmatched_text;incomplete_components"
+          },
+          {
+            "entity_id": "S2-234147637",
+            "address": "12, opposite metro pillar 353, kohat enclave, pitampura, delhi, new delhi, delhi",
+            "recognized": {
+              "house_number": "12",
+              "building": "kohat enclave",
+              "locality": "pitampura",
+              "city": "delhi",
+              "state": "delhi",
+              "landmark_direction": "opposite metro pillar"
+            },
+            "unparsed_text": "353, delhi",
+            "parse_reason": "unmatched_text"
+          },
+          {
+            "entity_id": "S2-645842533",
+            "address": "fl no b-603s no9/8/3-9/14a, sun planet suncity road, pune city, maharashtra",
+            "recognized": {
+              "street": "sun planet suncity road",
+              "city": "pune city",
+              "state": "maharashtra"
+            },
+            "unparsed_text": "fl no b-603s no9/8/3-9/14a",
+            "parse_reason": "unmatched_text"
+          }
+        ],
+        "stray_punctuation": [
+          {
+            "entity_id": "S2-720777491",
+            "address": "no 14/ , tank bund road, brindavan nagar, sbm colony, mathikere, bangalore, karnataka",
+            "recognized": {
+              "house_number": "14",
+              "street": "tank bund road",
+              "locality": "brindavan nagar, sbm colony, mathikere",
+              "city": "bangalore",
+              "state": "karnataka"
+            },
+            "unparsed_text": "/",
+            "parse_reason": "unmatched_text"
+          },
+          {
+            "entity_id": "S2-583233319",
+            "address": "8-, mirbahar ghat street, kolkata, west bengal",
+            "recognized": {
+              "house_number": "8",
+              "street": "mirbahar ghat street",
+              "city": "kolkata",
+              "state": "west bengal"
+            },
+            "unparsed_text": "-",
+            "parse_reason": "unmatched_text"
+          },
+          {
+            "entity_id": "S2-811112184",
+            "address": "16-, wariana industrial complex, jalandhar, punjab",
+            "recognized": {
+              "house_number": "16",
+              "building": "wariana industrial complex",
+              "city": "jalandhar",
+              "state": "punjab"
+            },
+            "unparsed_text": "-",
+            "parse_reason": "unmatched_text"
+          }
+        ],
+        "unrecognized_name_or_location": [
+          {
+            "entity_id": "S2-260361305",
+            "address": "plot no. 168, 3rd floor, blk -kp pitampura, pitampura, delhi, new delhi, delhi",
+            "recognized": {
+              "house_number": "plot 168",
+              "floor": "floor 3",
+              "locality": "pitampura",
+              "city": "delhi",
+              "state": "delhi"
+            },
+            "unparsed_text": "blk -kp pitampura, delhi",
+            "parse_reason": "unmatched_text"
+          },
+          {
+            "entity_id": "S2-864713235",
+            "address": "a-1423/17-, indira nagar, lucknow, lucknow, uttar pradesh, lucknow, uttar pradesh",
+            "recognized": {
+              "house_number": "a-1423/17",
+              "locality": "indira nagar",
+              "city": "lucknow",
+              "state": "uttar pradesh"
+            },
+            "unparsed_text": "-, lucknow, lucknow, uttar pradesh",
+            "parse_reason": "unmatched_text"
+          },
+          {
+            "entity_id": "S2-89391977",
+            "address": "#6 iscon house, ahmedabad, gujarat",
+            "recognized": {
+              "house_number": "6",
+              "city": "ahmedabad",
+              "state": "gujarat"
+            },
+            "unparsed_text": "iscon house",
+            "parse_reason": "unmatched_text"
+          }
+        ],
+        "unusual_unit_or_building": [
+          {
+            "entity_id": "S2-107854476",
+            "address": "shop at plot no.##29&31bl, d janakpuri kh. no. 598, new delhi, delhi",
+            "recognized": {
+              "house_number": "598",
+              "city": "delhi",
+              "state": "delhi"
+            },
+            "unparsed_text": "shop at plot no.##29&31bl, d janakpuri kh.",
+            "parse_reason": "unmatched_text"
+          },
+          {
+            "entity_id": "S2-201136136",
+            "address": "no 602 , floor no.6, e-wing vasant sagar krishana kaveri chs ltd, thakur village kandivali east, maharashtra",
+            "recognized": {
+              "house_number": "602",
+              "locality": "thakur village",
+              "city": "kandivali east",
+              "state": "maharashtra"
+            },
+            "unparsed_text": "floor no.6, e-wing vasant sagar krishana kaveri chs ltd",
+            "parse_reason": "unmatched_text"
+          },
+          {
+            "entity_id": "S2-937069949",
+            "address": "maharashtra, ###1459 at post jaitane, tal sakri",
+            "recognized": {
+              "state": "maharashtra"
+            },
+            "unparsed_text": "###1459 at post jaitane, tal sakri",
+            "parse_reason": "unmatched_text;incomplete_components"
+          }
+        ],
+        "rural_or_unrecognized_road_form": [
+          {
+            "entity_id": "S2-378076126",
+            "address": "16, raj bhavan rd., bangalore-1., bangalore, karnataka",
+            "recognized": {
+              "house_number": "16",
+              "building": "raj bhavan",
+              "city": "bangalore",
+              "state": "karnataka"
+            },
+            "unparsed_text": "rd., bangalore-1.",
+            "parse_reason": "unmatched_text"
+          },
+          {
+            "entity_id": "S2-869603297",
+            "address": "shop no. 470, japan market, opp. linear bus stand, ring road, gujarat",
+            "recognized": {
+              "unit": "shop 470",
+              "state": "gujarat",
+              "landmark_direction": "opposite linear bus stand"
+            },
+            "unparsed_text": "japan market, ring road",
+            "parse_reason": "unmatched_text;incomplete_components"
+          },
+          {
+            "entity_id": "S2-691739143",
+            "address": "113/1478/5596, k.f road lane-3, khandagiri vihar, bhubaneswar, odisha",
+            "recognized": {
+              "house_number": "113/1478/5596",
+              "street": "k.f road",
+              "locality": "khandagiri vihar",
+              "city": "bhubaneswar",
+              "state": "odisha"
+            },
+            "unparsed_text": "lane-3",
+            "parse_reason": "unmatched_text"
+          }
+        ],
+        "conflicting_component_guess": [
+          {
+            "entity_id": "S2-358076585",
+            "address": "house no. 83(69), khasra no. 877, vikas nagar, village saddiq nagar, ghaziabad, uttar pradesh",
+            "recognized": {
+              "house_number": "survey 877",
+              "locality": "vikas nagar, village saddiq nagar",
+              "city": "ghaziabad",
+              "state": "uttar pradesh"
+            },
+            "unparsed_text": "house no. 83(69",
+            "parse_reason": "conflicting_city,house_number;unmatched_text"
+          },
+          {
+            "entity_id": "S2-850383918",
+            "address": "hyderabad, shaikpet, plot no c-65, hno 8-2-293/82/c/65, road no-15, telangana",
+            "recognized": {
+              "house_number": "plot c-65",
+              "street": "road no-15",
+              "city": "hyderabad",
+              "state": "telangana"
+            },
+            "unparsed_text": "shaikpet, hno 8-2-293/82/c/65",
+            "parse_reason": "conflicting_house_number;unmatched_text;unrecognized_order"
+          },
+          {
+            "entity_id": "S2-721687425",
+            "address": "h.no 137-a , kh no.19/3, ist floor darshan vihar village burari, shastri park, delhi, dilli",
+            "recognized": {
+              "house_number": "137-a",
+              "locality": "shastri park",
+              "city": "delhi",
+              "state": "delhi"
+            },
+            "unparsed_text": "kh no.19/3, ist floor darshan vihar village burari, dilli",
+            "parse_reason": "conflicting_house_number;unmatched_text"
+          }
+        ],
+        "placeholder_text": [
+          {
+            "entity_id": "S2-419821094",
+            "address": "door no 69a krishnanagar, lucknow, null, uttara pradesha",
+            "recognized": {
+              "house_number": "69a",
+              "locality": "krishnanagar",
+              "city": "lucknow"
+            },
+            "unparsed_text": "null, uttara pradesha",
+            "parse_reason": "unmatched_text;incomplete_components"
+          },
+          {
+            "entity_id": "S2-531668966",
+            "address": "door no 1-9-115/3/13/a ramnagar, null , hyderabad, telamgana",
+            "recognized": {
+              "house_number": "1-9-115/3/13/a",
+              "locality": "ramnagar",
+              "city": "hyderabad"
+            },
+            "unparsed_text": "null, telamgana",
+            "parse_reason": "unmatched_text;incomplete_components"
+          },
+          {
+            "entity_id": "S2-567884501",
+            "address": "pu-11 pitampura, delhi, null, delhi",
+            "recognized": {
+              "house_number": "pu-11",
+              "locality": "pitampura",
+              "city": "delhi",
+              "state": "delhi"
+            },
+            "unparsed_text": "null",
+            "parse_reason": "unmatched_text"
+          }
+        ]
+      },
+      "sample_entity_ids_sha256": "68a81966e5c32314926d57554f3947b9dada0e0c7a7deeb7af11b4f700460702"
+    },
+    "test_S3": {
+      "counts": {
+        "rows": 10000,
+        "raw_addresses_with_six_digit_group": 1,
+        "raw_addresses_with_split_pin_shape": 157,
+        "raw_addresses_with_postal_marker": 5,
+        "normalized_addresses_with_six_digit_group": 13,
+        "addresses_with_unretained_numeric_groups": 0,
+        "parsed_with_street_or_po_box": 374,
+        "nonempty": 9732,
+        "with_unparsed_text": 7616,
+        "partial_without_unparsed_text": 270,
+        "empty": 268,
+        "status_parsed": 1846,
+        "status_partial": 7784,
+        "status_fallback": 102,
+        "address_word_number_tokens": 104753,
+        "unparsed_word_number_tokens": 34492,
+        "unparsed_token_percent": 32.93
+      },
+      "statuses": {
+        "partial": 7784,
+        "parsed": 1846,
+        "fallback": 102
+      },
+      "component_nonempty": {
+        "house_number": 6412,
+        "city": 8168,
+        "locality": 5249,
+        "state": 8155,
+        "street": 2380,
+        "building": 1484,
+        "landmark_direction": 794,
+        "floor": 913,
+        "unit": 1088,
+        "postal_code": 11,
+        "po_box": 3
+      },
+      "unparsed_categories": {
+        "unrecognized_name_or_location": 3300,
+        "conflicting_component_guess": 674,
+        "unrecognized_numeric_segment": 2396,
+        "placeholder_text": 306,
+        "unusual_unit_or_building": 855,
+        "rural_or_unrecognized_road_form": 79,
+        "stray_punctuation": 6
+      },
+      "missing_numeric_groups": {},
+      "examples": {
+        "unrecognized_name_or_location": [
+          {
+            "entity_id": "S3-303413463",
+            "address": "431, jaipur, rajasthana",
+            "recognized": {
+              "house_number": "431",
+              "city": "jaipur"
+            },
+            "unparsed_text": "rajasthana",
+            "parse_reason": "unmatched_text;incomplete_components"
+          },
+          {
+            "entity_id": "S3-909489221",
+            "address": "gujarata, ahmedabad, national highway no #9narol naroda road, ahmedabad-",
+            "recognized": {
+              "street": "national highway no # 9narol naroda road",
+              "city": "ahmedabad"
+            },
+            "unparsed_text": "gujarata, ahmedabad",
+            "parse_reason": "unmatched_text;incomplete_components"
+          },
+          {
+            "entity_id": "S3-498847777",
+            "address": "b-361 omaxe city raibareilly road lko., lucknow, uttara pradesha",
+            "recognized": {
+              "house_number": "b-361",
+              "street": "omaxe city raibareilly road",
+              "locality": "lko",
+              "city": "lucknow"
+            },
+            "unparsed_text": "uttara pradesha",
+            "parse_reason": "unmatched_text;incomplete_components"
+          }
+        ],
+        "conflicting_component_guess": [
+          {
+            "entity_id": "S3-115776167",
+            "address": "dl, new delhi, door no 2 nd floor house no 318 keshav mohalla khasra no -200 village ghitorni, south delhi",
+            "recognized": {
+              "house_number": "survey 200",
+              "locality": "village ghitorni",
+              "city": "delhi",
+              "state": "delhi"
+            },
+            "unparsed_text": "dl, door no 2 nd floor house no 318 keshav mohalla, south",
+            "parse_reason": "conflicting_city,house_number;unmatched_text;unrecognized_order"
+          },
+          {
+            "entity_id": "S3-496134603",
+            "address": "3rd floor, plot no 891, ayyappa housing society, madhapur, tg, hyderabad, no c-301",
+            "recognized": {
+              "house_number": "plot 891",
+              "floor": "floor 3",
+              "locality": "ayyappa housing society, madhapur",
+              "city": "hyderabad",
+              "state": "telangana"
+            },
+            "unparsed_text": "no c-301",
+            "parse_reason": "conflicting_house_number;unmatched_text;unrecognized_order"
+          },
+          {
+            "entity_id": "S3-879793581",
+            "address": "ground floor, next to comguard, 143/a, mbc centre, opp. cinewonder mall, kapurbawadi, thane, west, thane, maharashtra",
+            "recognized": {
+              "floor": "ground floor",
+              "building": "mbc centre",
+              "locality": "kapurbawadi, west",
+              "city": "thane",
+              "state": "maharashtra",
+              "landmark_direction": "next to comguard"
+            },
+            "unparsed_text": "143/a, opp. cinewonder mall, thane",
+            "parse_reason": "conflicting_landmark_direction;unmatched_text"
+          }
+        ],
+        "unrecognized_numeric_segment": [
+          {
+            "entity_id": "S3-384362918",
+            "address": "22/182 (1) asha sadanam, trivandrum, kl",
+            "recognized": {
+              "house_number": "22/182",
+              "locality": "asha sadanam",
+              "city": "thiruvananthapuram",
+              "state": "kerala"
+            },
+            "unparsed_text": "1",
+            "parse_reason": "unmatched_text"
+          },
+          {
+            "entity_id": "S3-383235823",
+            "address": "hn 361 chihpdi kathlal, kathlal, kheda, gujarata",
+            "recognized": {},
+            "unparsed_text": "hn 361 chihpdi kathlal, kathlal, kheda, gujarata",
+            "parse_reason": "unmatched_text"
+          },
+          {
+            "entity_id": "S3-163525567",
+            "address": "5-19, chaitanya armadale 181, kolkata, bangalore, ka",
+            "recognized": {
+              "house_number": "5-19",
+              "city": "bangalore",
+              "state": "karnataka"
+            },
+            "unparsed_text": "chaitanya armadale 181, kolkata",
+            "parse_reason": "unmatched_text"
+          }
+        ],
+        "placeholder_text": [
+          {
+            "entity_id": "S3-418935236",
+            "address": "jlnmarg, govindihouseplotno.8-a, kanotabaghbehindrbi, takteshairoad, null, rajasthana",
+            "recognized": {},
+            "unparsed_text": "jlnmarg, govindihouseplotno.8-a, kanotabaghbehindrbi, takteshairoad, null, rajasthana",
+            "parse_reason": "unmatched_text"
+          },
+          {
+            "entity_id": "S3-88584769",
+            "address": "no 65 sudhir vasanrao khandwe c/o nr.dakshina murti chowk, n/a, nagpur, mh",
+            "recognized": {
+              "house_number": "65",
+              "city": "nagpur",
+              "state": "maharashtra"
+            },
+            "unparsed_text": "sudhir vasanrao khandwe c/o nr.dakshina murti chowk, n/a",
+            "parse_reason": "unmatched_text"
+          },
+          {
+            "entity_id": "S3-679680347",
+            "address": "202, 2 no, nadi bhag, p.o- badu, p.s- madhyamgram, barasat - i, null, wb",
+            "recognized": {
+              "house_number": "202",
+              "locality": "p.o - badu",
+              "state": "west bengal"
+            },
+            "unparsed_text": "2 no, nadi bhag, p.s- madhyamgram, barasat - i, null",
+            "parse_reason": "unmatched_text;incomplete_components"
+          }
+        ],
+        "unusual_unit_or_building": [
+          {
+            "entity_id": "S3-705716152",
+            "address": "bangalore, bangalore south, no 10st floor, ka",
+            "recognized": {
+              "house_number": "10st",
+              "city": "bangalore",
+              "state": "karnataka"
+            },
+            "unparsed_text": "bangalore south, floor",
+            "parse_reason": "unmatched_text;unrecognized_order"
+          },
+          {
+            "entity_id": "S3-932201704",
+            "address": "no 10st floor, ahinsa nagar, new english schl bandra e, mumbai, navi mumbai, mh",
+            "recognized": {
+              "house_number": "10st",
+              "locality": "ahinsa nagar, new english schl bandra e",
+              "city": "navi mumbai",
+              "state": "maharashtra"
+            },
+            "unparsed_text": "floor, mumbai",
+            "parse_reason": "unmatched_text"
+          },
+          {
+            "entity_id": "S3-873479200",
+            "address": "dum dum, sarat bose road sukhsagar building 2nd floor, wb, 2/5a, howrah",
+            "recognized": {
+              "street": "sarat bose road",
+              "floor": "floor 2",
+              "state": "west bengal"
+            },
+            "unparsed_text": "dum dum, sukhsagar building, 2/5a, howrah",
+            "parse_reason": "unmatched_text;incomplete_components;unrecognized_order"
+          }
+        ],
+        "rural_or_unrecognized_road_form": [
+          {
+            "entity_id": "S3-420406147",
+            "address": "01, br, panch-manikpur mushah, village-manikpur musharia, sitamarhi, parihar",
+            "recognized": {
+              "house_number": "01",
+              "state": "bihar"
+            },
+            "unparsed_text": "panch-manikpur mushah, village-manikpur musharia, sitamarhi, parihar",
+            "parse_reason": "unmatched_text;incomplete_components"
+          },
+          {
+            "entity_id": "S3-291371235",
+            "address": "bangalore., road, ka, s-9",
+            "recognized": {
+              "city": "bangalore",
+              "state": "karnataka"
+            },
+            "unparsed_text": "road, s-9",
+            "parse_reason": "unmatched_text;incomplete_components"
+          },
+          {
+            "entity_id": "S3-31339505",
+            "address": "sfno 1017/1, door no 90/49, v.c.v nagar, r.s.road, erode, tn",
+            "recognized": {
+              "house_number": "90/49",
+              "locality": "v.c.v nagar",
+              "city": "erode",
+              "state": "tamil nadu"
+            },
+            "unparsed_text": "sfno 1017/1, r.s.road",
+            "parse_reason": "unmatched_text"
+          }
+        ],
+        "stray_punctuation": [
+          {
+            "entity_id": "S3-565707296",
+            "address": "a-10/4- 14st floor, south west delhi, new delhi, dl",
+            "recognized": {
+              "unit": "a-10/4",
+              "floor": "floor 14",
+              "locality": "south west delhi",
+              "city": "delhi",
+              "state": "delhi"
+            },
+            "unparsed_text": "-",
+            "parse_reason": "unmatched_text"
+          },
+          {
+            "entity_id": "S3-780515741",
+            "address": "shop no- g/#6, ground floor, shri laxmi c.h.s. ltd. gautam nagar, road no-8, midc, andheri (, east), mumbai, maharashtra",
+            "recognized": {
+              "house_number": "6",
+              "street": "road no-8",
+              "unit": "shop g",
+              "floor": "ground floor",
+              "locality": "shri laxmi c.h.s ltd gautam nagar, midc, andheri, east",
+              "city": "mumbai",
+              "state": "maharashtra"
+            },
+            "unparsed_text": "/",
+            "parse_reason": "unmatched_text;unrecognized_order"
+          },
+          {
+            "entity_id": "S3-789702760",
+            "address": "s29shopfantasiamultiplex&, intertainmentcomplex, thane, mh",
+            "recognized": {
+              "house_number": "s29shopfantasiamultiplex",
+              "locality": "intertainmentcomplex",
+              "city": "thane",
+              "state": "maharashtra"
+            },
+            "unparsed_text": "&",
+            "parse_reason": "unmatched_text"
+          }
+        ]
+      },
+      "sample_entity_ids_sha256": "1efd88b7c313b973fa5e6cd412915237f0825336afe4e019dff864aec4ec7091"
+    }
+  },
+  "files": {
+    "/home/sherencrypted/projects/simple_ml_pipeline/dataset/train/train_source1.tsv": {
+      "before": {
+        "sha256": "591af0e1dfeb65cab71ea6ee8cb69df00f92d6ba6fa79e05746c938775d14973",
+        "mtime_ns": 1790330230572535100
+      },
+      "after": {
+        "sha256": "591af0e1dfeb65cab71ea6ee8cb69df00f92d6ba6fa79e05746c938775d14973",
+        "mtime_ns": 1790330230572535100
+      },
+      "unchanged": true,
+      "sample_rows": 10000
+    },
+    "/home/sherencrypted/projects/simple_ml_pipeline/dataset/train/train_source2.tsv": {
+      "before": {
+        "sha256": "6336c1a055eec79cf8a6d99fdc8d32a2e4d9dc2662e00963cb35d66b89ed09ed",
+        "mtime_ns": 1790330224528272300
+      },
+      "after": {
+        "sha256": "6336c1a055eec79cf8a6d99fdc8d32a2e4d9dc2662e00963cb35d66b89ed09ed",
+        "mtime_ns": 1790330224528272300
+      },
+      "unchanged": true,
+      "sample_rows": 10000
+    },
+    "/home/sherencrypted/projects/simple_ml_pipeline/dataset/train/train_source3.tsv": {
+      "before": {
+        "sha256": "67da22f5151898ff3006febd836c1a159e97ae95efa7257a5aff4fda685e58e9",
+        "mtime_ns": 1790330228827089300
+      },
+      "after": {
+        "sha256": "67da22f5151898ff3006febd836c1a159e97ae95efa7257a5aff4fda685e58e9",
+        "mtime_ns": 1790330228827089300
+      },
+      "unchanged": true,
+      "sample_rows": 10000
+    },
+    "/home/sherencrypted/projects/simple_ml_pipeline/dataset/test/test_source1.tsv": {
+      "before": {
+        "sha256": "3d4a32c54c2ca9c53fd7c2be105bf26f708f94c4d2f88eb370972a195665c2f5",
+        "mtime_ns": 1790330219358088400
+      },
+      "after": {
+        "sha256": "3d4a32c54c2ca9c53fd7c2be105bf26f708f94c4d2f88eb370972a195665c2f5",
+        "mtime_ns": 1790330219358088400
+      },
+      "unchanged": true,
+      "sample_rows": 10000
+    },
+    "/home/sherencrypted/projects/simple_ml_pipeline/dataset/test/test_source2.tsv": {
+      "before": {
+        "sha256": "79d906c7497af2ace70aa277f6e334a652094909de99bd6c57b53420b6a7b2dd",
+        "mtime_ns": 1790330213588482500
+      },
+      "after": {
+        "sha256": "79d906c7497af2ace70aa277f6e334a652094909de99bd6c57b53420b6a7b2dd",
+        "mtime_ns": 1790330213588482500
+      },
+      "unchanged": true,
+      "sample_rows": 10000
+    },
+    "/home/sherencrypted/projects/simple_ml_pipeline/dataset/test/test_source3.tsv": {
+      "before": {
+        "sha256": "850942b11d2a4343486ed0834e28bce9f3b385f3fd497fd60ccf4ea3b8bda035",
+        "mtime_ns": 1790330217932101400
+      },
+      "after": {
+        "sha256": "850942b11d2a4343486ed0834e28bce9f3b385f3fd497fd60ccf4ea3b8bda035",
+        "mtime_ns": 1790330217932101400
+      },
+      "unchanged": true,
+      "sample_rows": 10000
+    }
+  },
+  "limitations": [
+    "Deterministic sampled coverage and text retention are not parser accuracy; no gold component labels are available.",
+    "The sample is 10,000 rows per source, selected by entity_id hash seed 42 after filtering country to India.",
+    "A complete delivery can now be house, unit, building, street, or PO box; state and city are required. The former parser required street or PO box.",
+    "Coverage percentages use nonempty normalized addresses as the denominator.",
+    "Word/number token counts ignore punctuation and token order. Canonical city aliases can change lexical spelling.",
+    "Unparsed categories are rule-based summaries, mutually exclusive per address, and are not ground truth.",
+    "Source hashes and modification times are checked before and after; this audit does not write to source files."
+  ],
+  "elapsed_seconds": 58.478,
+  "stats": {
+    "rows": 60000,
+    "raw_addresses_with_six_digit_group": 12,
+    "raw_addresses_with_split_pin_shape": 790,
+    "raw_addresses_with_postal_marker": 24,
+    "normalized_addresses_with_six_digit_group": 99,
+    "addresses_with_unretained_numeric_groups": 0,
+    "parsed_with_street_or_po_box": 3207,
+    "nonempty": 58861,
+    "with_unparsed_text": 45543,
+    "partial_without_unparsed_text": 2052,
+    "status_parsed": 11266,
+    "status_partial": 47227,
+    "status_fallback": 368,
+    "address_word_number_tokens": 695708,
+    "unparsed_word_number_tokens": 212377,
+    "empty": 1139,
+    "unparsed_token_percent": 30.53
+  },
+  "component_coverage": {
+    "house_number": 37517,
+    "street": 18311,
+    "locality": 36475,
+    "city": 49849,
+    "state": 52567,
+    "unit": 8382,
+    "floor": 7284,
+    "landmark_direction": 6329,
+    "building": 10769,
+    "postal_code": 90,
+    "po_box": 20
+  },
+  "unparsed_categories": {
+    "unusual_unit_or_building": 4848,
+    "unrecognized_numeric_segment": 14914,
+    "unrecognized_name_or_location": 18914,
+    "rural_or_unrecognized_road_form": 638,
+    "conflicting_component_guess": 4912,
+    "placeholder_text": 1257,
+    "stray_punctuation": 60
+  },
+  "statuses": {
+    "parsed": 11266,
+    "partial": 47227,
+    "fallback": 368
+  },
+  "missing_numeric_groups": {},
+  "component_coverage_percent": {
+    "house_number": 63.74,
+    "street": 31.11,
+    "unit": 14.24,
+    "floor": 12.37,
+    "building": 18.3,
+    "locality": 61.97,
+    "city": 84.69,
+    "state": 89.31,
+    "postal_code": 0.15,
+    "po_box": 0.03,
+    "landmark_direction": 10.75
+  },
+  "parse_status_percent": {
+    "parsed": 19.14,
+    "partial": 80.23,
+    "fallback": 0.63
+  },
+  "baseline_comparison": {
+    "artifact": "india_pipeline_coverage_60000_before.json",
+    "source_hashes_match": true,
+    "previous_stats": {
+      "rows": 60000,
+      "nonempty": 58861,
+      "with_unparsed_text": 57002,
+      "partial_without_unparsed_text": 1353,
+      "addresses_with_unretained_numeric_groups": 17,
+      "status_parsed": 506,
+      "status_partial": 56791,
+      "status_fallback": 1564,
+      "address_word_number_tokens": 695827,
+      "unparsed_word_number_tokens": 365990,
+      "empty": 1139,
+      "unparsed_token_percent": 52.6
+    },
+    "previous_component_coverage": {
+      "street": 16734,
+      "city": 30389,
+      "state": 53560,
+      "locality": 16879,
+      "house_number": 12827,
+      "unit": 6321,
+      "floor": 7259,
+      "landmark_direction": 6259,
+      "building": 6374,
+      "po_box": 20
+    }
+  },
+  "implementation_sha256": {
+    "tests/audit_india_pipeline_60000.py": "d147b80cd3bbb4ccdacf3dd1aaf354feea6f13d444708a31f0a1aeae4a0d7aed",
+    "src/preprocessing/india.py": "6e439fdad5a839442c93f93f6a8a4ebb251f0b84da01b1e83259e0bffbec42bf",
+    "src/preprocessing/__init__.py": "ec2ace2005fac632168bbc6cb52b0c27c4518c59646c18ca97cc6bc46986c144",
+    "src/preprocessing/address_normalization.py": "e7ada98331ad828b46598ee33948a98804da8115ee322ed14ea01c8c1d1f0e5a",
+    "src/resources/india_address.lark": "64a204c7d8525bb0f95c434588adb8daa438527b2a289dccc8499369c90e2345",
+    "src/resources/india_address_lexicon.json": "a0415f6035539976bbfba3c89bef156c2e322b2125680c5ffa7ee09bb13c9693"
+  },
+  "all_sources_unchanged": true
+}

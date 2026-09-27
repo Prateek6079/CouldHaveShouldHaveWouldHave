@@ -1,0 +1,32 @@
+test_administrative_middle_marker_does_not_drop_numbers (test_india.IndiaTests.test_administrative_middle_marker_does_not_drop_numbers) ... ok
+test_attached_and_spaced_pins_need_location_context (test_india.IndiaTests.test_attached_and_spaced_pins_need_location_context) ... ok
+test_bare_numbers_and_alphanumeric_ids (test_india.IndiaTests.test_bare_numbers_and_alphanumeric_ids) ... ok
+test_building_and_locality_delimiter_free (test_india.IndiaTests.test_building_and_locality_delimiter_free) ... ok
+test_city_and_state_names_inside_roads (test_india.IndiaTests.test_city_and_state_names_inside_roads) ... ok
+test_city_lookup_without_delivery_or_state (test_india.IndiaTests.test_city_lookup_without_delivery_or_state) ... ok
+test_city_state_overlap_and_repeated_name (test_india.IndiaTests.test_city_state_overlap_and_repeated_name) ... ok
+test_city_suffix_without_commas (test_india.IndiaTests.test_city_suffix_without_commas) ... ok
+test_conflicting_units_are_retained (test_india.IndiaTests.test_conflicting_units_are_retained) ... ok
+test_contextual_roman_normalization (test_india.IndiaTests.test_contextual_roman_normalization) ... ok
+test_empty_unknown_and_partial_contract (test_india.IndiaTests.test_empty_unknown_and_partial_contract) ... ok
+test_floor_variants (test_india.IndiaTests.test_floor_variants) ... ok
+test_leading_numbered_locality_is_not_a_house (test_india.IndiaTests.test_leading_numbered_locality_is_not_a_house) ... ok
+test_locality_markers_at_either_end (test_india.IndiaTests.test_locality_markers_at_either_end) ... ok
+test_multiple_localities_and_number_retention (test_india.IndiaTests.test_multiple_localities_and_number_retention) ... ok
+test_number_marker_and_numbered_road (test_india.IndiaTests.test_number_marker_and_numbered_road) ... ok
+test_numbered_streets_are_not_houses (test_india.IndiaTests.test_numbered_streets_are_not_houses) ... ok
+test_numerics_never_disappear (test_india.IndiaTests.test_numerics_never_disappear) ... ok
+test_pins_and_invalid_pin (test_india.IndiaTests.test_pins_and_invalid_pin) ... ok
+test_production_normalization_and_country_scope (test_india.IndiaTests.test_production_normalization_and_country_scope) ... ok
+test_reported_leading_number_and_locality (test_india.IndiaTests.test_reported_leading_number_and_locality) ... ok
+test_reported_plot_and_unmarked_locality (test_india.IndiaTests.test_reported_plot_and_unmarked_locality) ... ok
+test_reported_roman_floor_and_slash_identifier (test_india.IndiaTests.test_reported_roman_floor_and_slash_identifier) ... ok
+test_reversed_order_is_partial_and_keeps_fields (test_india.IndiaTests.test_reversed_order_is_partial_and_keeps_fields) ... ok
+test_unit_labels_are_numeric_or_identifier_not_names (test_india.IndiaTests.test_unit_labels_are_numeric_or_identifier_not_names) ... ok
+test_unknown_city_inference_respects_order (test_india.IndiaTests.test_unknown_city_inference_respects_order) ... ok
+test_unparsed_component_is_not_relabelled_as_locality (test_india.IndiaTests.test_unparsed_component_is_not_relabelled_as_locality) ... ok
+
+----------------------------------------------------------------------
+Ran 27 tests in 0.096s
+
+OK

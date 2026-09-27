@@ -1,0 +1,4770 @@
+{
+  "seed": 20260927,
+  "per_source": 10000,
+  "regressions": {
+    "description": "24 real US addresses manually inspected before custom-parser development; four per train/test source, originally selected with seed 197. Development regressions, not an independent accuracy benchmark. Expectations cover house, street, city and state only; state/city aliases are normalized for comparison.",
+    "cases": [
+      {
+        "address": "4012 Grandover Drive, Raleigh, NC",
+        "expected": {
+          "house_number": "4012",
+          "street": "grandover dr",
+          "city": "raleigh",
+          "state": "nc"
+        },
+        "parsers": {
+          "us_regex_lark": {
+            "mismatches": {},
+            "actual": {
+              "house_number": "4012",
+              "street": "grandover dr",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "raleigh",
+              "state": "nc",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          "usaddress": {
+            "mismatches": {},
+            "actual": {
+              "house_number": "4012",
+              "street": "grandover dr",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "raleigh",
+              "state": "nc",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          }
+        }
+      },
+      {
+        "address": "2338 Revolution Park Drive, Charlotte, NC",
+        "expected": {
+          "house_number": "2338",
+          "street": "revolution park dr",
+          "city": "charlotte",
+          "state": "nc"
+        },
+        "parsers": {
+          "us_regex_lark": {
+            "mismatches": {},
+            "actual": {
+              "house_number": "2338",
+              "street": "revolution park dr",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "charlotte",
+              "state": "nc",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          "usaddress": {
+            "mismatches": {},
+            "actual": {
+              "house_number": "2338",
+              "street": "revolution park dr",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "charlotte",
+              "state": "nc",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          }
+        }
+      },
+      {
+        "address": "35250 Pilotboat Drive, Lewes, DE",
+        "expected": {
+          "house_number": "35250",
+          "street": "pilotboat dr",
+          "city": "lewes",
+          "state": "de"
+        },
+        "parsers": {
+          "us_regex_lark": {
+            "mismatches": {},
+            "actual": {
+              "house_number": "35250",
+              "street": "pilotboat dr",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "lewes",
+              "state": "de",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          "usaddress": {
+            "mismatches": {},
+            "actual": {
+              "house_number": "35250",
+              "street": "pilotboat dr",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "lewes",
+              "state": "de",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          }
+        }
+      },
+      {
+        "address": "4309 Landsdowne Drive, Mckinney, TX",
+        "expected": {
+          "house_number": "4309",
+          "street": "landsdowne dr",
+          "city": "mckinney",
+          "state": "tx"
+        },
+        "parsers": {
+          "us_regex_lark": {
+            "mismatches": {},
+            "actual": {
+              "house_number": "4309",
+              "street": "landsdowne dr",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "mckinney",
+              "state": "tx",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          "usaddress": {
+            "mismatches": {},
+            "actual": {
+              "house_number": "4309",
+              "street": "landsdowne dr",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "mckinney",
+              "state": "tx",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          }
+        }
+      },
+      {
+        "address": "34 HOLLY AVE, NORTHFIELD, MA",
+        "expected": {
+          "house_number": "34",
+          "street": "holly ave",
+          "city": "northfield",
+          "state": "ma"
+        },
+        "parsers": {
+          "us_regex_lark": {
+            "mismatches": {},
+            "actual": {
+              "house_number": "34",
+              "street": "holly ave",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "northfield",
+              "state": "ma",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          "usaddress": {
+            "mismatches": {},
+            "actual": {
+              "house_number": "34",
+              "street": "holly ave",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "northfield",
+              "state": "ma",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          }
+        }
+      },
+      {
+        "address": "312 SUTTENFIELD ST, FORT WAYNE, IN",
+        "expected": {
+          "house_number": "312",
+          "street": "suttenfield st",
+          "city": "fort wayne",
+          "state": "in"
+        },
+        "parsers": {
+          "us_regex_lark": {
+            "mismatches": {},
+            "actual": {
+              "house_number": "312",
+              "street": "suttenfield st",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "fort wayne",
+              "state": "in",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          "usaddress": {
+            "mismatches": {},
+            "actual": {
+              "house_number": "312",
+              "street": "suttenfield st",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "fort wayne",
+              "state": "in",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          }
+        }
+      },
+      {
+        "address": "15745-15749 W ANDREW JOHNSON HIGHWAY, MOSHEIM, TN",
+        "expected": {
+          "house_number": "15745-15749",
+          "street": "w andrew johnson hwy",
+          "city": "mosheim",
+          "state": "tn"
+        },
+        "parsers": {
+          "us_regex_lark": {
+            "mismatches": {},
+            "actual": {
+              "house_number": "15745-15749",
+              "street": "w andrew johnson hwy",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "mosheim",
+              "state": "tn",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          "usaddress": {
+            "mismatches": {},
+            "actual": {
+              "house_number": "15745-15749",
+              "street": "w andrew johnson hwy",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "mosheim",
+              "state": "tn",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          }
+        }
+      },
+      {
+        "address": "#8340 BURDS RD, PEOSTA TOWNSHIP, IA",
+        "expected": {
+          "house_number": "#8340",
+          "street": "burds rd",
+          "city": "peosta township",
+          "state": "ia"
+        },
+        "parsers": {
+          "us_regex_lark": {
+            "mismatches": {},
+            "actual": {
+              "house_number": "#8340",
+              "street": "burds rd",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "peosta township",
+              "state": "ia",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          "usaddress": {
+            "mismatches": {},
+            "actual": {
+              "house_number": "#8340",
+              "street": "burds rd",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "peosta township",
+              "state": "ia",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          }
+        }
+      },
+      {
+        "address": "5195 Smumer Wind Lane, Arlington, Tennessee",
+        "expected": {
+          "house_number": "5195",
+          "street": "smumer wind ln",
+          "city": "arlington",
+          "state": "tn"
+        },
+        "parsers": {
+          "us_regex_lark": {
+            "mismatches": {},
+            "actual": {
+              "house_number": "5195",
+              "street": "smumer wind ln",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "arlington",
+              "state": "tn",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          "usaddress": {
+            "mismatches": {},
+            "actual": {
+              "house_number": "5195",
+              "street": "smumer wind ln",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "arlington",
+              "state": "tn",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          }
+        }
+      },
+      {
+        "address": "431 Nelson Dr, Laguna, New Mexico",
+        "expected": {
+          "house_number": "431",
+          "street": "nelson dr",
+          "city": "laguna",
+          "state": "nm"
+        },
+        "parsers": {
+          "us_regex_lark": {
+            "mismatches": {},
+            "actual": {
+              "house_number": "431",
+              "street": "nelson dr",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "laguna",
+              "state": "nm",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          "usaddress": {
+            "mismatches": {},
+            "actual": {
+              "house_number": "431",
+              "street": "nelson dr",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "laguna",
+              "state": "nm",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          }
+        }
+      },
+      {
+        "address": "Maine, Topsham, 17 Summer Street",
+        "expected": {
+          "house_number": "17",
+          "street": "summer st",
+          "city": "topsham",
+          "state": "me"
+        },
+        "parsers": {
+          "us_regex_lark": {
+            "mismatches": {},
+            "actual": {
+              "house_number": "17",
+              "street": "summer st",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "topsham",
+              "state": "me",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          "usaddress": {
+            "mismatches": {
+              "city": {
+                "expected": "topsham",
+                "actual": null
+              },
+              "state": {
+                "expected": "me",
+                "actual": null
+              }
+            },
+            "actual": {
+              "house_number": "17",
+              "street": "summer st",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": null,
+              "state": null,
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": "maine, topsham",
+              "parser": "usaddress",
+              "parse_status": "partial",
+              "parse_reason": "Street Address"
+            }
+          }
+        }
+      },
+      {
+        "address": "15607 Larch Way, Martha Lake, Washington",
+        "expected": {
+          "house_number": "15607",
+          "street": "larch way",
+          "city": "martha lake",
+          "state": "wa"
+        },
+        "parsers": {
+          "us_regex_lark": {
+            "mismatches": {},
+            "actual": {
+              "house_number": "15607",
+              "street": "larch way",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "martha lake",
+              "state": "wa",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          "usaddress": {
+            "mismatches": {},
+            "actual": {
+              "house_number": "15607",
+              "street": "larch way",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "martha lake",
+              "state": "wa",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          }
+        }
+      },
+      {
+        "address": "600 9th Street, Unit Lot 23, Bismarck, ND",
+        "expected": {
+          "house_number": "600",
+          "street": "9th st",
+          "city": "bismarck",
+          "state": "nd"
+        },
+        "parsers": {
+          "us_regex_lark": {
+            "mismatches": {},
+            "actual": {
+              "house_number": "600",
+              "street": "9th st",
+              "unit": "unit lot 23",
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "bismarck",
+              "state": "nd",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          "usaddress": {
+            "mismatches": {},
+            "actual": {
+              "house_number": "600",
+              "street": "9th st",
+              "unit": "unit lot 23",
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "bismarck",
+              "state": "nd",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          }
+        }
+      },
+      {
+        "address": "235 62nd Terrace, Kansas City, MO",
+        "expected": {
+          "house_number": "235",
+          "street": "62nd ter",
+          "city": "kansas city",
+          "state": "mo"
+        },
+        "parsers": {
+          "us_regex_lark": {
+            "mismatches": {},
+            "actual": {
+              "house_number": "235",
+              "street": "62nd ter",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "kansas city",
+              "state": "mo",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          "usaddress": {
+            "mismatches": {},
+            "actual": {
+              "house_number": "235",
+              "street": "62nd ter",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "kansas city",
+              "state": "mo",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          }
+        }
+      },
+      {
+        "address": "605 Kay Court, TN, Nashville",
+        "expected": {
+          "house_number": "605",
+          "street": "kay ct",
+          "city": "nashville",
+          "state": "tn"
+        },
+        "parsers": {
+          "us_regex_lark": {
+            "mismatches": {},
+            "actual": {
+              "house_number": "605",
+              "street": "kay ct",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "nashville",
+              "state": "tn",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          "usaddress": {
+            "mismatches": {
+              "street": {
+                "expected": "kay ct",
+                "actual": "kay ct tn"
+              },
+              "state": {
+                "expected": "tn",
+                "actual": null
+              }
+            },
+            "actual": {
+              "house_number": "605",
+              "street": "kay ct tn",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "nashville",
+              "state": null,
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "partial",
+              "parse_reason": "Street Address"
+            }
+          }
+        }
+      },
+      {
+        "address": "2973 Buffalo Shoals Road, Maiden, NC",
+        "expected": {
+          "house_number": "2973",
+          "street": "buffalo shoals rd",
+          "city": "maiden",
+          "state": "nc"
+        },
+        "parsers": {
+          "us_regex_lark": {
+            "mismatches": {},
+            "actual": {
+              "house_number": "2973",
+              "street": "buffalo shoals rd",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "maiden",
+              "state": "nc",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          "usaddress": {
+            "mismatches": {},
+            "actual": {
+              "house_number": "2973",
+              "street": "buffalo shoals rd",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "maiden",
+              "state": "nc",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          }
+        }
+      },
+      {
+        "address": "172-77 A HIGHLAND AVENUE, JAMAICA, NY",
+        "expected": {
+          "house_number": "172-77 a",
+          "street": "highland ave",
+          "city": "jamaica",
+          "state": "ny"
+        },
+        "parsers": {
+          "us_regex_lark": {
+            "mismatches": {},
+            "actual": {
+              "house_number": "172-77 a",
+              "street": "highland ave",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "jamaica",
+              "state": "ny",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          "usaddress": {
+            "mismatches": {},
+            "actual": {
+              "house_number": "172-77 a",
+              "street": "highland ave",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "jamaica",
+              "state": "ny",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          }
+        }
+      },
+      {
+        "address": "#8548 HIGHCREST DR, HOUSTON, TX",
+        "expected": {
+          "house_number": "#8548",
+          "street": "highcrest dr",
+          "city": "houston",
+          "state": "tx"
+        },
+        "parsers": {
+          "us_regex_lark": {
+            "mismatches": {},
+            "actual": {
+              "house_number": "#8548",
+              "street": "highcrest dr",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "houston",
+              "state": "tx",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          "usaddress": {
+            "mismatches": {},
+            "actual": {
+              "house_number": "#8548",
+              "street": "highcrest dr",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "houston",
+              "state": "tx",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          }
+        }
+      },
+      {
+        "address": "3721 MECHANIC RD, ASHEBORO, NC",
+        "expected": {
+          "house_number": "3721",
+          "street": "mechanic rd",
+          "city": "asheboro",
+          "state": "nc"
+        },
+        "parsers": {
+          "us_regex_lark": {
+            "mismatches": {},
+            "actual": {
+              "house_number": "3721",
+              "street": "mechanic rd",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "asheboro",
+              "state": "nc",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          "usaddress": {
+            "mismatches": {},
+            "actual": {
+              "house_number": "3721",
+              "street": "mechanic rd",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "asheboro",
+              "state": "nc",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          }
+        }
+      },
+      {
+        "address": "SHERWOOD RD, NEW CUMBERLAND BOROUGH, PA",
+        "expected": {
+          "house_number": null,
+          "street": "sherwood rd",
+          "city": "new cumberland borough",
+          "state": "pa"
+        },
+        "parsers": {
+          "us_regex_lark": {
+            "mismatches": {},
+            "actual": {
+              "house_number": null,
+              "street": "sherwood rd",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "new cumberland borough",
+              "state": "pa",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "partial",
+              "parse_reason": "incomplete_components"
+            }
+          },
+          "usaddress": {
+            "mismatches": {},
+            "actual": {
+              "house_number": null,
+              "street": "sherwood rd",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "new cumberland borough",
+              "state": "pa",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "partial",
+              "parse_reason": "Ambiguous"
+            }
+          }
+        }
+      },
+      {
+        "address": "3686 189th Street, Russell, Kansas",
+        "expected": {
+          "house_number": "3686",
+          "street": "189th st",
+          "city": "russell",
+          "state": "ks"
+        },
+        "parsers": {
+          "us_regex_lark": {
+            "mismatches": {},
+            "actual": {
+              "house_number": "3686",
+              "street": "189th st",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "russell",
+              "state": "ks",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          "usaddress": {
+            "mismatches": {},
+            "actual": {
+              "house_number": "3686",
+              "street": "189th st",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "russell",
+              "state": "ks",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          }
+        }
+      },
+      {
+        "address": "409 Court Street, NULL, Harrisville, West Virginia",
+        "expected": {
+          "house_number": "409",
+          "street": "court st",
+          "city": "harrisville",
+          "state": "wv"
+        },
+        "parsers": {
+          "us_regex_lark": {
+            "mismatches": {},
+            "actual": {
+              "house_number": "409",
+              "street": "court st",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "harrisville",
+              "state": "wv",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": "NULL",
+              "parser": "us_regex_lark",
+              "parse_status": "partial",
+              "parse_reason": "unmatched_text"
+            }
+          },
+          "usaddress": {
+            "mismatches": {
+              "city": {
+                "expected": "harrisville",
+                "actual": "null"
+              },
+              "state": {
+                "expected": "wv",
+                "actual": "harrisville, west virginia"
+              }
+            },
+            "actual": {
+              "house_number": "409",
+              "street": "court st",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "null",
+              "state": "harrisville, west virginia",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          }
+        }
+      },
+      {
+        "address": "1632-1634 Olive Pl, Catnon, Ohio",
+        "expected": {
+          "house_number": "1632-1634",
+          "street": "olive pl",
+          "city": "catnon",
+          "state": "oh"
+        },
+        "parsers": {
+          "us_regex_lark": {
+            "mismatches": {},
+            "actual": {
+              "house_number": "1632-1634",
+              "street": "olive pl",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "catnon",
+              "state": "oh",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          "usaddress": {
+            "mismatches": {},
+            "actual": {
+              "house_number": "1632-1634",
+              "street": "olive pl",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "catnon",
+              "state": "oh",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          }
+        }
+      },
+      {
+        "address": "3899 Cabeza Road, Nordheim, Texas",
+        "expected": {
+          "house_number": "3899",
+          "street": "cabeza rd",
+          "city": "nordheim",
+          "state": "tx"
+        },
+        "parsers": {
+          "us_regex_lark": {
+            "mismatches": {},
+            "actual": {
+              "house_number": "3899",
+              "street": "cabeza rd",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "nordheim",
+              "state": "tx",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          "usaddress": {
+            "mismatches": {},
+            "actual": {
+              "house_number": "3899",
+              "street": "cabeza rd",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "nordheim",
+              "state": "tx",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          }
+        }
+      }
+    ],
+    "passed": {
+      "us_regex_lark": 24,
+      "usaddress": 21
+    }
+  },
+  "samples": {
+    "train_S1": {
+      "us_regex_lark": {
+        "counts": {
+          "rows": 10000,
+          "nonempty": 10000,
+          "with_unparsed_text": 1236,
+          "missing_numeric_groups_with_remainder": 0,
+          "raw_lexical_flags_with_remainder": 8918,
+          "numeric_groups_only_in_remainder": 821
+        },
+        "statuses": {
+          "partial": 1824,
+          "parsed": 8176
+        },
+        "coverage": {
+          "house_number": 9211,
+          "street": 9229,
+          "unit": 1277,
+          "floor": 162,
+          "building": 61,
+          "locality": 247,
+          "city": 8721,
+          "state": 10000,
+          "postal_code": 13,
+          "po_box": 0,
+          "landmark_direction": 1
+        },
+        "parse_seconds": 1.7903,
+        "rows_per_second": 5586,
+        "flag_examples": [
+          {
+            "entity_id": "S1-415081605",
+            "address": "4991 Arbor Village Drive, Unit B22, Columbus, OH",
+            "raw_missing": {
+              "drive": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "4991",
+              "street": "arbor village dr",
+              "unit": "unit b22",
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "columbus",
+              "state": "oh",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S1-651284113",
+            "address": "2719 72nd Drive, Kansas City, KS",
+            "raw_missing": {
+              "drive": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "2719",
+              "street": "72nd dr",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "kansas city",
+              "state": "ks",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S1-89277544",
+            "address": "4244 175th Street, Seatac, WA",
+            "raw_missing": {
+              "street": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "4244",
+              "street": "175th st",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "seatac",
+              "state": "wa",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S1-673218948",
+            "address": "Vancouver, WA, 7212 71st Street",
+            "raw_missing": {
+              "street": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "7212",
+              "street": "71st st",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "vancouver",
+              "state": "wa",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S1-526510549",
+            "address": "325 Amsterdam Court, Village Of Kimberly, WI",
+            "raw_missing": {
+              "court": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "325",
+              "street": "amsterdam ct",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": "village of kimberly",
+              "city": null,
+              "state": "wi",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "partial",
+              "parse_reason": "incomplete_components;unrecognized_order"
+            }
+          },
+          {
+            "entity_id": "S1-116501451",
+            "address": "658 Revere Beach Boulevard, Unit 4, Revere, MA",
+            "raw_missing": {
+              "boulevard": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "658",
+              "street": "revere beach blvd",
+              "unit": "unit 4",
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "revere",
+              "state": "ma",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S1-7580864",
+            "address": "109 Garden Terrace, Beckley, WV",
+            "raw_missing": {
+              "terrace": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "109",
+              "street": "garden ter",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "beckley",
+              "state": "wv",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S1-83462341",
+            "address": "34 Huizache Street, Brownsville, TX",
+            "raw_missing": {
+              "street": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "34",
+              "street": "huizache st",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "brownsville",
+              "state": "tx",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S1-962762739",
+            "address": "Fl APT 28, Queen City, TX, 806 Houston Street",
+            "raw_missing": {
+              "street": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "806",
+              "street": "houston st",
+              "unit": "apt 28",
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "queen city",
+              "state": "tx",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": "Fl",
+              "parser": "us_regex_lark",
+              "parse_status": "partial",
+              "parse_reason": "unmatched_text;unrecognized_order"
+            }
+          },
+          {
+            "entity_id": "S1-232576412",
+            "address": "2234 Horning Road, Shelby, OH",
+            "raw_missing": {
+              "road": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "2234",
+              "street": "horning rd",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "shelby",
+              "state": "oh",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          }
+        ]
+      },
+      "usaddress": {
+        "counts": {
+          "rows": 10000,
+          "nonempty": 10000,
+          "missing_numeric_groups_with_remainder": 0,
+          "raw_lexical_flags_with_remainder": 8430,
+          "numeric_groups_only_in_remainder": 160,
+          "with_unparsed_text": 917
+        },
+        "statuses": {
+          "parsed": 8534,
+          "partial": 1410,
+          "fallback": 56
+        },
+        "coverage": {
+          "house_number": 9798,
+          "street": 9815,
+          "unit": 1482,
+          "floor": 0,
+          "building": 142,
+          "locality": 0,
+          "city": 9078,
+          "state": 9441,
+          "postal_code": 9,
+          "po_box": 7,
+          "landmark_direction": 0
+        },
+        "parse_seconds": 1.4746,
+        "rows_per_second": 6781,
+        "flag_examples": [
+          {
+            "entity_id": "S1-415081605",
+            "address": "4991 Arbor Village Drive, Unit B22, Columbus, OH",
+            "raw_missing": {
+              "drive": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "4991",
+              "street": "arbor village dr",
+              "unit": "unit b22",
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "columbus",
+              "state": "oh",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S1-651284113",
+            "address": "2719 72nd Drive, Kansas City, KS",
+            "raw_missing": {
+              "drive": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "2719",
+              "street": "72nd dr",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "kansas city",
+              "state": "ks",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S1-89277544",
+            "address": "4244 175th Street, Seatac, WA",
+            "raw_missing": {
+              "street": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "4244",
+              "street": "175th st",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "seatac",
+              "state": "wa",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S1-673218948",
+            "address": "Vancouver, WA, 7212 71st Street",
+            "raw_missing": {
+              "street": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "7212",
+              "street": "71st st",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": null,
+              "state": "wa",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": "vancouver",
+              "parser": "usaddress",
+              "parse_status": "partial",
+              "parse_reason": "Street Address"
+            }
+          },
+          {
+            "entity_id": "S1-526510549",
+            "address": "325 Amsterdam Court, Village Of Kimberly, WI",
+            "raw_missing": {
+              "court": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "325",
+              "street": "amsterdam ct",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "village of kimberly",
+              "state": "wi",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S1-116501451",
+            "address": "658 Revere Beach Boulevard, Unit 4, Revere, MA",
+            "raw_missing": {
+              "boulevard": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "658",
+              "street": "revere beach blvd",
+              "unit": "unit 4",
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "revere",
+              "state": "ma",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S1-7580864",
+            "address": "109 Garden Terrace, Beckley, WV",
+            "raw_missing": {
+              "terrace": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "109",
+              "street": "garden ter",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "beckley",
+              "state": "wv",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S1-83462341",
+            "address": "34 Huizache Street, Brownsville, TX",
+            "raw_missing": {
+              "street": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "34",
+              "street": "huizache st",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "brownsville",
+              "state": "tx",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S1-962762739",
+            "address": "Fl APT 28, Queen City, TX, 806 Houston Street",
+            "raw_missing": {
+              "street": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "806",
+              "street": "houston st",
+              "unit": "fl apt 28",
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "queen city",
+              "state": "tx",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S1-232576412",
+            "address": "2234 Horning Road, Shelby, OH",
+            "raw_missing": {
+              "road": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "2234",
+              "street": "horning rd",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "shelby",
+              "state": "oh",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          }
+        ]
+      },
+      "batch_input_columns_unchanged": true
+    },
+    "train_S2": {
+      "us_regex_lark": {
+        "counts": {
+          "rows": 10000,
+          "nonempty": 9616,
+          "missing_numeric_groups_with_remainder": 0,
+          "raw_lexical_flags_with_remainder": 3912,
+          "numeric_groups_only_in_remainder": 1049,
+          "with_unparsed_text": 2001
+        },
+        "statuses": {
+          "parsed": 6563,
+          "partial": 3053,
+          "empty": 384
+        },
+        "coverage": {
+          "house_number": 8028,
+          "street": 8661,
+          "unit": 56,
+          "floor": 1,
+          "building": 19,
+          "locality": 185,
+          "city": 8311,
+          "state": 9616,
+          "postal_code": 12,
+          "po_box": 149,
+          "landmark_direction": 0
+        },
+        "parse_seconds": 2.0551,
+        "rows_per_second": 4866,
+        "flag_examples": [
+          {
+            "entity_id": "S2-208806033",
+            "address": "245 HIGHWAY 270, SHERIDAN, AR",
+            "raw_missing": {
+              "highway": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "245",
+              "street": "hwy 270",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "sheridan",
+              "state": "ar",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S2-637079756",
+            "address": "0100 CHICAGO AVENUE, EVANSTON, IL",
+            "raw_missing": {
+              "avenue": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "0100",
+              "street": "chicago ave",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "evanston",
+              "state": "il",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S2-448442178",
+            "address": "REDOUBT AVENUE, KENAI PENINSULA BOROUGH, AK",
+            "raw_missing": {
+              "avenue": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": null,
+              "street": "redoubt ave",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "kenai peninsula borough",
+              "state": "ak",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "partial",
+              "parse_reason": "incomplete_components"
+            }
+          },
+          {
+            "entity_id": "S2-254291690",
+            "address": "311-313 WALNUT AVENUE, OSAWATOMIE, KS",
+            "raw_missing": {
+              "avenue": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "311-313",
+              "street": "walnut ave",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "osawatomie",
+              "state": "ks",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S2-950929558",
+            "address": "162 JEFFERSON AVENUE, CARTHAGE, TN",
+            "raw_missing": {
+              "avenue": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "162",
+              "street": "jefferson ave",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "carthage",
+              "state": "tn",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S2-182983684",
+            "address": "763 WOODRING AVENUE, PAULDING, OH",
+            "raw_missing": {
+              "avenue": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "763",
+              "street": "woodring ave",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "paulding",
+              "state": "oh",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S2-952960866",
+            "address": "220 SASSER DRIVE, PRICHARD, AL",
+            "raw_missing": {
+              "drive": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "220",
+              "street": "sasser dr",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "prichard",
+              "state": "al",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S2-807156896",
+            "address": "5210 SUN COAST DRIVE, WILMINGTON, NC",
+            "raw_missing": {
+              "drive": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "5210",
+              "street": "sun coast dr",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "wilmington",
+              "state": "nc",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S2-553380036",
+            "address": "171-35 119 ROAD, JAMAICA, NY",
+            "raw_missing": {
+              "road": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "171-35",
+              "street": "119 rd",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "jamaica",
+              "state": "ny",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S2-128876929",
+            "address": "ABBOTT STREET, WATERVILLE, ME",
+            "raw_missing": {
+              "street": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": null,
+              "street": "abbott st",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "waterville",
+              "state": "me",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "partial",
+              "parse_reason": "incomplete_components"
+            }
+          }
+        ]
+      },
+      "usaddress": {
+        "counts": {
+          "rows": 10000,
+          "nonempty": 9616,
+          "missing_numeric_groups_with_remainder": 0,
+          "raw_lexical_flags_with_remainder": 3630,
+          "numeric_groups_only_in_remainder": 275,
+          "with_unparsed_text": 1373
+        },
+        "statuses": {
+          "parsed": 7357,
+          "partial": 2222,
+          "fallback": 37,
+          "empty": 384
+        },
+        "coverage": {
+          "house_number": 8781,
+          "street": 9225,
+          "unit": 108,
+          "floor": 0,
+          "building": 103,
+          "locality": 0,
+          "city": 8795,
+          "state": 9117,
+          "postal_code": 5,
+          "po_box": 155,
+          "landmark_direction": 0
+        },
+        "parse_seconds": 1.3086,
+        "rows_per_second": 7642,
+        "flag_examples": [
+          {
+            "entity_id": "S2-208806033",
+            "address": "245 HIGHWAY 270, SHERIDAN, AR",
+            "raw_missing": {
+              "highway": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "245",
+              "street": "hwy 270",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "sheridan",
+              "state": "ar",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S2-637079756",
+            "address": "0100 CHICAGO AVENUE, EVANSTON, IL",
+            "raw_missing": {
+              "avenue": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "0100",
+              "street": "chicago ave",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "evanston",
+              "state": "il",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S2-448442178",
+            "address": "REDOUBT AVENUE, KENAI PENINSULA BOROUGH, AK",
+            "raw_missing": {
+              "avenue": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": null,
+              "street": "redoubt ave",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "kenai peninsula borough",
+              "state": "ak",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "partial",
+              "parse_reason": "Ambiguous"
+            }
+          },
+          {
+            "entity_id": "S2-254291690",
+            "address": "311-313 WALNUT AVENUE, OSAWATOMIE, KS",
+            "raw_missing": {
+              "avenue": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "311-313",
+              "street": "walnut ave",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "osawatomie",
+              "state": "ks",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S2-950929558",
+            "address": "162 JEFFERSON AVENUE, CARTHAGE, TN",
+            "raw_missing": {
+              "avenue": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "162",
+              "street": "jefferson ave",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "carthage",
+              "state": "tn",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S2-182983684",
+            "address": "763 WOODRING AVENUE, PAULDING, OH",
+            "raw_missing": {
+              "avenue": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "763",
+              "street": "woodring ave",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "paulding",
+              "state": "oh",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S2-952960866",
+            "address": "220 SASSER DRIVE, PRICHARD, AL",
+            "raw_missing": {
+              "drive": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "220",
+              "street": "sasser dr",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "prichard",
+              "state": "al",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S2-807156896",
+            "address": "5210 SUN COAST DRIVE, WILMINGTON, NC",
+            "raw_missing": {
+              "drive": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "5210",
+              "street": "sun coast dr",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "wilmington",
+              "state": "nc",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S2-553380036",
+            "address": "171-35 119 ROAD, JAMAICA, NY",
+            "raw_missing": {
+              "road": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "171-35",
+              "street": "119 rd",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "jamaica",
+              "state": "ny",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S2-128876929",
+            "address": "ABBOTT STREET, WATERVILLE, ME",
+            "raw_missing": {
+              "street": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": null,
+              "street": "abbott st",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "waterville",
+              "state": "me",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "partial",
+              "parse_reason": "Ambiguous"
+            }
+          }
+        ]
+      },
+      "batch_input_columns_unchanged": true
+    },
+    "train_S3": {
+      "us_regex_lark": {
+        "counts": {
+          "rows": 10000,
+          "nonempty": 9663,
+          "missing_numeric_groups_with_remainder": 0,
+          "raw_lexical_flags_with_remainder": 9585,
+          "numeric_groups_only_in_remainder": 1014,
+          "with_unparsed_text": 1994
+        },
+        "statuses": {
+          "parsed": 6567,
+          "empty": 337,
+          "partial": 3096
+        },
+        "coverage": {
+          "house_number": 8162,
+          "street": 8739,
+          "unit": 1090,
+          "floor": 129,
+          "building": 55,
+          "locality": 257,
+          "city": 8254,
+          "state": 9663,
+          "postal_code": 14,
+          "po_box": 154,
+          "landmark_direction": 1
+        },
+        "parse_seconds": 2.2851,
+        "rows_per_second": 4376,
+        "flag_examples": [
+          {
+            "entity_id": "S3-687511801",
+            "address": "007612 Barrington Street, Fl 0, Wichita, Kansas",
+            "raw_missing": {
+              "street": 1,
+              "fl": 1,
+              "kansas": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "007612",
+              "street": "barrington st",
+              "unit": null,
+              "floor": "floor 0",
+              "building": null,
+              "locality": null,
+              "city": "wichita",
+              "state": "ks",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S3-585612565",
+            "address": "122 Marilyn Drive, Madison, Ohio",
+            "raw_missing": {
+              "drive": 1,
+              "ohio": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "122",
+              "street": "marilyn dr",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "madison",
+              "state": "oh",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S3-292412841",
+            "address": "38 Lerma Lane, Stockdale, Texas",
+            "raw_missing": {
+              "lane": 1,
+              "texas": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "38",
+              "street": "lerma ln",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "stockdale",
+              "state": "tx",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S3-884989300",
+            "address": "206 Central Ave, Bowie CDP, Arizona",
+            "raw_missing": {
+              "arizona": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "206",
+              "street": "central ave",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "bowie cdp",
+              "state": "az",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S3-923550418",
+            "address": "209 Magnolia Way, Madrid, Alabama",
+            "raw_missing": {
+              "alabama": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "209",
+              "street": "magnolia way",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "madrid",
+              "state": "al",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S3-714863846",
+            "address": "62 Regency Drive, Dracut, Massachusetts",
+            "raw_missing": {
+              "drive": 1,
+              "massachusetts": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "62",
+              "street": "regency dr",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "dracut",
+              "state": "ma",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S3-796246169",
+            "address": "Texas, Venus, 10912 Foothills Drive",
+            "raw_missing": {
+              "texas": 1,
+              "drive": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "10912",
+              "street": "foothills dr",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "venus",
+              "state": "tx",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S3-593521",
+            "address": "Manchester, 432 Middle Tpke, # 112, Connecticut",
+            "raw_missing": {
+              "connecticut": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": null,
+              "street": null,
+              "unit": "# 112",
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": null,
+              "state": "ct",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": "Manchester, 432 Middle Tpke",
+              "parser": "us_regex_lark",
+              "parse_status": "partial",
+              "parse_reason": "unmatched_text;incomplete_components;unrecognized_order"
+            }
+          },
+          {
+            "entity_id": "S3-839321832",
+            "address": "7682 Kaiser Road, Oregon, Portland",
+            "raw_missing": {
+              "road": 1,
+              "oregon": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "7682",
+              "street": "kaiser rd",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "portland",
+              "state": "or",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S3-160601864",
+            "address": "7334. Chicago Ave, Portland, Oregon",
+            "raw_missing": {
+              "oregon": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "7334",
+              "street": "chicago ave",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "portland",
+              "state": "or",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          }
+        ]
+      },
+      "usaddress": {
+        "counts": {
+          "rows": 10000,
+          "nonempty": 9663,
+          "missing_numeric_groups_with_remainder": 0,
+          "raw_lexical_flags_with_remainder": 3789,
+          "numeric_groups_only_in_remainder": 491,
+          "with_unparsed_text": 1741
+        },
+        "statuses": {
+          "parsed": 7152,
+          "empty": 337,
+          "partial": 2230,
+          "fallback": 281
+        },
+        "coverage": {
+          "house_number": 8712,
+          "street": 9138,
+          "unit": 1031,
+          "floor": 0,
+          "building": 180,
+          "locality": 0,
+          "city": 8875,
+          "state": 8165,
+          "postal_code": 5,
+          "po_box": 157,
+          "landmark_direction": 0
+        },
+        "parse_seconds": 1.5877,
+        "rows_per_second": 6298,
+        "flag_examples": [
+          {
+            "entity_id": "S3-687511801",
+            "address": "007612 Barrington Street, Fl 0, Wichita, Kansas",
+            "raw_missing": {
+              "street": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "007612",
+              "street": "barrington st",
+              "unit": "fl 0",
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "wichita",
+              "state": "kansas",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S3-585612565",
+            "address": "122 Marilyn Drive, Madison, Ohio",
+            "raw_missing": {
+              "drive": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "122",
+              "street": "marilyn dr",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "madison",
+              "state": "ohio",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S3-292412841",
+            "address": "38 Lerma Lane, Stockdale, Texas",
+            "raw_missing": {
+              "lane": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "38",
+              "street": "lerma ln",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "stockdale",
+              "state": "texas",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S3-714863846",
+            "address": "62 Regency Drive, Dracut, Massachusetts",
+            "raw_missing": {
+              "drive": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "62",
+              "street": "regency dr",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "dracut",
+              "state": "massachusetts",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S3-796246169",
+            "address": "Texas, Venus, 10912 Foothills Drive",
+            "raw_missing": {
+              "drive": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "10912",
+              "street": "foothills dr",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": null,
+              "state": null,
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": "texas, venus",
+              "parser": "usaddress",
+              "parse_status": "partial",
+              "parse_reason": "Street Address"
+            }
+          },
+          {
+            "entity_id": "S3-839321832",
+            "address": "7682 Kaiser Road, Oregon, Portland",
+            "raw_missing": {
+              "road": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "7682",
+              "street": "kaiser rd",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "oregon",
+              "state": "portland",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S3-844325004",
+            "address": "31594 Dog Mountain Lane, Burns, Oregon",
+            "raw_missing": {
+              "lane": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "31594",
+              "street": "dog mountain ln",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "burns",
+              "state": "oregon",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S3-489850350",
+            "address": "5415 Rocky Mountain Drive, Indianapolis, Indiana",
+            "raw_missing": {
+              "drive": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "5415",
+              "street": "rocky mountain dr",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "indianapolis",
+              "state": "indiana",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S3-210638837",
+            "address": "Hornll, 192 Hornehl Street, New York",
+            "raw_missing": {
+              "street": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "192",
+              "street": "hornehl st",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "new york city",
+              "state": null,
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": "hornll",
+              "parser": "usaddress",
+              "parse_status": "partial",
+              "parse_reason": "Street Address"
+            }
+          },
+          {
+            "entity_id": "S3-926843465",
+            "address": "86 Cayuga Street, Seneca Falls, New York",
+            "raw_missing": {
+              "street": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "86",
+              "street": "cayuga st",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "seneca falls",
+              "state": "new york",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          }
+        ]
+      },
+      "batch_input_columns_unchanged": true
+    },
+    "test_S1": {
+      "us_regex_lark": {
+        "counts": {
+          "rows": 10000,
+          "nonempty": 10000,
+          "missing_numeric_groups_with_remainder": 0,
+          "raw_lexical_flags_with_remainder": 8971,
+          "numeric_groups_only_in_remainder": 754,
+          "with_unparsed_text": 1179
+        },
+        "statuses": {
+          "parsed": 8216,
+          "partial": 1784
+        },
+        "coverage": {
+          "house_number": 9268,
+          "street": 9278,
+          "unit": 1324,
+          "floor": 151,
+          "building": 61,
+          "locality": 257,
+          "city": 8765,
+          "state": 10000,
+          "postal_code": 8,
+          "po_box": 0,
+          "landmark_direction": 0
+        },
+        "parse_seconds": 2.1327,
+        "rows_per_second": 4689,
+        "flag_examples": [
+          {
+            "entity_id": "S1-797338433",
+            "address": "2700 Dunbarton Drive, Austin, TX",
+            "raw_missing": {
+              "drive": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "2700",
+              "street": "dunbarton dr",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "austin",
+              "state": "tx",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S1-392334470",
+            "address": "7348 Donovan Drive, Blacklick, OH",
+            "raw_missing": {
+              "drive": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "7348",
+              "street": "donovan dr",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "blacklick",
+              "state": "oh",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S1-11565368",
+            "address": "2895 Sirocco Road, Payneville, KY",
+            "raw_missing": {
+              "road": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "2895",
+              "street": "sirocco rd",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "payneville",
+              "state": "ky",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S1-265981231",
+            "address": "23580 Silvercreek Drive, Mineola, TX",
+            "raw_missing": {
+              "drive": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "23580",
+              "street": "silvercreek dr",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "mineola",
+              "state": "tx",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S1-709243609",
+            "address": "522 Harvard Street, Washington, DC",
+            "raw_missing": {
+              "street": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "522",
+              "street": "harvard st",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "washington",
+              "state": "dc",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S1-677130754",
+            "address": "2801 Cortland Place, Unit 303, Washington, DC",
+            "raw_missing": {
+              "place": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "2801",
+              "street": "cortland pl",
+              "unit": "unit 303",
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "washington",
+              "state": "dc",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S1-267056760",
+            "address": "Colonie, NY, 6 Marne Street",
+            "raw_missing": {
+              "street": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "6",
+              "street": "marne st",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "colonie",
+              "state": "ny",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S1-331398799",
+            "address": "42 Main Street, Commercial Point, OH",
+            "raw_missing": {
+              "street": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "42",
+              "street": "main st",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "commercial point",
+              "state": "oh",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S1-970329743",
+            "address": "Indianapolis, 6418 Heartland Court, IN",
+            "raw_missing": {
+              "court": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "6418",
+              "street": "heartland ct",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "indianapolis",
+              "state": "in",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S1-321345961",
+            "address": "131 Dartmouth Street, Rockville Centre, NY",
+            "raw_missing": {
+              "street": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "131",
+              "street": "dartmouth st",
+              "unit": null,
+              "floor": null,
+              "building": "rockville centre",
+              "locality": null,
+              "city": null,
+              "state": "ny",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "partial",
+              "parse_reason": "incomplete_components"
+            }
+          }
+        ]
+      },
+      "usaddress": {
+        "counts": {
+          "rows": 10000,
+          "nonempty": 10000,
+          "missing_numeric_groups_with_remainder": 0,
+          "raw_lexical_flags_with_remainder": 8506,
+          "numeric_groups_only_in_remainder": 162,
+          "with_unparsed_text": 931
+        },
+        "statuses": {
+          "parsed": 8503,
+          "partial": 1446,
+          "fallback": 51
+        },
+        "coverage": {
+          "house_number": 9794,
+          "street": 9814,
+          "unit": 1509,
+          "floor": 0,
+          "building": 151,
+          "locality": 0,
+          "city": 9082,
+          "state": 9433,
+          "postal_code": 2,
+          "po_box": 13,
+          "landmark_direction": 0
+        },
+        "parse_seconds": 1.3219,
+        "rows_per_second": 7565,
+        "flag_examples": [
+          {
+            "entity_id": "S1-797338433",
+            "address": "2700 Dunbarton Drive, Austin, TX",
+            "raw_missing": {
+              "drive": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "2700",
+              "street": "dunbarton dr",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "austin",
+              "state": "tx",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S1-392334470",
+            "address": "7348 Donovan Drive, Blacklick, OH",
+            "raw_missing": {
+              "drive": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "7348",
+              "street": "donovan dr",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "blacklick",
+              "state": "oh",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S1-11565368",
+            "address": "2895 Sirocco Road, Payneville, KY",
+            "raw_missing": {
+              "road": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "2895",
+              "street": "sirocco rd",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "payneville",
+              "state": "ky",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S1-265981231",
+            "address": "23580 Silvercreek Drive, Mineola, TX",
+            "raw_missing": {
+              "drive": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "23580",
+              "street": "silvercreek dr",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "mineola",
+              "state": "tx",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S1-709243609",
+            "address": "522 Harvard Street, Washington, DC",
+            "raw_missing": {
+              "street": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "522",
+              "street": "harvard st",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "washington",
+              "state": "dc",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S1-677130754",
+            "address": "2801 Cortland Place, Unit 303, Washington, DC",
+            "raw_missing": {
+              "place": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "2801",
+              "street": "cortland pl",
+              "unit": "unit 303",
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "washington",
+              "state": "dc",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S1-267056760",
+            "address": "Colonie, NY, 6 Marne Street",
+            "raw_missing": {
+              "street": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "6",
+              "street": "marne st",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": null,
+              "state": "ny",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": "colonie",
+              "parser": "usaddress",
+              "parse_status": "partial",
+              "parse_reason": "Street Address"
+            }
+          },
+          {
+            "entity_id": "S1-331398799",
+            "address": "42 Main Street, Commercial Point, OH",
+            "raw_missing": {
+              "street": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "42",
+              "street": "main st",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "commercial point",
+              "state": "oh",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S1-321345961",
+            "address": "131 Dartmouth Street, Rockville Centre, NY",
+            "raw_missing": {
+              "street": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "131",
+              "street": "dartmouth st",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "rockville centre",
+              "state": "ny",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S1-888138347",
+            "address": "1415 35th Street, Canton, OH",
+            "raw_missing": {
+              "street": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "1415",
+              "street": "35th st",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "canton",
+              "state": "oh",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          }
+        ]
+      },
+      "batch_input_columns_unchanged": true
+    },
+    "test_S2": {
+      "us_regex_lark": {
+        "counts": {
+          "rows": 10000,
+          "nonempty": 9709,
+          "with_unparsed_text": 2026,
+          "missing_numeric_groups_with_remainder": 0,
+          "raw_lexical_flags_with_remainder": 3894,
+          "numeric_groups_only_in_remainder": 1059
+        },
+        "statuses": {
+          "partial": 3078,
+          "parsed": 6631,
+          "empty": 291
+        },
+        "coverage": {
+          "house_number": 8210,
+          "street": 8753,
+          "unit": 42,
+          "floor": 0,
+          "building": 27,
+          "locality": 220,
+          "city": 8334,
+          "state": 9709,
+          "postal_code": 6,
+          "po_box": 167,
+          "landmark_direction": 1
+        },
+        "parse_seconds": 1.9222,
+        "rows_per_second": 5202,
+        "flag_examples": [
+          {
+            "entity_id": "S2-655258011",
+            "address": "601 183RD STREET, TINLEY PARK, IL",
+            "raw_missing": {
+              "street": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "601",
+              "street": "183rd st",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": "tinley park",
+              "city": null,
+              "state": "il",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "partial",
+              "parse_reason": "incomplete_components;unrecognized_order"
+            }
+          },
+          {
+            "entity_id": "S2-358540613",
+            "address": "324 WEST 29TH ST, DAVENPORT, IA",
+            "raw_missing": {
+              "west": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "324",
+              "street": "w 29th st",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "davenport",
+              "state": "ia",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S2-339758085",
+            "address": "711 SARAVALLE DRIVE, ST PETEERS, MO",
+            "raw_missing": {
+              "drive": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "711",
+              "street": "saravalle dr",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "st peteers",
+              "state": "mo",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S2-399421763",
+            "address": "#10856 OAK CREEK TRAIL, N/A, CORVILLE CDP, AZ",
+            "raw_missing": {
+              "trail": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "#10856",
+              "street": "oak creek trl",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "corville cdp",
+              "state": "az",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": "N/A",
+              "parser": "us_regex_lark",
+              "parse_status": "partial",
+              "parse_reason": "unmatched_text"
+            }
+          },
+          {
+            "entity_id": "S2-169531393",
+            "address": "3901A FOREST TRAIL DRIVE, NULL, SEVIERVILLE, TN",
+            "raw_missing": {
+              "trail": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "3901a",
+              "street": "forest trl",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "sevierville",
+              "state": "tn",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": "DRIVE, NULL",
+              "parser": "us_regex_lark",
+              "parse_status": "partial",
+              "parse_reason": "unmatched_text"
+            }
+          },
+          {
+            "entity_id": "S2-105624197",
+            "address": "#1970 JEFFERSON AVENUE, ST PAUL, MN",
+            "raw_missing": {
+              "avenue": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "#1970",
+              "street": "jefferson ave",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "st paul",
+              "state": "mn",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S2-133512251",
+            "address": "5 Victoria Drive, AIRMONT, NY",
+            "raw_missing": {
+              "drive": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "5",
+              "street": "victoria dr",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "airmont",
+              "state": "ny",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S2-707763114",
+            "address": "334 SEAWALL ROAD, SOUTHWEST HARBOR, ME",
+            "raw_missing": {
+              "road": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "334",
+              "street": "seawall rd",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "southwest harbor",
+              "state": "me",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S2-88798601",
+            "address": "N WAES, ##507 WILLOW LANE, PA",
+            "raw_missing": {
+              "lane": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "#507",
+              "street": "willow ln",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": null,
+              "state": "pa",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": "N WAES, #",
+              "parser": "us_regex_lark",
+              "parse_status": "partial",
+              "parse_reason": "unmatched_text;incomplete_components"
+            }
+          },
+          {
+            "entity_id": "S2-363892626",
+            "address": "1366 Second Avenue, UPLAND, CA",
+            "raw_missing": {
+              "avenue": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "1366",
+              "street": "second ave",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "upland",
+              "state": "ca",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          }
+        ]
+      },
+      "usaddress": {
+        "counts": {
+          "rows": 10000,
+          "nonempty": 9709,
+          "missing_numeric_groups_with_remainder": 0,
+          "raw_lexical_flags_with_remainder": 3596,
+          "numeric_groups_only_in_remainder": 253,
+          "with_unparsed_text": 1367
+        },
+        "statuses": {
+          "parsed": 7510,
+          "partial": 2168,
+          "empty": 291,
+          "fallback": 31
+        },
+        "coverage": {
+          "house_number": 8989,
+          "street": 9363,
+          "unit": 99,
+          "floor": 0,
+          "building": 109,
+          "locality": 0,
+          "city": 8847,
+          "state": 9253,
+          "postal_code": 3,
+          "po_box": 172,
+          "landmark_direction": 0
+        },
+        "parse_seconds": 1.3414,
+        "rows_per_second": 7455,
+        "flag_examples": [
+          {
+            "entity_id": "S2-655258011",
+            "address": "601 183RD STREET, TINLEY PARK, IL",
+            "raw_missing": {
+              "street": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "601",
+              "street": "183rd st",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "tinley park",
+              "state": "il",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S2-358540613",
+            "address": "324 WEST 29TH ST, DAVENPORT, IA",
+            "raw_missing": {
+              "west": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "324",
+              "street": "w 29th st",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "davenport",
+              "state": "ia",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S2-339758085",
+            "address": "711 SARAVALLE DRIVE, ST PETEERS, MO",
+            "raw_missing": {
+              "drive": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "711",
+              "street": "saravalle dr",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "st peteers",
+              "state": "mo",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S2-169531393",
+            "address": "3901A FOREST TRAIL DRIVE, NULL, SEVIERVILLE, TN",
+            "raw_missing": {
+              "drive": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "3901a",
+              "street": "forest trail dr",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "null, sevierville",
+              "state": "tn",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S2-105624197",
+            "address": "#1970 JEFFERSON AVENUE, ST PAUL, MN",
+            "raw_missing": {
+              "avenue": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "# 1970",
+              "street": "jefferson ave",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "st paul",
+              "state": "mn",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S2-133512251",
+            "address": "5 Victoria Drive, AIRMONT, NY",
+            "raw_missing": {
+              "drive": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "5",
+              "street": "victoria dr",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "airmont",
+              "state": "ny",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S2-707763114",
+            "address": "334 SEAWALL ROAD, SOUTHWEST HARBOR, ME",
+            "raw_missing": {
+              "road": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "334",
+              "street": "seawall rd",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "southwest harbor",
+              "state": "me",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S2-363892626",
+            "address": "1366 Second Avenue, UPLAND, CA",
+            "raw_missing": {
+              "avenue": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "1366",
+              "street": "second ave",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "upland",
+              "state": "ca",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S2-924721848",
+            "address": "127 HIGHVIEW AVENUE, MELROSE, MA",
+            "raw_missing": {
+              "avenue": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "127",
+              "street": "highview ave",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "melrose",
+              "state": "ma",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S2-987576032",
+            "address": "PO BOX 7865, KNOXVILLE, 5822 BLOSSOM ROAD, TN",
+            "raw_missing": {
+              "road": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "5822",
+              "street": "blossom rd",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": null,
+              "state": "tn",
+              "postal_code": null,
+              "po_box": "po box 7865",
+              "landmark_direction": null,
+              "unparsed_text": "knoxville",
+              "parser": "usaddress",
+              "parse_status": "partial",
+              "parse_reason": "Street Address"
+            }
+          }
+        ]
+      },
+      "batch_input_columns_unchanged": true
+    },
+    "test_S3": {
+      "us_regex_lark": {
+        "counts": {
+          "rows": 10000,
+          "nonempty": 9695,
+          "missing_numeric_groups_with_remainder": 0,
+          "raw_lexical_flags_with_remainder": 9608,
+          "numeric_groups_only_in_remainder": 1058,
+          "with_unparsed_text": 2086
+        },
+        "statuses": {
+          "parsed": 6588,
+          "partial": 3107,
+          "empty": 305
+        },
+        "coverage": {
+          "house_number": 8291,
+          "street": 8774,
+          "unit": 1043,
+          "floor": 104,
+          "building": 54,
+          "locality": 244,
+          "city": 8300,
+          "state": 9695,
+          "postal_code": 9,
+          "po_box": 171,
+          "landmark_direction": 0
+        },
+        "parse_seconds": 2.0423,
+        "rows_per_second": 4896,
+        "flag_examples": [
+          {
+            "entity_id": "S3-740511602",
+            "address": "429 Blue Daze Ct, Burleson, Texas",
+            "raw_missing": {
+              "texas": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "429",
+              "street": "blue daze ct",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "burleson",
+              "state": "tx",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S3-446167890",
+            "address": "825 Brown Street, Sapulpa, Oklahoma",
+            "raw_missing": {
+              "street": 1,
+              "oklahoma": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "825",
+              "street": "brown st",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "sapulpa",
+              "state": "ok",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S3-88565945",
+            "address": "##9 Roselawn Road, New York, Higghland Mills",
+            "raw_missing": {
+              "road": 1,
+              "new": 1,
+              "york": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "#9",
+              "street": "roselawn rd",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "higghland mills",
+              "state": "ny",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": "#",
+              "parser": "us_regex_lark",
+              "parse_status": "partial",
+              "parse_reason": "unmatched_text"
+            }
+          },
+          {
+            "entity_id": "S3-399548528",
+            "address": "19 Binford Rd, Maine, Standish",
+            "raw_missing": {
+              "maine": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "19",
+              "street": "binford rd",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "standish",
+              "state": "me",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S3-707819069",
+            "address": "36803 191, Chambers, Arizona",
+            "raw_missing": {
+              "arizona": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": null,
+              "street": null,
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": null,
+              "state": "az",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": "36803 191, Chambers",
+              "parser": "us_regex_lark",
+              "parse_status": "partial",
+              "parse_reason": "unmatched_text;incomplete_components;unrecognized_order"
+            }
+          },
+          {
+            "entity_id": "S3-857308867",
+            "address": "Stayman Dr, Virginia, Roanoke",
+            "raw_missing": {
+              "virginia": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": null,
+              "street": "stayman dr",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "roanoke",
+              "state": "va",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "partial",
+              "parse_reason": "incomplete_components"
+            }
+          },
+          {
+            "entity_id": "S3-999822998",
+            "address": "#10108 Elkton Rd, Lisbon, Ohio",
+            "raw_missing": {
+              "ohio": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "#10108",
+              "street": "elkton rd",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "lisbon",
+              "state": "oh",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S3-284690341",
+            "address": "Lake Vista Circle, Unit Apartment H, Cockeysville, Maryland",
+            "raw_missing": {
+              "circle": 1,
+              "apartment": 1,
+              "maryland": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": null,
+              "street": "lake vista cir",
+              "unit": "unit apt h",
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "cockeysville",
+              "state": "md",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "partial",
+              "parse_reason": "incomplete_components"
+            }
+          },
+          {
+            "entity_id": "S3-377030758",
+            "address": "#269 5 St, Bldg 1817, Marysville, Ohio",
+            "raw_missing": {
+              "ohio": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "#269",
+              "street": "5 st",
+              "unit": null,
+              "floor": null,
+              "building": "bldg 1817",
+              "locality": null,
+              "city": "marysville",
+              "state": "oh",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S3-11247366",
+            "address": "235 Lear Rd, Portland, Tennessee",
+            "raw_missing": {
+              "tennessee": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "235",
+              "street": "lear rd",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "portland",
+              "state": "tn",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "us_regex_lark",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          }
+        ]
+      },
+      "usaddress": {
+        "counts": {
+          "rows": 10000,
+          "nonempty": 9695,
+          "missing_numeric_groups_with_remainder": 0,
+          "raw_lexical_flags_with_remainder": 3772,
+          "numeric_groups_only_in_remainder": 512,
+          "with_unparsed_text": 1785
+        },
+        "statuses": {
+          "parsed": 7218,
+          "partial": 2218,
+          "fallback": 259,
+          "empty": 305
+        },
+        "coverage": {
+          "house_number": 8847,
+          "street": 9197,
+          "unit": 972,
+          "floor": 0,
+          "building": 163,
+          "locality": 0,
+          "city": 8905,
+          "state": 8241,
+          "postal_code": 3,
+          "po_box": 180,
+          "landmark_direction": 0
+        },
+        "parse_seconds": 1.4388,
+        "rows_per_second": 6950,
+        "flag_examples": [
+          {
+            "entity_id": "S3-446167890",
+            "address": "825 Brown Street, Sapulpa, Oklahoma",
+            "raw_missing": {
+              "street": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "825",
+              "street": "brown st",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "sapulpa",
+              "state": "oklahoma",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S3-88565945",
+            "address": "##9 Roselawn Road, New York, Higghland Mills",
+            "raw_missing": {
+              "road": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "9",
+              "street": "roselawn rd",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "new york, higghland mills",
+              "state": null,
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": "# #",
+              "parser": "usaddress",
+              "parse_status": "partial",
+              "parse_reason": "Street Address"
+            }
+          },
+          {
+            "entity_id": "S3-806756062",
+            "address": "114 Austin Avenue, Harlingen, TX",
+            "raw_missing": {
+              "avenue": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "114",
+              "street": "austin ave",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "harlingen",
+              "state": "tx",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S3-988660226",
+            "address": "27 White Oak Boulevard, Mechanicsburg, Pennsylvania",
+            "raw_missing": {
+              "boulevard": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "27",
+              "street": "white oak blvd",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "mechanicsburg",
+              "state": "pennsylvania",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S3-704045724",
+            "address": "124 1/2 Pinetown Road, NULL, Jacksonville, North Carolina",
+            "raw_missing": {
+              "road": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "124 1/2",
+              "street": "pinetown rd",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "null, jacksonville",
+              "state": "north carolina",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S3-184366086",
+            "address": "26 Williams Street, Killingly, Connecticut",
+            "raw_missing": {
+              "street": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "26",
+              "street": "williams st",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "killingly",
+              "state": "connecticut",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S3-97351294",
+            "address": "11752 86th Avenue E, Bixby, Oklahoma",
+            "raw_missing": {
+              "avenue": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "11752",
+              "street": "86th ave e",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "bixby",
+              "state": "oklahoma",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S3-878097195",
+            "address": "Unit 9, Tennessee, Lewisburg, 1431 New Columbia Highway",
+            "raw_missing": {
+              "highway": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": null,
+              "street": "hwy",
+              "unit": "unit 9",
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "tennessee",
+              "state": "lewisburg, 1431 new columbia",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "partial",
+              "parse_reason": "Ambiguous"
+            }
+          },
+          {
+            "entity_id": "S3-591067018",
+            "address": "9 9rd Street, Haworth, Oklahoma",
+            "raw_missing": {
+              "street": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "9",
+              "street": "9rd st",
+              "unit": null,
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "haworth",
+              "state": "oklahoma",
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": null,
+              "parser": "usaddress",
+              "parse_status": "parsed",
+              "parse_reason": null
+            }
+          },
+          {
+            "entity_id": "S3-364385272",
+            "address": "Greenburgh, 570 Taxter Road, New York, Unit Suite 590",
+            "raw_missing": {
+              "road": 1
+            },
+            "missing_numbers": {},
+            "actual": {
+              "house_number": "570",
+              "street": "taxter rd",
+              "unit": "unit suite 590",
+              "floor": null,
+              "building": null,
+              "locality": null,
+              "city": "new",
+              "state": null,
+              "postal_code": null,
+              "po_box": null,
+              "landmark_direction": null,
+              "unparsed_text": "greenburgh york",
+              "parser": "usaddress",
+              "parse_status": "partial",
+              "parse_reason": "Street Address"
+            }
+          }
+        ]
+      },
+      "batch_input_columns_unchanged": true
+    }
+  },
+  "files": {
+    "/home/sherencrypted/projects/simple_ml_pipeline/dataset/train/train_source1.tsv": {
+      "before": {
+        "sha256": "591af0e1dfeb65cab71ea6ee8cb69df00f92d6ba6fa79e05746c938775d14973",
+        "size": 210069713,
+        "mtime_ns": 1790330230572535100
+      },
+      "after": {
+        "sha256": "591af0e1dfeb65cab71ea6ee8cb69df00f92d6ba6fa79e05746c938775d14973",
+        "size": 210069713,
+        "mtime_ns": 1790330230572535100
+      },
+      "unchanged": true
+    },
+    "/home/sherencrypted/projects/simple_ml_pipeline/dataset/train/train_source2.tsv": {
+      "before": {
+        "sha256": "6336c1a055eec79cf8a6d99fdc8d32a2e4d9dc2662e00963cb35d66b89ed09ed",
+        "size": 489301488,
+        "mtime_ns": 1790330224528272300
+      },
+      "after": {
+        "sha256": "6336c1a055eec79cf8a6d99fdc8d32a2e4d9dc2662e00963cb35d66b89ed09ed",
+        "size": 489301488,
+        "mtime_ns": 1790330224528272300
+      },
+      "unchanged": true
+    },
+    "/home/sherencrypted/projects/simple_ml_pipeline/dataset/train/train_source3.tsv": {
+      "before": {
+        "sha256": "67da22f5151898ff3006febd836c1a159e97ae95efa7257a5aff4fda685e58e9",
+        "size": 503705637,
+        "mtime_ns": 1790330228827089300
+      },
+      "after": {
+        "sha256": "67da22f5151898ff3006febd836c1a159e97ae95efa7257a5aff4fda685e58e9",
+        "size": 503705637,
+        "mtime_ns": 1790330228827089300
+      },
+      "unchanged": true
+    },
+    "/home/sherencrypted/projects/simple_ml_pipeline/dataset/test/test_source1.tsv": {
+      "before": {
+        "sha256": "3d4a32c54c2ca9c53fd7c2be105bf26f708f94c4d2f88eb370972a195665c2f5",
+        "size": 175022086,
+        "mtime_ns": 1790330219358088400
+      },
+      "after": {
+        "sha256": "3d4a32c54c2ca9c53fd7c2be105bf26f708f94c4d2f88eb370972a195665c2f5",
+        "size": 175022086,
+        "mtime_ns": 1790330219358088400
+      },
+      "unchanged": true
+    },
+    "/home/sherencrypted/projects/simple_ml_pipeline/dataset/test/test_source2.tsv": {
+      "before": {
+        "sha256": "79d906c7497af2ace70aa277f6e334a652094909de99bd6c57b53420b6a7b2dd",
+        "size": 509456422,
+        "mtime_ns": 1790330213588482500
+      },
+      "after": {
+        "sha256": "79d906c7497af2ace70aa277f6e334a652094909de99bd6c57b53420b6a7b2dd",
+        "size": 509456422,
+        "mtime_ns": 1790330213588482500
+      },
+      "unchanged": true
+    },
+    "/home/sherencrypted/projects/simple_ml_pipeline/dataset/test/test_source3.tsv": {
+      "before": {
+        "sha256": "850942b11d2a4343486ed0834e28bce9f3b385f3fd497fd60ccf4ea3b8bda035",
+        "size": 506002772,
+        "mtime_ns": 1790330217932101400
+      },
+      "after": {
+        "sha256": "850942b11d2a4343486ed0834e28bce9f3b385f3fd497fd60ccf4ea3b8bda035",
+        "size": 506002772,
+        "mtime_ns": 1790330217932101400
+      },
+      "unchanged": true
+    }
+  },
+  "limitations": [
+    "24 labeled cases are development regressions; not an unbiased accuracy estimate.",
+    "Sampled records have no component gold labels. Coverage/status/retention do not measure correct assignments.",
+    "Raw lexical flags include expected abbreviation, full-state, city-alias and floor-ordinal changes; no lexical equivalence adjustment is applied.",
+    "Numeric retention ignores punctuation except slash/hyphen groups; it is not a semantic correctness check.",
+    "Single local warm-parser timing; includes Python extraction, excludes I/O, normalization and batch assembly.",
+    "US source strings are parsed as supplied; the production pipeline normally runs Roman normalization first."
+  ]
+}

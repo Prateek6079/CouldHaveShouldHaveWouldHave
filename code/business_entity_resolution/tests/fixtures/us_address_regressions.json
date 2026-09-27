@@ -1,0 +1,29 @@
+{
+  "description": "24 real US addresses manually inspected before custom-parser development; four per train/test source, originally selected with seed 197. Development regressions, not an independent accuracy benchmark. Expectations cover house, street, city and state only; state/city aliases are normalized for comparison.",
+  "cases": [
+    ["4012 Grandover Drive, Raleigh, NC", "4012", "grandover dr", "raleigh", "nc"],
+    ["2338 Revolution Park Drive, Charlotte, NC", "2338", "revolution park dr", "charlotte", "nc"],
+    ["35250 Pilotboat Drive, Lewes, DE", "35250", "pilotboat dr", "lewes", "de"],
+    ["4309 Landsdowne Drive, Mckinney, TX", "4309", "landsdowne dr", "mckinney", "tx"],
+    ["34 HOLLY AVE, NORTHFIELD, MA", "34", "holly ave", "northfield", "ma"],
+    ["312 SUTTENFIELD ST, FORT WAYNE, IN", "312", "suttenfield st", "fort wayne", "in"],
+    ["15745-15749 W ANDREW JOHNSON HIGHWAY, MOSHEIM, TN", "15745-15749", "w andrew johnson hwy", "mosheim", "tn"],
+    ["#8340 BURDS RD, PEOSTA TOWNSHIP, IA", "#8340", "burds rd", "peosta township", "ia"],
+    ["5195 Smumer Wind Lane, Arlington, Tennessee", "5195", "smumer wind ln", "arlington", "tn"],
+    ["431 Nelson Dr, Laguna, New Mexico", "431", "nelson dr", "laguna", "nm"],
+    ["Maine, Topsham, 17 Summer Street", "17", "summer st", "topsham", "me"],
+    ["15607 Larch Way, Martha Lake, Washington", "15607", "larch way", "martha lake", "wa"],
+    ["600 9th Street, Unit Lot 23, Bismarck, ND", "600", "9th st", "bismarck", "nd"],
+    ["235 62nd Terrace, Kansas City, MO", "235", "62nd ter", "kansas city", "mo"],
+    ["605 Kay Court, TN, Nashville", "605", "kay ct", "nashville", "tn"],
+    ["2973 Buffalo Shoals Road, Maiden, NC", "2973", "buffalo shoals rd", "maiden", "nc"],
+    ["172-77 A HIGHLAND AVENUE, JAMAICA, NY", "172-77 a", "highland ave", "jamaica", "ny"],
+    ["#8548 HIGHCREST DR, HOUSTON, TX", "#8548", "highcrest dr", "houston", "tx"],
+    ["3721 MECHANIC RD, ASHEBORO, NC", "3721", "mechanic rd", "asheboro", "nc"],
+    ["SHERWOOD RD, NEW CUMBERLAND BOROUGH, PA", null, "sherwood rd", "new cumberland borough", "pa"],
+    ["3686 189th Street, Russell, Kansas", "3686", "189th st", "russell", "ks"],
+    ["409 Court Street, NULL, Harrisville, West Virginia", "409", "court st", "harrisville", "wv"],
+    ["1632-1634 Olive Pl, Catnon, Ohio", "1632-1634", "olive pl", "catnon", "oh"],
+    ["3899 Cabeza Road, Nordheim, Texas", "3899", "cabeza rd", "nordheim", "tx"]
+  ]
+}
